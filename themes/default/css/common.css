@@ -1,4 +1,5 @@
 body{
+    /*background:#111216 ;*/
     font-family: 'open sans','PingFang SC','Lantinghei SC','Helvetica Neue',Helvetica,Arial,'Microsoft YaHei',"sans-serif"
 }
 *{
@@ -65,12 +66,15 @@ a{
     margin: 0 auto;
     font-size: 15px;
     font-weight: 200;
-    color: #999999;
+    color: white;
     line-height: 30px;
     border-bottom: 1px silver dashed;
 }
+.nav_last{
+    border-bottom: none!important;
+}
 .sub-page-nav:hover{
-    color: white;
+    color: #aaaaaa;
 }
 .sub-page-navH{
     display: none;
@@ -98,7 +102,7 @@ a{
     background: transparent;
     outline: none;
     border: none;
-    text-indent: 10px;
+    text-indent: 20px;
     color: white;
     font-size: 15px;
 }
@@ -178,6 +182,10 @@ a{
     width: 50%;
     margin-top: 8px;
     margin-left: 3px;
+}
+.foodImg_A{
+    position: relative;
+    top: 1.5px;
 }
 
 

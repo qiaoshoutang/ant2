@@ -1,6 +1,7 @@
 .RecentnavList{
     width: 1200px;
     margin: 0 auto;
+    padding-bottom: 80px;
 }
 .RecentnavList_ul{
     height: 80px;
@@ -138,7 +139,8 @@
     border: 1px silver solid;
     clear: both;
     position: relative;
-    top:40px;
+    top: 40px;
+
 }
 .Time_Bm{
     width: 75px;

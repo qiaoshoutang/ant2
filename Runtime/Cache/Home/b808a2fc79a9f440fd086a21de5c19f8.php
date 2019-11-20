@@ -23,9 +23,9 @@
                 </li>
                 <li>
                     <p>关于我们</p>
-                    <p>简介</p>
-                    <p>团队</p>
-                    <p>联系我们</p>
+                    <p onclick='window.location.href="/description"'>简介</p>
+                    <p onclick='window.location.href="/aboutus"'>团队</p>
+                    <p onclick='window.location.href="/contactus"'>联系我们</p>
                 </li>
                 <li>
                     <p>联系我们</p>

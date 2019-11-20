@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新闻资讯</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<style>
+    .NewsContent{
+        width: 100%;
+        padding-bottom: .2rem;
+    }
+    .NewsContent_Titile{
+        width: 90%;
+        margin: 0.3rem auto 0 auto;
+        font-size: .35rem;
+        text-align: justify;
+    }
+    .NewsContent_Titile p:nth-child(1){
+        font-weight: bold;
+    }
+    .Time_Num{
+        width: 100%;
+        font-size: .21rem;
+        margin-top: .05rem;
+    }
+
+   .Num{
+       margin-left: .3rem;
+   }
+    .guankan{
+        width: 5%;
+    }
+    .ZxNr{
+        width: 90%;
+        margin: 0.4rem auto 0 auto;
+        text-align: justify;
+        font-weight: bold;
+    }
+    .ZxNr_Title{
+        width: 100%;
+        font-size: .25rem;
+        margin-top: 0.2rem;
+    }
+    .ZxNr_Content{
+        font-size: .25rem;
+        font-weight: 300;
+        margin-top: .2rem;
+    }
+    .ZxNr_Img{
+        width: 100%;
+        margin: 0.2rem auto 0 auto;
+    }
+</style>
+<body>
+<div class="box">
+    <!--顶部导航栏-->
+    <!--#include file="header.html"-->
+    <div class="NewsContent">
+        <div class="NewsContent_Titile">
+            <p>金色荐读|平安证券首席经济学家张明:Libra对全球经济的潜在影响</p>
+            <p class="Time_Num">
+                <span>蚂蚁节点联盟 · 2019-10-30 17:30:09</span>
+                <span class="Num">
+                    <img src="images/guankan.png" alt="" class="guankan">
+                    <span>650</span>
+                </span>
+            </p>
+        </div>
+        <!--资讯内容-->
+        <div class="ZxNr">
+            <div class="ZxNr_Title">
+                金色荐读|平安证券首席经济学家张明:Libra对全球
+                经济的潜在影响
+            </div>
+            <div class="ZxNr_Content">
+                2019首届GETS“新风向”全球加密大会由CoinKaola考拉财经主办， 世界数字经济联盟WDEA和Cyberpunk Lab联合主办方，由月亮财经承办。本次会议定向邀约超过100位全球行业权威加密技术专家、100家投资机构，1000名行业精英、多家上市公司，全球头部财经媒体共同参与，汇聚区块链行业最专业、最具代表性人群，共同探讨加密技术在未来百年的行业创新变革与应用。考拉财经带你走进加密技术，走进POW矿业芯动力，走进高交会!
+            </div>
+
+            <div class="ZxNr_Title">
+                亮点1：海量媒体流量，全球瞩目
+            </div>
+
+            <div class="ZxNr_Img">
+                <img src="images/ZxNr.png" alt="" width="100%">
+            </div>
+            <div class="ZxNr_Content">
+                2019首届GETS“新风向”全球加密大会由CoinKaola考拉财经主办， 世界数字经济联盟WDEA和Cyberpunk Lab联合主办方，由月亮财经承办。本次会议定向邀约超过100位全球行业权威加密技术专家、100家投资机构，1000名行业精英、多家上市公司，全球头部财经媒体共同参与，汇聚区块链行业最专业、最具代表性人群，共同探讨加密技术在未来百年的行业创新变革与应用。考拉财经带你走进加密技术，走进POW矿业芯动力，走进高交会!
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <!--底部框-->
+    <!--#include file="footer.html"-->
+</div>
+</body>
+</html>

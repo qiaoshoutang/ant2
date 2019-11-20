@@ -1,0 +1,252 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蚂蚁节点联盟简介</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/briefIntroduction.css?52">
+</head>
+<body>
+<div class="box">
+    <!--导航栏-->
+    <!--#include file="header.html"-->
+
+    <!--banner页-->
+    <div class="briefbanner"></div>
+    <!--视频-->
+    <div class="AntVideo">
+        <div class="AntVideo_Title">
+            <img src="images/introdutionTitle.png" alt="" >
+        </div>
+        <div class="AntZhi">
+            蚂蚁节点联盟是国内知名的区块链线下社群组织，联盟以引领行业新生态、促进区块链行业稳健发展为宗旨，
+            致力于聚合全球区块链行业专家及区块链爱好者整合区块链产业上下游资源，为区块链行业参与者提供第三方综合服务。
+        </div>
+        <div class="video_box">
+            <video src="/themes/mobile/video/G_New.mp4" controls="controls" class="videoTrol" ></video>
+        </div>
+    </div>
+    <!--发展历程-->
+    <div class="developmentHistory">
+        <div class="HistoryTitle">
+            <img src="images/hisTory.png" alt="" >
+        </div>
+        <div class="HistoryContent">
+            <div class="History_Left">
+                <ul>
+                    <li>
+                        <div class="HisDetail">
+                            <p>2019年9月21日-22日</p>
+                            <p>2019FINWISE纷智第六届</p>
+                            <p>全球峰会·澳门站</p>
+                            <p>蚂蚁节点联盟承办</p>
+                        </div>
+                        <div class="HisImg">
+                            <img src="images/HisImg01.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="HisDetail SHD">
+                            <p>2018年8月10日-11日</p>
+                            <p>FINWISE纷智第四届·香港峰会</p>
+                            <p>蚂蚁节点联盟联合主办</p>
+                        </div>
+                        <div class="HisImg">
+                            <img src="images/HisImg02.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="HisDetail">
+                            <p>2018年5月21日-22日</p>
+                            <p>Finwise纷智第三届·东京峰会</p>
+                            <p>豪哥发表重要演讲</p>
+                            <p>蚂蚁节点联盟联合主办</p>
+                        </div>
+                        <div class="HisImg">
+                            <img src="images/HisImg03.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="HisDetail SHD">
+                            <p>2018年3月20日</p>
+                            <p>2018两会大家谈</p>
+                            <p>吴杰庄委员盛赞蚂蚁节点联盟</p>
+                        </div>
+                        <div class="HisImg">
+                            <img src="images/HisImg04.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="HisDetail">
+                            <p>2018年1月12日-13日</p>
+                            <p>FINWISE纷智第二届·澳门峰会</p>
+                            <p>蚂蚁节点联盟联合主办</p>
+                            <p>正式全球发布蚂蚁节点联盟成立</p>
+                        </div>
+                        <div class="HisImg">
+                            <img src="images/HisImg05.png" alt="">
+                        </div>
+
+                    </li>
+                </ul>
+                <div class="lineDD"></div>
+                <div class="BallDD"></div>
+            </div>
+            <!--中间格子线-->
+            <div class="History_Centet">
+                <!--今天-->
+                <div class="taday">今天</div>
+                <div class="lineL">
+                    <ul>
+                        <li><span class="ballHistoryB"></span></li>
+                        <li><span class="ballHistoryB"></span></li>
+                        <li><span class="ballHistoryB"></span></li>
+                        <li><span class="ballHistoryB"></span></li>
+                        <li><span class="ballHistoryB"></span></li>
+                    </ul>
+                </div>
+                <div class="lineR">
+                    <ul>
+                        <li> <span class="ballHistory"></span></li>
+                        <li> <span class="ballHistory"></span></li>
+                        <li> <span class="ballHistory"></span></li>
+                        <li> <span class="ballHistory"></span></li>
+                        <li> <span class="ballHistory"></span></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="History_Right">
+                <ul>
+                    <li>
+
+                        <div class="HisImg">
+                            <img src="images/HisImg06.png" alt="">
+                        </div>
+                        <div class="HisDetail">
+                            <p>2019年5月28日-29日</p>
+                            <p>2019FINWISE纷智第五届</p>
+                            <p>全球峰会·香港站</p>
+                            <p>蚂蚁节点联盟承办</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="HisDetail">
+                            <p>2018年6月29日-30日</p>
+                            <p>2018第二届海创会暨</p>
+                            <p>首届全球区块链技术成果论坛</p>
+                            <p>蚂蚁节点联盟承办</p>
+                        </div>
+                        <div class="HisImg">
+                            <img src="images/HisImg07.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="HisDetail">
+                            <p>2018年4月9日</p>
+                            <p>全国政协委员吴杰庄</p>
+                            <p>莅临蚂蚁节点联盟</p>
+                            <p>深度交流及指导工作</p>
+                        </div>
+                        <div class="HisImg">
+                            <img src="images/HisImg08.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="HisDetail SHD">
+                            <p>2018年1月26日</p>
+                            <p>区块链领袖峰会</p>
+                            <p>暨蚂蚁节点联盟年会</p>
+                        </div>
+                        <div class="HisImg">
+                            <img src="images/HisImg09.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="HisDetail wyx">
+                            <p>2017年5月</p>
+                            <p>福建区块链俱乐部成立</p>
+                        </div>
+                        <div class="HisImg">
+                            <img src="images/HisImg10.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    <!--公司荣誉-->
+    <div class="Company-Honor">
+        <div class="Company-Honor-box">
+            <div class="Medal">
+                <img src="images/Medal.png" alt="">
+            </div>
+            <div class="Company-Honor-Title">
+                <img src="images/CompanyHonor.png" alt="">
+            </div>
+            <ul class="Company-Honor-Text">
+                <li class="Company-Honor-Textlist">
+                    <p>
+                        <span class="blueBall"></span>
+                        中国高科技产业化研究会区块链产业联盟
+                    </p>
+                    <p><span class="blue_sBall"></span> 副理事长单位</p>
+                    <p><span class="blue_sBall"></span> 会务会展发展委员会</p>
+                    <p><span class="blue_sBall"></span> 国内事务发展委员会执委</p>
+                </li>
+                <li>
+                    <span class="blueBall"></span>
+                    中国科学院大学数字经济与区块链研究中心战略合作单位
+                </li>
+                <li>
+                    <span class="blueBall"></span>
+                    厦门大学区块链研究中心战略合作单位
+                </li>
+                <li>
+                    <span class="blueBall"></span>
+                    厦门区块链协会创始会长单位
+                </li>
+                <li>
+                    <span class="blueBall"></span>
+                    粤港澳大湾区媒体联盟执行会长单位
+                </li>
+                <li>
+                    <span class="blueBall"></span>
+                    2019年5月28日第五届纷智峰会·香港站，纷智金球奖-获优秀社区联盟奖
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--底部-->
+    <!--#include file="footer.html"-->
+</div>
+</body>
+</html>
+<script src="js/jquery.js"></script>
+<script src="js/commom.js"></script>
+<script>
+
+    var HistoryList=$(".History_Text ul");
+    $(".HistoryBall li").hover(function () {
+        var $this=$(this);
+        $this.find("img").attr("src","/themes/default/images/bigBall.png");
+        $this.find("img").addClass("topUp");
+        var index=$(this).index();
+        // $this.parent().
+        HistoryList.css("bottom",(index-1) * (300) + "px")
+    },function () {
+        $(this).find("img").attr("src","/themes/default/images/smallBall.png")
+        $(this).find("img").removeClass("topUp")
+    });
+
+</script>

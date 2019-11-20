@@ -51,15 +51,17 @@
 .Partner_Title{
     width: 100%;
     text-align: center;
+    position: relative;
+    top: .2rem;
 }
 .Partner_Title img{
     width: 33%;
 }
 .Cooperative_Partner_ul{
     width: 90%;
-    margin: 0 auto;
-    display: block;
-    height: 100%;
+    margin-left: 5%;
+    display: inline-block;
+    margin-top: .2rem;
 }
 .Cooperative_Partner_ul li{
     width: 25%;
