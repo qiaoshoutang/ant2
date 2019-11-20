@@ -1,0 +1,203 @@
+body{
+    min-width: 1400px;
+}
+.briefbanner{
+    width: 100%;
+}
+.briefbanner img{
+    width: 100%;
+}
+.video-introdution{
+    width: 100%;
+    height: 795px;
+    background:#eef3f9;
+    position: relative;
+}
+.introdutionTitle{
+    width: 100%;
+    text-align: center;
+    padding-top:55px ;
+}
+.introText{
+    width: 60%;
+    height: 440px;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 170px;
+}
+.introVideo{
+    width: 50%;
+    height: 430px;
+    background: url("../images/videoBanner.png")top center no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    top: 230px;
+    z-index: 9;
+}
+.introTextContent{
+    width: 350px;
+    height: 250px;
+    float: right;
+    margin-right:300px ;
+    margin-top:120px;
+    font-size: 18px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-align: justify;
+    line-height: 180%;
+    text-indent: 2em;
+}
+#video{
+    width: 550px;
+    height: 300px;
+    margin-top: 55px;
+    margin-left: 45px;
+}
+.DevelopmentHistory{
+    width: 100%;
+    height: 685px;
+    background: url("../images/DevelopmentHistory.png")top center no-repeat;
+    background-size: 100% 100%;
+}
+.Company-Honor{
+    width: 100%;
+    height: 820px;
+    background:#eef3f9;
+    overflow: hidden;
+}
+.Company-Honor-box{
+    width: 1200px;
+    height: 655px;
+    margin: 75px auto 0 auto;
+    border: 1px silver solid;
+    background: white;
+    text-align: center;
+}
+.Company-Honor-box img{
+    margin-top: 40px;
+}
+.Company-Honor-Text{
+    width: 80%;
+    margin: 45px auto 0 auto;
+    text-align: left;
+}
+.Company-Honor-Text li{
+    font-size: 22px;margin-top: 25px;
+}
+.blueBall{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #2e84fb;
+    display: inline-block;
+    position: relative;
+    top: -4px;
+}
+.blue_sBall{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #2e84fb;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+}
+.Company-Honor-Textlist p{
+    text-indent: 2em;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.Company-Honor-Textlist p:nth-child(1){
+    text-indent: 0;
+    font-size: 22px;
+}
+.DevelopmentHistory_Title{
+    width: 100%;
+    text-align: center;
+}
+.DevelopmentHistory_Title img{
+    margin-top: 60px;
+}
+.DevelopmentHistoryContent{
+    width: 1200px;
+    margin: 0 auto;
+    height: 480px;
+    /*background: white;*/
+    position: relative;
+    overflow: hidden;
+}
+.HistoryBall{
+    width: 100%;
+    height: 30px;
+    border-top: 3px #244cc1 solid;
+    position: absolute;
+    bottom: 0;
+
+}
+.HistoryBall li{
+    float: left;
+    width: 10%;
+    height: 100%;
+    text-align: center;
+}
+
+.smallBall{
+    /*width: 20px;*/
+    /*height: 20px;*/
+    /*background: url("../images/smallBall.png")no-repeat;*/
+    /*background-size: 100% 100%;*/
+    margin: -10px auto;
+}
+.topUp{
+    position: relative;
+    bottom: 70px;
+}
+.History_Text{
+    width: 100%;
+    height: 300px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.History_Text ul{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: 1s all;
+}
+.History_Text ul li{
+    width: 100%;
+    height: 300px;
+
+}
+.History_Time{
+    width: 35%;
+    text-align: right;
+    height: 300px;
+    line-height: 300px;
+    font-size: 80px;
+    color: white;
+    overflow: hidden;
+    float: left;
+
+}
+
+.History_content{
+    width: 60%;
+    height: 100%;
+    float: right;
+    text-align: left;
+    /*color: white;*/
+    font-size: 20px;
+    overflow: hidden;
+    color: #cbcbcb;
+}
+.History_content p:nth-child(1){
+    margin-top: 125px;
+}
+.Time_List{
+    position:absolute;
+    font-size: 25px;
+    color: white;
+}

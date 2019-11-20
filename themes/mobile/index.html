@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蚂蚁节点联盟</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+
+
+
+</head>
+<body>
+     <div class="box">
+         <!--顶部导航栏-->
+         <!--#include file="header.html"-->
+
+         <!--轮播-->
+         <div id="slideBox" class="slideBox">
+
+             <div class="bd">
+                 <ul>
+                     <li>
+                         <a class="pic" href="#"><img src="images/banner.png" /></a>
+                         <a class="tit" href="#"></a>
+                     </li>
+                     <li>
+                         <a class="pic" href="#"><img src="images/bannerTow.png"/></a>
+                         <a class="tit" href="#"></a>
+                     </li>
+                 </ul>
+             </div>
+
+             <div class="hd">
+                 <ul></ul>
+             </div>
+         </div>
+
+
+         <!--服务类型-->
+         <div class="serviceTypes">
+             <div class="serviceTitle">
+                 <img src="images/seviceTypes.png" alt="">
+             </div>
+             <ul class="service_ul">
+                 <li>
+                     <img src="images/list01.png" alt="">
+                 </li>
+                 <li>
+                     <img src="images/list02.png" alt="">
+                 </li>
+                 <li>
+                     <img src="images/list03.png" alt="">
+                 </li>
+                 <li>
+                     <img src="images/list04.png" alt="">
+                 </li>
+                 <li>
+                     <img src="images/list05.png" alt="">
+                 </li>
+                 <li>
+                     <img src="images/list06.png" alt="">
+                 </li>
+             </ul>
+             
+         </div>
+         <!--合作伙伴-->
+         <div class="Cooperative_Partner">
+             <div class="Cooperative_Partner_box">
+                 <div class="Partner_Title">
+                     <img src="images/Partner.png" alt="">
+                 </div>
+                 <ul class="Cooperative_Partner_ul">
+                     <li><img src="images/patner01.png" alt=""></li>
+                     <li><img src="images/patner02.png" alt=""></li>
+                     <li><img src="images/patner03.png" alt=""></li>
+                     <li><img src="images/patner04.png" alt=""></li>
+                     <li><img src="images/patner05.png" alt=""></li>
+                     <li><img src="images/patner06.png" alt=""></li>
+                     <li><img src="images/patner07.png" alt=""></li>
+                     <li><img src="images/patner08.png" alt=""></li>
+                     <li><img src="images/patner09.png" alt=""></li>
+                     <li><img src="images/patner10.png" alt=""></li>
+                     <li><img src="images/patner11.png" alt=""></li>
+                     <li><img src="images/patner12.png" alt=""></li>
+                     <li><img src="images/patner13.png" alt=""></li>
+                     <li><img src="images/patner14.png" alt=""></li>
+                     <li><img src="images/patner15.png" alt=""></li>
+                 </ul>
+
+             </div>
+
+         </div>
+         <!--旗下产品-->
+         <div class="Its_products">
+             <img src="images/itproduct.png" alt="">
+         </div>
+         <!--底部框-->
+        <!--#include file="footer.html"-->
+     </div>
+</body>
+</html>
+<script src="js/common.js"></script>
+<script src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript">
+    TouchSlide({
+        slideCell:"#slideBox",
+        titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+        mainCell:".bd ul",
+        effect:"leftLoop",
+        autoPage:true,//自动分页
+        autoPlay:true //自动播放
+    });
+</script>

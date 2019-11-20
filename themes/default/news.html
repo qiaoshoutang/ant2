@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新闻动态</title>
+    <link rel="stylesheet" href="css/NewsInformation.css">
+    <link rel="stylesheet" href="css/common.css">
+
+</head>
+<body>
+<div class="box">
+    <!--导航栏-->
+    <!--#include file="header.html"-->
+
+    <!--合作伙伴链接窗-->
+    <div class="Partner-Links">
+        <ul>
+            <!--{foreach name='naviList' item='vo' }-->
+            <li>
+                <div class="Partner-Links-WinD">
+                    <div class="Partner-T">
+                        <img src="{$vo.icon}" alt="" width="100%">
+                    </div>
+                    <div class="Partner-LinksText">
+                        <p>{$vo.name}</p>
+                        <p>{$vo.descrip}</p>
+                    </div>
+                </div>
+            </li>
+            <!--{/foreach}-->
+        </ul>
+    </div>
+    <!--各类文章-->
+    <div class="NewType">
+        <div class="NewType-nav">
+            <ul>
+                <li class='<!--{if condition="$class_id eq all"}--> active <!--{/if}-->'>
+                    <a href = '/news/all'>
+                        全部
+                    </a>
+                </li>
+                <li class='<!--{if condition="$class_id eq 1"}--> active <!--{/if}-->'>
+                    <a href = '/news/1'>
+                        行情
+                    </a>
+                </li>
+                <li class='<!--{if condition="$class_id eq 2"}--> active <!--{/if}-->'>
+                    <a href = '/news/2'>
+                        政策
+                    </a>
+                </li>
+                <li class='<!--{if condition="$class_id eq 3"}--> active <!--{/if}-->'>
+                    <a href = '/news/3'>
+                        产业
+                    </a>
+                </li>
+                <li class='<!--{if condition="$class_id eq 4"}--> active <!--{/if}-->'>
+                    <a href = '/news/4'>
+                        声音
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--全部-->
+        <div class="NewType-Content">
+            <ul>
+            <!--{foreach name='newsList' item='vo' }-->
+                <li>
+                    <div class="NewType-Detail">
+                        <div class="NewTypeImg">
+                            <img src="images/NewTypr-img.png" alt="">
+                        </div>
+                        <div class="NewTypeText">
+                            <div class="TextTitle">
+                                {$vo.title}
+                            </div>
+                            <div class="TextContent">
+                                {$vo.description}
+                            </div>
+                            <div class="TextSource">
+                                <span>{$vo.author}</span>
+                                <span>{$vo.time|format_time='Y-m-d H:i:s'}</span>
+                                <span>{$vo.view}</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+                <!--{/foreach}-->
+            </ul>
+
+            <div class="LookMore">
+                <a href="">查看更多</a>
+            </div>
+
+        </div>
+        <!--热门快讯-->
+        <div class="Hot-News">
+
+            <div class="Hot-News-content">
+                <!--标题-->
+                <div class="HotNewsTitle">
+                    <span>热门快讯</span>
+                    <span class="HotMore">
+                        <a href='/message'>
+                            更多>
+                        </a>
+                    </span>
+                </div>
+
+                <!--内容-->
+                <div class="HotNewsText">
+                    <!--{foreach name='messageList' item='vo' }-->
+                    <div class="HotNewsText-box">
+                        <div class="TuoY">
+                            <img src="images/TuoY.png" alt="" width="100%">
+                        </div>
+                        <div class="HotNewsText-Article">
+                            <div class="HotNewsTime">
+                                {$vo.time|format_time='H:i'}
+                            </div>
+                            <div class="HotNewsA-T">
+                                {$vo.title}
+                            </div>
+                            <div class="HotNewsTTT">
+                                {$vo.content}...
+                            </div>
+                            <div class="Favorable-BadProfit">
+                                <span ><img src="images/up.png" alt=""> 利好<span class="count-f">{$vo.up}</span></span>
+                                <span class="Fb-span"><img src="images/down.png" alt=""> 利空<span class="count-f">{$vo.down}</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--{/foreach}-->
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!--底部-->
+    <!--#include file="footer.html"-->
+</div>
+</body>
+</html>
+<script src="js/jquery.js"></script>
+<script src="js/commom.js"></script>
+<script>
+    $(".NewType-Content ul li").hover(function () {
+        $(this).addClass("bg-color")
+        $(this).find($(".NewType-Detail")).css({
+            "border-bottom":"none"
+        })
+    }, function () {
+        $(this).removeClass("bg-color");
+        $(this).find($(".NewType-Detail")).css({
+            "border-bottom":"1px silver solid"
+        })
+    });
+    
+</script>

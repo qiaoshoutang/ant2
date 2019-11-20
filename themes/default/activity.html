@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蚂蚁活动</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/AntNavigation.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <link rel="stylesheet" href="css/allianceActivities.css">
+</head>
+<body>
+<div class="box">
+    <!--导航栏-->
+    <!--#include file="header.html"-->
+    
+    <!--轮播-->
+    <div class="banner-nav">
+        <div class="in exhibition_hall">
+            <div id="" class="roundabout_box">
+                <ul>
+                    <li><a href="#"><img src="images/zt1.png" alt=""><span class="text">Picture information 1</span></a></li>
+                    <li><a href="#"><img src="images/zt2.png" alt=""><span class="text">Picture information 2</span></a></li>
+                    <li><a href="#"><img src="images/zt3.png" alt=""><span class="text">Picture information 3</span></a></li>
+                    <li><a href="#"><img src="images/zt4.png" alt=""><span class="text">Picture information 4</span></a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!--主要内容导航-->
+    <div class="RecentnavList">
+        <ul class="RecentnavList_ul">
+            <li class='<!--{if condition="$state eq all"}--> active <!--{/if}-->'>
+                <a href='/activit/all/all'>全部</a>
+            </li>
+            <li class='<!--{if condition="$state eq 1"}--> active <!--{/if}-->'>
+                <a href='/activit/1/all'>报名中</a>
+            </li>
+            <li class='<!--{if condition="$state eq 2"}--> active <!--{/if}-->'>
+                <a href='/activit/2/all'>已结束</a>
+            </li>
+        </ul>
+        <!--近期-->
+        <div class="Recent-time">
+            <ul>
+                <li class='<!--{if condition="$time eq all"}--> active <!--{/if}-->'>
+                    <a href='/activit/all/all'>全部</a>
+                </li>
+                <li class='<!--{if condition="$time eq 1"}--> active <!--{/if}-->'>
+                    <a href='/activit/all/1'>近一周</a>
+                </li>
+                <li class='<!--{if condition="$time eq 2"}--> active <!--{/if}-->'>
+                    <a href='/activit/all/2'>近一月</a>
+                </li>
+                <li class='<!--{if condition="$time eq 3"}--> active <!--{/if}-->'>
+                    <a href='/activit/all/3'>近半年</a>
+                </li>
+                <li class='<!--{if condition="$time eq 4"}--> active <!--{/if}-->'>
+                    <a href='/activit/all/4'>更早</a>
+                </li>
+            </ul>
+        </div>
+        <!--活动详情-->
+        <div class="Activity-Details">
+            <ul>
+                <!--{foreach name='acitvityList' item='vo' }-->
+                <li>
+                    <div class="Img_Ac">
+                        <img src="images/Ac01.png" alt="">
+                    </div>
+                    <div class="Title_Ac">
+                        <p class="Title_Ac_P">
+                            <span>{$vo.name}</span>
+                            <span>{$vo.views}人浏览</span>
+                        </p>
+                    </div>
+                    <div class="LocationTime">
+                        <div class="Location">
+                            <p><img src="images/location.png" alt=""><span>{$vo.position}</span></p>
+                            <p><img src="images/shijian.png" alt=""><span>{$vo.duration}</span></p>
+                        </div>
+
+                        <div class="Time">
+                            <!--{if condition="$vo.state eq 1"}-->
+                            <div class="Time_Bm">
+                                报名中
+                            </div>
+                            <!--{/if}-->
+                            <!--{if condition="$vo.state eq 2"}-->
+                            <div class="Time_Finish">
+                                已结束
+                            </div>
+                            <!--{/if}-->
+                        </div>
+
+                    </div>
+                </li>
+                <!--{/foreach}-->
+            </ul>
+            <div class="LOOKMMM">
+                查看更多
+            </div>
+        </div>
+
+    </div>
+
+    <!--底部-->
+    <!--#include file="footer.html"-->
+</div>
+</body>
+</html>
+
+<script src="js/jquery.roundabout.min.js"></script>
+<script src="js/commom.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.roundabout_box ul').roundabout({
+            duration: 1000,
+            minScale: 0.6,
+            autoplay: true,
+            autoplayDuration: 5000,
+            minOpacity: 0,
+            maxOpacity: 1,
+            reflect: true,
+            startingChild: 3,
+            autoplayInitialDelay: 5000,
+            autoplayPauseOnHover: true,
+            enableDrag: true
+        });
+    });
+    $(".RecentnavList_ul li").click(function () {
+        $(this).addClass("font-cx");
+        $(this).siblings().removeClass("font-cx")
+    })
+
+    $(".Recent-time ul li").click(function () {
+        $(this).addClass("font-cxb");
+        $(this).siblings().removeClass("font-cxb")
+    })
+</script>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <title>联盟介绍</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/Allianceprofile.css">
+    <script src="js/jquery.js"></script>
+
+</head>
+<body>
+    <div class="box">
+        <!--顶部导航栏-->
+        <!--#include file="header.html"-->
+        <!--banner图-->
+        <div class="banner">
+
+        </div>
+        <!--联盟介绍-->
+        <div class="introduction">
+            <img src="images/introductionLm.png" alt="" class="Title_Intro">
+            <div class="intro_text">
+                蚂蚁节点联盟是国内知名的区块链线下社群组织，联盟以引领行业新生态、促进区块链行业稳健发展为宗旨，致力于聚合全球区块链行业专家及区块链爱好者整合区块链产业上下游资源，为区块链行业参与者提供第三方综合服务。
+            </div>
+            <!--视频-->
+            <div class="video_box">
+                <video src="/themes/mobile/video/G_New.mp4" controls class="videoTrol"></video>
+            </div>
+        </div>
+        
+        <!--发展历程-->
+        <div class="Development_History">
+            <div class="Title_History">
+                <img src="images/Title_History.png" alt="">
+            </div>
+            <div class="HistoryBox">
+                <div class="HistoryTime">
+                    <ul>
+                        <li>
+                            <span class="ball">
+                                <img src="images/ball.png" alt="">
+                            </span>
+                           <div class="HistoryTimeText">2017.05</div>
+                        </li>
+                        <li>
+                            <span class="ball">
+                                <img src="images/ball.png" alt="">
+                            </span>
+                            <div class="HistoryTimeText">2018.01.12</div>
+                        </li>
+                        <li>
+                            <span class="ball">
+                                <img src="images/ball.png" alt="">
+                            </span>
+                            <div class="HistoryTimeText">2018.01.26</div>
+                        </li>
+                        <li>
+                            <span class="ball">
+                                <img src="images/ball.png" alt="">
+                            </span>
+                            <div class="HistoryTimeText">2018.03.20</div>
+                        </li>
+                        <li>
+                            <span class="ball">
+                                <img src="images/ball.png" alt="">
+                            </span>
+                            <div class="HistoryTimeText">2018.04.09</div>
+                        </li>
+                        <li>
+                            <span class="ball">
+                                <img src="images/ball.png" alt="">
+                            </span>
+                            <div class="HistoryTimeText">2018.05.22</div>
+                        </li>
+                        <li>
+                            <span class="ball">
+                                <img src="images/ball.png" alt="">
+                            </span>
+                            <div class="HistoryTimeText">2018.06.29</div>
+                        </li>
+                        <li>
+                            <span class="ball">
+                                <img src="images/ball.png" alt="">
+                            </span>
+                            <div class="HistoryTimeText">2018.08.10</div>
+                        </li>
+                        <li>
+                            <span class="ball">
+                                <img src="images/ball.png" alt="">
+                            </span>
+                            <div class="HistoryTimeText">2019.05.28</div>
+                        </li>
+                        <li>
+                            <span class="ball">
+                                <img src="images/ball.png" alt="">
+                            </span>
+                            <div class="HistoryTimeText">2019.09.21</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="HistoryContent">
+                      <ul>
+                          <li>福建省区块链俱乐部成立</li>
+                          <li>Finwise纷智第二届·澳门峰会-蚂蚁节点联盟联合主办，正式向全球发布蚂蚁节点联盟成立</li>
+                          <li>Finwise纷智第二届·澳门峰会-蚂蚁节点联盟联合主办，正式向全球发布蚂蚁节点联盟成立</li>
+                          <li>区块链领袖峰会-暨蚂蚁节点联盟年会</li>
+                          <li>2018两会大家谈，吴杰庄委员盛赞蚂蚁节点联盟</li>
+                          <li>全国政协委员吴杰庄莅临蚂蚁节点联盟深度交流及指导工作</li>
+                          <li>2018第二届海创会暨首届全球区块链技术成果论坛蚂蚁节点联盟承办</li>
+                          <li>2018FINWISE纷智第四届金融科技峰会·香港站蚂蚁节点联盟联合主办</li>
+                          <li>2019FINWISE纷智第五届全球峰会·香港站蚂蚁节点联盟承办</li>
+                          <li>2019FINWISE纷智第六届全球峰会·澳门站蚂蚁节点联盟承办</li>
+                      </ul>
+                </div>
+
+            </div>
+
+            
+        </div>
+
+        <!--主要荣誉-->
+        <div class="Honors">
+            <img src="images/Honors.png" alt="">
+        </div>
+
+        <!--底部框-->
+        <!--#include file="footer.html"-->
+
+    </div>
+</body>
+<script src="js/common.js"></script>
+</html>

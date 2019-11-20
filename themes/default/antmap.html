@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蚂蚁导航</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/AntNavigation.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+</head>
+<body>
+<div class="box">
+    <!--导航栏-->
+    <!--#include file="header.html"-->
+    
+    <!--轮播-->
+    <div class="banner-nav">
+        <div class="in exhibition_hall">
+            <div id="" class="roundabout_box">
+                <ul>
+                    <li><a href="#"><img src="images/zt1.png" alt=""><span class="text">Picture information 1</span></a></li>
+                    <li><a href="#"><img src="images/zt2.png" alt=""><span class="text">Picture information 2</span></a></li>
+                    <li><a href="#"><img src="images/zt3.png" alt=""><span class="text">Picture information 3</span></a></li>
+                    <li><a href="#"><img src="images/zt4.png" alt=""><span class="text">Picture information 4</span></a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!--主要内容导航-->
+    <div class="navList">
+        <ul>
+            <li class='<!--{if condition="$class_id eq recom"}--> active <!--{/if}-->'>
+                <a href='/antmap/recom'>推荐</a>
+            </li>
+            <li class='<!--{if condition="$class_id eq 1"}--> active <!--{/if}-->'>
+                <a href='/antmap/1'>行情</a>
+            </li>
+            <li class='<!--{if condition="$class_id eq 2"}--> active <!--{/if}-->'>
+                <a href='/antmap/2'>交易所</a>
+            </li>
+            <li class='<!--{if condition="$class_id eq 3"}--> active <!--{/if}-->'>
+                <a href='/antmap/3'>TOP200</a>
+            </li>
+            <li class='<!--{if condition="$class_id eq 4"}--> active <!--{/if}-->'>
+                <a href='/antmap/4'>钱包</a>
+            </li>
+            <li class='<!--{if condition="$class_id eq 5"}--> active <!--{/if}-->'>
+                <a href='/antmap/5'>矿池</a>
+            </li>
+            <li class='<!--{if condition="$class_id eq 6"}--> active <!--{/if}-->'>
+                <a href='/antmap/6'>媒体</a>
+            </li>
+            <li class='<!--{if condition="$class_id eq 7"}--> active <!--{/if}-->'>
+                <a href='/antmap/7'>技术服务</a>
+            </li>
+            <li class='<!--{if condition="$class_id eq 8"}--> active <!--{/if}-->'>
+                <a href='/antmap/8'>其他</a>
+            </li>
+        </ul>
+        <div class="ApplyIncluded">
+            <div class="ApplyIncluded_btn">
+                申请收录
+            </div>
+        </div>
+
+    </div>
+    <!--行情查看-->
+    <div class="Market_view">
+        <!--推荐-->
+        <!--{if condition="$class_id eq recom"}-->
+        <ul class="Market_view_ul" >
+            <li class="Market_view_ul_list">
+                <div class="Market_view_order">
+                    <div class="Market">
+                        行情
+                    </div>
+                    <div class="LookMore" >
+                        查看更多>
+                    </div>
+                </div>
+                <ul class="type_NavList">
+                    <!--{foreach name='naviList1' item='vo' }-->
+                    <li>
+                         <div class="type_NavList_box">
+                             <div class="Partner-T">
+                                 <img src="{$vo.icon}" alt="" width="100%">
+                             </div>
+                             <div class="Partner-LinksText">
+                                 <p>{$vo.name}</p>
+                                 <p>{$vo.descrip}</p>
+                             </div>
+                         </div>
+                    </li>
+                    <!--{/foreach}-->
+                </ul>
+            </li>
+            <li class="Market_view_ul_list">
+                <div class="Market_view_order">
+                    <div class="Market">
+                        交易所
+                    </div>
+                    <div class="LookMore">
+                        查看更多>
+                    </div>
+                </div>
+                <ul class="type_NavList">
+                    <!--{foreach name='naviList2' item='vo' }-->
+                    <li>
+                         <div class="type_NavList_box">
+                             <div class="Partner-T">
+                                 <img src="{$vo.icon}" alt="" width="100%">
+                             </div>
+                             <div class="Partner-LinksText">
+                                 <p>{$vo.name}</p>
+                                 <p>{$vo.descrip}</p>
+                             </div>
+                         </div>
+                    </li>
+                    <!--{/foreach}-->
+                </ul>
+            </li>
+            <li class="Market_view_ul_list">
+                <div class="Market_view_order">
+                    <div class="Market">
+                        TOP200
+                    </div>
+                    <div class="LookMore">
+                        查看更多>
+                    </div>
+                </div>
+                <ul class="type_NavList">
+                    <!--{foreach name='naviList3' item='vo' }-->
+                    <li>
+                         <div class="type_NavList_box">
+                             <div class="Partner-T">
+                                 <img src="{$vo.icon}" alt="" width="100%">
+                             </div>
+                             <div class="Partner-LinksText">
+                                 <p>{$vo.name}</p>
+                                 <p>{$vo.descrip}</p>
+                             </div>
+                         </div>
+                    </li>
+                    <!--{/foreach}-->
+                </ul>
+            </li>
+            <li class="Market_view_ul_list">
+                <div class="Market_view_order">
+                    <div class="Market">
+                        钱包
+                    </div>
+                    <div class="LookMore">
+                        查看更多>
+                    </div>
+                </div>
+                <ul class="type_NavList">
+                    <!--{foreach name='naviList4' item='vo' }-->
+                    <li>
+                         <div class="type_NavList_box">
+                             <div class="Partner-T">
+                                 <img src="{$vo.icon}" alt="" width="100%">
+                             </div>
+                             <div class="Partner-LinksText">
+                                 <p>{$vo.name}</p>
+                                 <p>{$vo.descrip}</p>
+                             </div>
+                         </div>
+                    </li>
+                    <!--{/foreach}-->
+                </ul>
+            </li>
+            <li class="Market_view_ul_list">
+                <div class="Market_view_order">
+                    <div class="Market">
+                        矿池
+                    </div>
+                    <div class="LookMore">
+                        查看更多>
+                    </div>
+                </div>
+                <ul class="type_NavList">
+                    <!--{foreach name='naviList5' item='vo' }-->
+                    <li>
+                         <div class="type_NavList_box">
+                             <div class="Partner-T">
+                                 <img src="{$vo.icon}" alt="" width="100%">
+                             </div>
+                             <div class="Partner-LinksText">
+                                 <p>{$vo.name}</p>
+                                 <p>{$vo.descrip}</p>
+                             </div>
+                         </div>
+                    </li>
+                    <!--{/foreach}-->
+                </ul>
+            </li>
+            <li class="Market_view_ul_list">
+                <div class="Market_view_order">
+                    <div class="Market">
+                        媒体
+                    </div>
+                    <div class="LookMore">
+                        查看更多>
+                    </div>
+                </div>
+                <ul class="type_NavList">
+                    <!--{foreach name='naviList6' item='vo' }-->
+                    <li>
+                         <div class="type_NavList_box">
+                             <div class="Partner-T">
+                                 <img src="{$vo.icon}" alt="" width="100%">
+                             </div>
+                             <div class="Partner-LinksText">
+                                 <p>{$vo.name}</p>
+                                 <p>{$vo.descrip}</p>
+                             </div>
+                         </div>
+                    </li>
+                    <!--{/foreach}-->
+                </ul>
+            </li>
+            <li class="Market_view_ul_list">
+                <div class="Market_view_order">
+                    <div class="Market">
+                        技术服务
+                    </div>
+                    <div class="LookMore">
+                        查看更多>
+                    </div>
+                </div>
+                <ul class="type_NavList">
+                    <!--{foreach name='naviList7' item='vo' }-->
+                    <li>
+                         <div class="type_NavList_box">
+                             <div class="Partner-T">
+                                 <img src="{$vo.icon}" alt="" width="100%">
+                             </div>
+                             <div class="Partner-LinksText">
+                                 <p>{$vo.name}</p>
+                                 <p>{$vo.descrip}</p>
+                             </div>
+                         </div>
+                    </li>
+                    <!--{/foreach}-->
+                </ul>
+            </li>
+            <li class="Market_view_ul_list">
+                <div class="Market_view_order">
+                    <div class="Market">
+                        其他
+                    </div>
+                    <div class="LookMore">
+                        查看更多>
+                    </div>
+                </div>
+                <ul class="type_NavList">
+                    <!--{foreach name='naviList8' item='vo' }-->
+                    <li>
+                         <div class="type_NavList_box">
+                             <div class="Partner-T">
+                                 <img src="{$vo.icon}" alt="" width="100%">
+                             </div>
+                             <div class="Partner-LinksText">
+                                 <p>{$vo.name}</p>
+                                 <p>{$vo.descrip}</p>
+                             </div>
+                         </div>
+                    </li>
+                    <!--{/foreach}-->
+                </ul>
+            </li>
+        </ul>
+        <!--{/if}-->
+        <!--{if condition="$class_id neq recom"}-->
+        <ul class="Market_view_ul" >
+            <li class="Market_view_ul_list">
+                <ul class="type_NavList">
+                    <!--{foreach name='naviList' item='vo' }-->
+                    <li>
+                         <div class="type_NavList_box">
+                             <div class="Partner-T">
+                                 <img src="{$vo.icon}" alt="" width="100%">
+                             </div>
+                             <div class="Partner-LinksText">
+                                 <p>{$vo.name}</p>
+                                 <p>{$vo.descrip}</p>
+                             </div>
+                         </div>
+                    </li>
+                    <!--{/foreach}-->
+                    
+                </ul>
+            </li>
+            <div class="btnMORE">查看更多</div>
+        </ul>
+        <!--{/if}-->
+    </div>
+    <!--底部-->
+    <!--#include file="footer.html"-->
+</div>
+</body>
+</html>
+
+<script src="js/jquery.roundabout.min.js"></script>
+<script src="js/commom.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.roundabout_box ul').roundabout({
+            duration: 1000,
+            minScale: 0.6,
+            autoplay: true,
+            autoplayDuration: 5000,
+            minOpacity: 0,
+            maxOpacity: 1,
+            reflect: true,
+            startingChild: 3,
+            autoplayInitialDelay: 5000,
+            autoplayPauseOnHover: true,
+            enableDrag: true
+        });
+    });
+
+    $(".navList ul li").click(function () {
+       var $this=$(this);
+       var index=$this.index()
+       var Market_view_ul=$(".Market_view_ul");
+        Market_view_ul.hide().eq(index).show();
+        $this.addClass("font-cx");
+        $this.siblings().removeClass("font-cx")
+    })
+    $(".LookMore").click(function () {
+        var $this=$(this);
+        var index=$this.index();
+        console.log(index)
+        // var Market_view_ul=$(".Market_view_ul");
+        // Market_view_ul.hide().eq(index).show();
+    })
+</script>
