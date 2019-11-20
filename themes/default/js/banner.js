@@ -82,16 +82,16 @@ webpackJsonp([0], [function(t, e, n) {
 				changeByIdx: function(t) {
 					switch(clearTimeout(i), t) {
 						case 0:
-							l.one();
-							break;
-						case 1:
-							l.two();
-							break;
-						case 2:
 							l.three();
 							break;
-						case 3:
+						case 1:
 							l.four()
+							break;
+						case 2:
+							l.one()
+							break;
+						case 3:
+							l.two()
 					}
 					c.removeClass("cur").eq(t).addClass("cur"), f.changeInterval()
 				},

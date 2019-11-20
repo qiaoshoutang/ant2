@@ -48,6 +48,10 @@
     height: 25px;
     line-height: 25px;
     font-size: 22px;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .KxConttt{
     width: 85%;
