@@ -83,6 +83,9 @@ a{
     bottom: 10px;
     z-index: 999;
 }
+.sub-page-navH div:last-child{
+    border-bottom: none!important;
+}
 .header-list li:hover .sub-page{
     border: 1.5px solid white;
 }
