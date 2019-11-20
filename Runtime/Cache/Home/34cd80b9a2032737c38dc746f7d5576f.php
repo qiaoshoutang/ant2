@@ -311,8 +311,6 @@
 
     var page_num = 2;
     var class_id = '<?php echo ($class_id); ?>'
-
-    
     $('#navi_more').click(function(){
         
         $.ajax({

@@ -110,9 +110,12 @@ body{
     position: absolute;
     left: 0;
     top: 0;
+    overflow: hidden;
 }
 .NewTypeImg img{
     margin-top: 36px;
+    width: 160px;
+    height: 160px;
 }
 .NewTypeText{
     width: 65%;

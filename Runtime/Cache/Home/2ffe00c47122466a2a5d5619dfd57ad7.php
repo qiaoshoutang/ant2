@@ -35,8 +35,9 @@
 
 </head>
 <style>
-    .Button{
-
+    .Button img{
+         width: 90%!important;
+        margin-left: 5%;
     }
 </style>
 <body>

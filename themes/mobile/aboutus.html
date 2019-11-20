@@ -30,7 +30,7 @@
     .Honor_union{
         width: 90%;
         margin: 0 auto;
-        height: 6.3rem;
+        height: 6.2rem;
         border-radius: 4px;
         position: relative;
         border: 1px silver solid;
