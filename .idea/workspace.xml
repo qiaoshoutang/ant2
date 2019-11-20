@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d651e91c-2a79-4b79-88fe-9046f73e9574" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime/Cache/Home/2ffe00c47122466a2a5d5619dfd57ad7.php" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime/Cache/Home/2ffe00c47122466a2a5d5619dfd57ad7.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime/Cache/Home/34cd80b9a2032737c38dc746f7d5576f.php" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime/Cache/Home/34cd80b9a2032737c38dc746f7d5576f.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime/Cache/Home/db82705a397be04f53ce56b28f44fb50.php" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime/Cache/Home/db82705a397be04f53ce56b28f44fb50.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Runtime/Logs/19_11_20.log" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime/Logs/19_11_20.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/css/NewsDynamicContent.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/NewsDynamicContent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/css/NewsInformation.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/NewsInformation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/css/allianceActivities.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/allianceActivities.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/aboutus.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/aboutus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/images/TeamStylePicture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/images/briefbanner.png" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/images/briefbanner.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,13 +71,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="261" />
+          <entry key="css" value="282" />
           <entry key="html" value="75" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="261" />
+          <entry key="CSS" value="282" />
           <entry key="HTML" value="75" />
         </counts>
       </usages-collector>
@@ -96,7 +85,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/default/css/NewsFlash.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="768">
@@ -121,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/default/css/allianceActivities.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="97" column="20" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
+            <state relative-caret-position="197">
+              <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -142,8 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>act_box</find>
-      <find>locationStyle</find>
       <find>.locationAct</find>
       <find>RightHistory</find>
       <find>LeftHistory</find>
@@ -172,6 +159,8 @@
       <find>hot_NewContentImg_Left</find>
       <find>.hot_NewContent_Right div:nth-child(2)</find>
       <find>.Title_Ac_P span:nth-child(1)</find>
+      <find>Location</find>
+      <find>.TextSource span:nth-child(2), .TextSource span:nth-child(3)</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -267,7 +256,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574242092445" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574242396263" />
     <property name="last_opened_file_path" value="G:/其他/旗下产品轮播" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -301,12 +290,12 @@
       <workItem from="1574056091175" duration="3323000" />
       <workItem from="1574124718440" duration="13187000" />
       <workItem from="1574230281590" duration="6975000" />
-      <workItem from="1574239076239" duration="2451000" />
+      <workItem from="1574239076239" duration="2840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86807000" />
+    <option name="totallyTimeSpent" value="87196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
@@ -539,10 +528,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/css/NewsFlash.css">
+    <entry file="file://$PROJECT_DIR$/themes/default/css/activitiesDetail.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+        <state relative-caret-position="-53" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/css/allianceActivities.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -553,15 +547,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/css/activitiesDetail.css">
+    <entry file="file://$PROJECT_DIR$/themes/default/css/NewsFlash.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-53" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/css/allianceActivities.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="97" column="20" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
+        <state relative-caret-position="768">
+          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
         </state>
       </provider>
     </entry>
