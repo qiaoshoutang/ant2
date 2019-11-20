@@ -75,7 +75,7 @@
                         行情
                     </div>
                     <div class="LookMore" >
-                        查看更多>
+                        <a href='/antmap/1'>查看更多></a>
                     </div>
                 </div>
                 <ul class="type_NavList">
@@ -98,7 +98,7 @@
                         交易所
                     </div>
                     <div class="LookMore">
-                        查看更多>
+                        <a href='/antmap/2'>查看更多></a>
                     </div>
                 </div>
                 <ul class="type_NavList">
@@ -121,7 +121,7 @@
                         TOP200
                     </div>
                     <div class="LookMore">
-                        查看更多>
+                        <a href='/antmap/3'>查看更多></a>
                     </div>
                 </div>
                 <ul class="type_NavList">
@@ -144,7 +144,7 @@
                         钱包
                     </div>
                     <div class="LookMore">
-                        查看更多>
+                        <a href='/antmap/4'>查看更多></a>
                     </div>
                 </div>
                 <ul class="type_NavList">
@@ -167,7 +167,7 @@
                         矿池
                     </div>
                     <div class="LookMore">
-                        查看更多>
+                        <a href='/antmap/5'>查看更多></a>
                     </div>
                 </div>
                 <ul class="type_NavList">
@@ -190,7 +190,7 @@
                         媒体
                     </div>
                     <div class="LookMore">
-                        查看更多>
+                        <a href='/antmap/6'>查看更多></a>
                     </div>
                 </div>
                 <ul class="type_NavList">
@@ -213,7 +213,7 @@
                         技术服务
                     </div>
                     <div class="LookMore">
-                        查看更多>
+                        <a href='/antmap/7'>查看更多></a>
                     </div>
                 </div>
                 <ul class="type_NavList">
@@ -236,7 +236,7 @@
                         其他
                     </div>
                     <div class="LookMore">
-                        查看更多>
+                        <a href='/antmap/8'>查看更多></a>
                     </div>
                 </div>
                 <ul class="type_NavList">
@@ -271,7 +271,7 @@
                     
                 </ul>
             </li>
-            <div class="btnMORE">查看更多</div>
+            <div class="btnMORE" id='navi_more'>查看更多</div>
         </ul><?php endif; ?>
     </div>
     <!--底部-->
@@ -307,11 +307,32 @@
         $this.addClass("font-cx");
         $this.siblings().removeClass("font-cx")
     })
-    $(".LookMore").click(function () {
-        var $this=$(this);
-        var index=$this.index();
-        console.log(index)
-        // var Market_view_ul=$(".Market_view_ul");
-        // Market_view_ul.hide().eq(index).show();
+
+
+    var page_num = 2;
+    var class_id = '<?php echo ($class_id); ?>'
+
+    
+    $('#navi_more').click(function(){
+        
+        $.ajax({
+          type:"post",
+          url:"/Home/Ajax/get_navi",
+          data:{class_id:class_id,page_num:page_num},
+          dataType:'json',
+          success:function(rdata){
+
+            if(rdata.code==1){
+                $('.type_NavList ul').append(rdata.data);
+                page_num++;
+            }else{
+                $('#navi_more').html(rdata.info);
+            }
+          }
+        });
     })
+</script>
+
+<script>
+
 </script>

@@ -59,7 +59,7 @@ class IndexController extends SiteController {
         $messageMod = D('Article/Message');
        
         $messageCount = $messageMod->countList($where);
-        $limit = $this->getPageLimit($messageCount,20);
+        $limit = $this->getPageLimit($messageCount,10);
         $messageList = $messageMod->loadList($where,$limit);
         
         //热门新闻
@@ -83,7 +83,7 @@ class IndexController extends SiteController {
             $where['class_id'] = $class_id;
         }
         //热门新闻
-        $newsList = M('content')->where($where)->field('content_id,title,description,image,time,views')->limit('0,5')
+        $newsList = M('content')->where($where)->field('content_id,title,description,image,time,views')->limit(10)
                                 ->order('content_id desc')->select();
         
         
