@@ -56,6 +56,94 @@
                 <p class="help-block">活动的时间</p>
             </div>
         </div>
+
+    
+        <div class="formitm">
+            <label class="lab">活动内容</label>
+            <div class="ipt">
+                <textarea name="content" type="text"  class="form-element u-width-full u-editor" id="content" value="" rows="10"   ><?php echo ($info["content"]); ?></textarea>
+                <p class="help-block"></p>
+            </div>
+        </div>
+
+    
+        <div class="formitm">
+            <label class="lab">主办方1名称</label>
+            <div class="ipt">
+                <input name="master_name_1" type="text"  class="form-element u-width-large  " id="master_name_1" value="<?php echo ($info["master_name_1"]); ?>" maxlength="100"   >
+                <p class="help-block"></p>
+            </div>
+        </div>
+    
+        <div class="formitm">
+            <label class="lab">主办方1简介</label>
+            <div class="ipt">
+                <input name="master_descrip_1" type="text"  class="form-element u-width-large  " id="master_descrip_1" value="<?php echo ($info["master_descrip_1"]); ?>" maxlength="100"   >
+                <p class="help-block"></p>
+            </div>
+        </div>
+    
+        <div class="formitm">
+            <label class="lab">主办方1链接</label>
+            <div class="ipt">
+                <input name="master_target_1" type="text"  class="form-element u-width-large  " id="master_target_1" value="<?php echo ($info["master_target_1"]); ?>" maxlength="100"   >
+                <p class="help-block"></p>
+            </div>
+        </div>
+    
+        <div class="formitm">
+            <label class="lab">主办方1图标</label>
+            <div class="ipt">
+                <input name="master_icon_1" type="text"  class="form-element u-width-medium  " id="master_icon_1" value="<?php echo ($info["master_icon_1"]); ?>" maxlength="250"   >
+      <a class="u-btn u-btn-primary" data="master_icon_1" href="javascript:;" id="icon_1">上传</a>
+                <p class="help-block"></p>
+            </div>
+        </div>
+
+    
+        <div class="formitm">
+            <label class="lab">主办方2名称</label>
+            <div class="ipt">
+                <input name="master_name_2" type="text"  class="form-element u-width-large  " id="master_name_2" value="<?php echo ($info["master_name_2"]); ?>" maxlength="100"   >
+                <p class="help-block"></p>
+            </div>
+        </div>
+    
+        <div class="formitm">
+            <label class="lab">主办方2简介</label>
+            <div class="ipt">
+                <input name="master_descrip_2" type="text"  class="form-element u-width-large  " id="master_descrip_2" value="<?php echo ($info["master_descrip_2"]); ?>" maxlength="100"   >
+                <p class="help-block"></p>
+            </div>
+        </div>
+    
+        <div class="formitm">
+            <label class="lab">主办方2链接</label>
+            <div class="ipt">
+                <input name="master_target_2" type="text"  class="form-element u-width-large  " id="master_target_2" value="<?php echo ($info["master_target_2"]); ?>" maxlength="100"   >
+                <p class="help-block"></p>
+            </div>
+        </div>
+    
+        <div class="formitm">
+            <label class="lab">主办方2图标</label>
+            <div class="ipt">
+                <input name="master_icon_2" type="text"  class="form-element u-width-medium  " id="master_icon_2" value="<?php echo ($info["master_icon_2"]); ?>" maxlength="250"   >
+      <a class="u-btn u-btn-primary" data="master_icon_2" href="javascript:;" id="icon_2">上传</a>
+                <p class="help-block"></p>
+            </div>
+        </div>
+
+    
+        <div class="formitm">
+            <label class="lab">报名二维码</label>
+            <div class="ipt">
+                <input name="qrcode" type="text"  class="form-element u-width-medium  " id="qrcode" value="<?php echo ($info["qrcode"]); ?>" maxlength="250"   >
+      <a class="u-btn u-btn-primary" data="qrcode" href="javascript:;" id="qrcode_up">上传</a>
+                <p class="help-block"></p>
+            </div>
+        </div>
+
     
         <div class="formitm">
             <label class="lab">浏览量</label>
@@ -96,12 +184,23 @@ Do.ready('base',function(){
   option.returnUrl="<?php echo U('Admin/Activity/activityList');?>";
   $('#form').duxFormPage(option);
 
-    $('#upload_cover').duxFileUpload({
+  $('#upload_cover').duxFileUpload({
       
       complete: function (data) {
           $('#img_cover').attr('src', data.url);
       }
   });
+  $('#icon_1').duxFileUpload({
+      
+  });
+  $('#icon_2').duxFileUpload({
+      
+  });
+  $('#qrcode_up').duxFileUpload({
+      
+  });
+
+  
 
 });
 

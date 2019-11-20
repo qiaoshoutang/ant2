@@ -16,7 +16,7 @@
     <div class="Partner-Links">
         <ul>
             <!--{foreach name='naviList' item='vo' }-->
-            <li>
+            <li onclick='window.location.href="{$vo.target}"'>
                 <div class="Partner-Links-WinD">
                     <div class="Partner-T">
                         <img src="{$vo.icon}" alt="" width="100%">
@@ -65,7 +65,7 @@
         <div class="NewType-Content">
             <ul>
             <!--{foreach name='newsList' item='vo' }-->
-                <li>
+                <li onclick='window.location.href="/newsContent/{$vo.content_id}"'>
                     <div class="NewType-Detail">
                         <div class="NewTypeImg">
                             <img src="{$vo.image}" alt="">

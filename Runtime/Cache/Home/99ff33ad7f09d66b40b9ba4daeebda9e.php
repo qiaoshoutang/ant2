@@ -55,9 +55,16 @@
     </ul>
     <div class="search">
         <input type="text" placeholder="搜索" class="search-i">
-        <span class="search-s">
+        <span class="search-s" >
             <img src="images/SearchK.png" alt="">
-
         </span>
     </div>
 </div>
+<script src="js/jquery.js"></script>
+<script>
+$('.search-s').click(function(){
+    var keyword = $('.search-i').val();
+
+    window.location.href="/search/"+keyword;
+})
+</script>

@@ -15,7 +15,7 @@
     <!--合作伙伴链接窗-->
     <div class="Partner-Links">
         <ul>
-            <?php if(is_array($naviList)): foreach($naviList as $key=>$vo): ?><li>
+            <?php if(is_array($naviList)): foreach($naviList as $key=>$vo): ?><li onclick='window.location.href="<?php echo ($vo["target"]); ?>"'>
                 <div class="Partner-Links-WinD">
                     <div class="Partner-T">
                         <img src="<?php echo ($vo["icon"]); ?>" alt="" width="100%">
@@ -62,7 +62,7 @@
         <!--全部-->
         <div class="NewType-Content">
             <ul>
-            <?php if(is_array($newsList)): foreach($newsList as $key=>$vo): ?><li>
+            <?php if(is_array($newsList)): foreach($newsList as $key=>$vo): ?><li onclick='window.location.href="/newsContent/<?php echo ($vo["content_id"]); ?>"'>
                     <div class="NewType-Detail">
                         <div class="NewTypeImg">
                             <img src="<?php echo ($vo["image"]); ?>" alt="">
