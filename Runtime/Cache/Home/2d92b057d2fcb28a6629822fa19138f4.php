@@ -65,7 +65,7 @@
             <?php if(is_array($newsList)): foreach($newsList as $key=>$vo): ?><li>
                     <div class="NewType-Detail">
                         <div class="NewTypeImg">
-                            <img src="images/NewTypr-img.png" alt="">
+                            <img src="<?php echo ($vo["image"]); ?>" alt="">
                         </div>
                         <div class="NewTypeText">
                             <div class="TextTitle">
@@ -86,7 +86,7 @@
             </ul>
 
             <div class="LookMore">
-                <a href="">查看更多</a>
+                <span id='news_more'>查看更多</span>
             </div>
 
         </div>
@@ -142,6 +142,9 @@
 <script src="js/jquery.js"></script>
 <script src="js/commom.js"></script>
 <script>
+var page_num = 2;
+var class_id = '<?php echo ($class_id); ?>'
+
     $(".NewType-Content ul li").hover(function () {
         $(this).addClass("bg-color")
         $(this).find($(".NewType-Detail")).css({
@@ -154,4 +157,22 @@
         })
     });
     
+    $('#news_more').click(function(){
+        
+        $.ajax({
+          type:"post",
+          url:"/Home/Ajax/get_news",
+          data:{class_id:class_id,page_num:page_num},
+          dataType:'json',
+          success:function(rdata){
+
+            if(rdata.code==1){
+                $('.NewType-Content ul').append(rdata.data);
+                page_num++;
+            }else{
+                $('#news_more').html(rdata.info);
+            }
+          }
+        });
+    })
 </script>

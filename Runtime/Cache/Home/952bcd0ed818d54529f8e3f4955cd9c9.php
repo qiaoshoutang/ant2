@@ -63,8 +63,9 @@
                                 </div>
                             </li><?php endforeach; endif; ?>
                         </ul>
-
-
+                    </div>
+                    <div>
+                        <span id='message_more'>加载更多</span>
                     </div>
 
                 </div>
@@ -123,3 +124,25 @@
 </html>
 <script src="js/jquery.js"></script>
 <script src="js/commom.js"></script>
+<script>
+var page_num = 2;
+  
+    $('#message_more').click(function(){
+        
+        $.ajax({
+          type:"post",
+          url:"/Home/Ajax/get_message",
+          data:{page_num:page_num},
+          dataType:'json',
+          success:function(rdata){
+
+            if(rdata.code==1){
+                $('.KxText ul').append(rdata.data);
+                page_num++;
+            }else{
+                $('#message_more').html(rdata.info);
+            }
+          }
+        });
+    })
+</script>

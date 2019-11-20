@@ -1,0 +1,24 @@
+
+<foreach name='newsList' item='vo'>
+    <li>
+        <div class="NewType-Detail">
+            <div class="NewTypeImg">
+                <img src="{$vo.image}" alt="">
+            </div>
+            <div class="NewTypeText">
+                <div class="TextTitle">
+                    {$vo.title}
+                </div>
+                <div class="TextContent">
+                    {$vo.description}
+                </div>
+                <div class="TextSource">
+                    <span>{$vo.author}</span>
+                    <span>{$vo.time|format_time='Y-m-d H:i:s'}</span>
+                    <span>{$vo.view}</span>
+                </div>
+
+            </div>
+        </div>
+    </li>
+</foreach>

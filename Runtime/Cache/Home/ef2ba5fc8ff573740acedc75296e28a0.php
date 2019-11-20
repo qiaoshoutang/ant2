@@ -66,7 +66,7 @@
             <ul>
                 <?php if(is_array($acitvityList)): foreach($acitvityList as $key=>$vo): ?><li>
                     <div class="Img_Ac">
-                        <img src="images/Ac01.png" alt="">
+                        <img src="<?php echo ($vo["cover_url"]); ?>" alt="">
                     </div>
                     <div class="Title_Ac">
                         <p class="Title_Ac_P">
@@ -91,10 +91,8 @@
 
                     </div>
                 </li><?php endforeach; endif; ?>
-
-
             </ul>
-            <div class="LOOKMMM">
+            <div class="LOOKMMM" id='acti_more'>
                 查看更多
             </div>
         </div>
@@ -125,13 +123,26 @@
             enableDrag: true
         });
     });
-    $(".RecentnavList_ul li").click(function () {
-        $(this).addClass("font-cx");
-        $(this).siblings().removeClass("font-cx")
-    })
 
-    $(".Recent-time ul li").click(function () {
-        $(this).addClass("font-cxb");
-        $(this).siblings().removeClass("font-cxb")
+    var page_num = 2;
+    var state = '<?php echo ($state); ?>';
+    var time = '<?php echo ($time); ?>';
+    $('#acti_more').click(function(){
+        
+        $.ajax({
+          type:"post",
+          url:"/Home/Ajax/get_acti",
+          data:{state:state,time:time,page_num:page_num},
+          dataType:'json',
+          success:function(rdata){
+
+            if(rdata.code==1){
+                $('.Activity-Details ul').append(rdata.data);
+                page_num++;
+            }else{
+                $('#acti_more').html(rdata.info);
+            }
+          }
+        });
     })
 </script>
