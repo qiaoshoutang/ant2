@@ -30,15 +30,15 @@
                 <li>
                     <p>联系我们</p>
                     <p>
-                        <img src="" alt="">
+                        <img src="images/dianhua.png" alt="" class="foodImg_A">
                         <span>0592-6600592</span>
                     </p>
                     <p>
-                        <img src="" alt="">
-                        <span>info@ababtc.com</span>
+                        <img src="images/youxiang.png" alt="" class="foodImg_A">
+                        <span>info@mayi.org</span>
                     </p>
                     <p>
-                        <img src="" alt="">
+                        <img src="images/dizhi.png" alt="" class="foodImg_A">
                         <span>厦门市湖里区</span>
                     </p>
                 </li>
@@ -54,8 +54,8 @@
 
     </div>
     <div class="Right-belonging">
-        <div>
-            Copyright @2018 ababtc.com  <span style="margin-left: 50px">蚂蚁节点联盟版权所有</span>
+        <div style="margin-right: 25px">
+            Copyright @2018 mayi.org <span style="margin-left: 50px">蚂蚁节点联盟版权所有</span>
         </div>
 
     </div>
