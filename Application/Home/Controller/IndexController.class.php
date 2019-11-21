@@ -256,7 +256,21 @@ class IndexController extends SiteController {
     public function searchPage(){
         $keyword =  I('request.keyword',0);
         
-        dd($keyword);
+        $where['title'] = 
+        $newsList = M('content')->where(['status'=>2,'title'=>['like','%'.$keyword.'%']])->select();
+        $messageList = M('message')->where(['state'=>2,'title'=>['like','%'.$keyword.'%']])->select();
+        $activityList = M('activity')->where(['name'=>['like','%'.$keyword.'%']])->select();
+
+        //推荐导航
+        $naviList = D('Admin/Navi')->loadList(['recom'=>1],'0,5');
+        
+        $this->assign('keyword',$keyword);
+        $this->assign('newsList',$newsList);
+        $this->assign('messageList',$messageList);
+        $this->assign('activityList',$activityList);
+        $this->assign('naviList',$naviList);
+        $this ->siteDisplay('searchPage');
+        
     }
     
     /**********************************************************************/

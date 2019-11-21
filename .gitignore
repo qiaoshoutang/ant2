@@ -46,4 +46,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 Runtime
-Runtime/Cache/
+Runtime/Cache
+Runtime/Logs
+Runtime/Logs
