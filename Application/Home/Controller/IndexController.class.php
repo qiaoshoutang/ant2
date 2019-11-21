@@ -255,24 +255,46 @@ class IndexController extends SiteController {
     //搜索
     public function searchPage(){
         $keyword =  I('request.keyword',0);
+
+        $contentMod = M('content');
+        $messageMod = M('message');
         
-        $where['title'] = 
-        $newsList = M('content')->where(['status'=>2,'title'=>['like','%'.$keyword.'%']])->select();
-        $messageList = M('message')->where(['state'=>2,'title'=>['like','%'.$keyword.'%']])->select();
-        $activityList = M('activity')->where(['name'=>['like','%'.$keyword.'%']])->select();
+        //搜索内容
+        $newsList = $contentMod->where(['status'=>2,'title'=>['like','%'.$keyword.'%']])->order('content_id desc')->select();
+        $messageList = $messageMod->where(['state'=>2,'title'=>['like','%'.$keyword.'%']])->order('id desc')->select();
+        $activityList = M('activity')->where(['name'=>['like','%'.$keyword.'%']])->order('id desc')->select();
 
         //推荐导航
         $naviList = D('Admin/Navi')->loadList(['recom'=>1],'0,5');
         
+        //最新快讯
+        $messageList2 = $messageMod->where(['state'=>2])->limit(0,3)->order('id desc')->select();
+        
+        //热门新闻
+        $newsList2 = $contentMod->where(['status'=>2])->limit(0,5)->order('content_id desc')->select();
+        
         $this->assign('keyword',$keyword);
         $this->assign('newsList',$newsList);
+        $this->assign('newsList2',$newsList2);
         $this->assign('messageList',$messageList);
+        $this->assign('messageList2',$messageList2);
         $this->assign('activityList',$activityList);
         $this->assign('naviList',$naviList);
         $this ->siteDisplay('searchPage');
         
     }
     
+    //申请收录
+    public function apply(){
+        $list = M('navi_category')->where(['state'=>1])->select();
+        $classList = [];
+        foreach($list as $val){
+            $classList[$val['id']] = $val['name'];
+        }
+
+        $this->assign('classList',$classList);
+        $this ->siteDisplay('apply');
+    }
     /**********************************************************************/
     
     //采集

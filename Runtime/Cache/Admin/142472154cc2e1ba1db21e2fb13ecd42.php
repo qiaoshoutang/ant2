@@ -55,7 +55,14 @@
                 <p class="help-block"></p>
             </div>
         </div>
-
+    
+        <div class="formitm">
+            <label class="lab">目标链接</label>
+            <div class="ipt">
+                <input name="target" type="text"  class="form-element u-width-large  " id="target" value="<?php echo ($info["target"]); ?>" maxlength="100"   >
+                <p class="help-block">导航的目标链接</p>
+            </div>
+        </div>
     
         <div class="formitm">
             <label class="lab">推荐</label>
@@ -77,6 +84,10 @@
                       <input type="radio" name="state" id="state0" value="1"   <?php if(!isset($info['state'])){ $info['state']= "1"; } if(1 == $info['state']){ ?> checked="checked" <?php } ?> > <span>展示</span>
                     </label> <label>
                       <input type="radio" name="state" id="state1" value="2"   <?php if(!isset($info['state'])){ $info['state']= "1"; } if(2 == $info['state']){ ?> checked="checked" <?php } ?> > <span>隐藏</span>
+                    </label> <label>
+                      <input type="radio" name="state" id="state2" value="3"   <?php if(!isset($info['state'])){ $info['state']= "1"; } if(3 == $info['state']){ ?> checked="checked" <?php } ?> > <span>待审核</span>
+                    </label> <label>
+                      <input type="radio" name="state" id="state3" value="4"   <?php if(!isset($info['state'])){ $info['state']= "1"; } if(4 == $info['state']){ ?> checked="checked" <?php } ?> > <span>不通过</span>
                     </label> 
                 <p class="help-block"></p>
             </div>

@@ -59,7 +59,7 @@
             </li>
         </ul>
         <div class="ApplyIncluded">
-            <div class="ApplyIncluded_btn">
+            <div class="ApplyIncluded_btn" onclick='window.location.href="/Apply"'>
                 申请收录
             </div>
         </div>
@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <ul class="type_NavList">
-                    <?php if(is_array($naviList1)): foreach($naviList1 as $key=>$vo): ?><li>
+                    <?php if(is_array($naviList1)): foreach($naviList1 as $key=>$vo): ?><li onclick='window.location.href="<?php echo ($vo["target"]); ?>"'>
                          <div class="type_NavList_box">
                              <div class="Partner-T">
                                  <img src="<?php echo ($vo["icon"]); ?>" alt="" width="100%">
@@ -102,7 +102,7 @@
                     </div>
                 </div>
                 <ul class="type_NavList">
-                    <?php if(is_array($naviList2)): foreach($naviList2 as $key=>$vo): ?><li>
+                    <?php if(is_array($naviList2)): foreach($naviList2 as $key=>$vo): ?><li onclick='window.location.href="<?php echo ($vo["target"]); ?>"'>
                          <div class="type_NavList_box">
                              <div class="Partner-T">
                                  <img src="<?php echo ($vo["icon"]); ?>" alt="" width="100%">
@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 <ul class="type_NavList">
-                    <?php if(is_array($naviList3)): foreach($naviList3 as $key=>$vo): ?><li>
+                    <?php if(is_array($naviList3)): foreach($naviList3 as $key=>$vo): ?><li onclick='window.location.href="<?php echo ($vo["target"]); ?>"'>
                          <div class="type_NavList_box">
                              <div class="Partner-T">
                                  <img src="<?php echo ($vo["icon"]); ?>" alt="" width="100%">
@@ -148,7 +148,7 @@
                     </div>
                 </div>
                 <ul class="type_NavList">
-                    <?php if(is_array($naviList4)): foreach($naviList4 as $key=>$vo): ?><li>
+                    <?php if(is_array($naviList4)): foreach($naviList4 as $key=>$vo): ?><li onclick='window.location.href="<?php echo ($vo["target"]); ?>"'>
                          <div class="type_NavList_box">
                              <div class="Partner-T">
                                  <img src="<?php echo ($vo["icon"]); ?>" alt="" width="100%">
@@ -171,7 +171,7 @@
                     </div>
                 </div>
                 <ul class="type_NavList">
-                    <?php if(is_array($naviList5)): foreach($naviList5 as $key=>$vo): ?><li>
+                    <?php if(is_array($naviList5)): foreach($naviList5 as $key=>$vo): ?><li onclick='window.location.href="<?php echo ($vo["target"]); ?>"'>
                          <div class="type_NavList_box">
                              <div class="Partner-T">
                                  <img src="<?php echo ($vo["icon"]); ?>" alt="" width="100%">
@@ -194,7 +194,7 @@
                     </div>
                 </div>
                 <ul class="type_NavList">
-                    <?php if(is_array($naviList6)): foreach($naviList6 as $key=>$vo): ?><li>
+                    <?php if(is_array($naviList6)): foreach($naviList6 as $key=>$vo): ?><li onclick='window.location.href="<?php echo ($vo["target"]); ?>"'>
                          <div class="type_NavList_box">
                              <div class="Partner-T">
                                  <img src="<?php echo ($vo["icon"]); ?>" alt="" width="100%">
@@ -217,7 +217,7 @@
                     </div>
                 </div>
                 <ul class="type_NavList">
-                    <?php if(is_array($naviList7)): foreach($naviList7 as $key=>$vo): ?><li>
+                    <?php if(is_array($naviList7)): foreach($naviList7 as $key=>$vo): ?><li onclick='window.location.href="<?php echo ($vo["target"]); ?>"'>
                          <div class="type_NavList_box">
                              <div class="Partner-T">
                                  <img src="<?php echo ($vo["icon"]); ?>" alt="" width="100%">
@@ -240,7 +240,7 @@
                     </div>
                 </div>
                 <ul class="type_NavList">
-                    <?php if(is_array($naviList8)): foreach($naviList8 as $key=>$vo): ?><li>
+                    <?php if(is_array($naviList8)): foreach($naviList8 as $key=>$vo): ?><li onclick='window.location.href="<?php echo ($vo["target"]); ?>"'>
                          <div class="type_NavList_box">
                              <div class="Partner-T">
                                  <img src="<?php echo ($vo["icon"]); ?>" alt="" width="100%">
@@ -257,7 +257,7 @@
         <?php if($class_id != recom): ?><ul class="Market_view_ul" >
             <li class="Market_view_ul_list">
                 <ul class="type_NavList">
-                    <?php if(is_array($naviList)): foreach($naviList as $key=>$vo): ?><li>
+                    <?php if(is_array($naviList)): foreach($naviList as $key=>$vo): ?><li onclick='window.location.href="<?php echo ($vo["target"]); ?>"'>
                          <div class="type_NavList_box">
                              <div class="Partner-T">
                                  <img src="<?php echo ($vo["icon"]); ?>" alt="" width="100%">

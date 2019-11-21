@@ -202,13 +202,13 @@
                     <div class="HotNewsTitle">
                         <span>热门快讯</span>
                         <span class="HotMore">
-                            更多>
+                            <a href='/message'>更多></a>
                         </span>
                     </div>
 
                     <!--内容-->
                     <div class="HotNewsText">
-                        <!--{foreach name='messageList' item='vo' }-->
+                        <!--{foreach name='messageList2' item='vo' }-->
                         <div class="HotNewsText-box">
                             <div class="TuoY">
                                 <img src="images/TuoY.png" alt="" width="100%">
@@ -242,7 +242,7 @@
                     <div class="HotNewsTitle">
                         <span>热门新闻</span>
                         <span class="HotMore">
-                        更多>
+                        <a href='/news/all'>更多></a>
                     </span>
                     </div>
                     <!--内容-->
@@ -253,75 +253,22 @@
                                 国内外大事件
                             </div>
                             <ul class="hot_NewContent_ul">
+                                <!--{foreach name='newsList2' item='vo' }-->
                                 <li>
                                     <div class="hot_NewContentImg_Left">
-                                        <img src="images/NewImg.png" alt="" width="100%">
+                                        <img src="{$vo.image}" alt="" width="100%">
                                     </div>
                                     <div class="hot_NewContent_Right">
                                         <div class="">
-                                            苏宁上线块链溯源平台为双十一用户提供保障
+                                            {$vo.title}
                                         </div>
                                         <div>
-                                            2019-10-30
+                                            {$vo.time|format_time='Y-m-d'}
                                         </div>
 
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="hot_NewContentImg_Left">
-                                        <img src="images/NewImg.png" alt="" width="100%">
-                                    </div>
-                                    <div class="hot_NewContent_Right">
-                                        <div class="">
-                                            苏宁上线块链溯源平台为双十一用户提供保障
-                                        </div>
-                                        <div>
-                                            2019-10-30
-                                        </div>
-
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="hot_NewContentImg_Left">
-                                        <img src="images/NewImg.png" alt="" width="100%">
-                                    </div>
-                                    <div class="hot_NewContent_Right">
-                                        <div class="">
-                                            苏宁上线块链溯源平台为双十一用户提供保障
-                                        </div>
-                                        <div>
-                                            2019-10-30
-                                        </div>
-
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="hot_NewContentImg_Left">
-                                        <img src="images/NewImg.png" alt="" width="100%">
-                                    </div>
-                                    <div class="hot_NewContent_Right">
-                                        <div class="">
-                                            苏宁上线块链溯源平台为双十一用户提供保障
-                                        </div>
-                                        <div>
-                                            2019-10-30
-                                        </div>
-
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="hot_NewContentImg_Left">
-                                        <img src="images/NewImg.png" alt="" width="100%">
-                                    </div>
-                                    <div class="hot_NewContent_Right">
-                                        <div class="">
-                                            苏宁上线块链溯源平台为双十一用户提供保障
-                                        </div>
-                                        <div>
-                                            2019-10-30
-                                        </div>
-                                    </div>
-                                </li>
+                                <!--{/foreach}-->
                             </ul>
                         </div>
                     </div>
@@ -348,20 +295,13 @@
 
 
     })
-    $(".NewType-Content ul li").hover(function () {
-            $(this).addClass("bg-color")
-            $(this).find($(".NewType-Detail")).css({
-                "border-bottom":"none"
-            })
-        }, function () {
-            $(this).removeClass("bg-color");
-            $(this).find($(".NewType-Detail")).css({
-                "border-bottom":"1px silver solid"
-            })
-        }
-    )
-    $(".SearchK_Point").click(function () {
-        $(".haveY").hide();
-        $(".haveN").show()
+
+
+    $('.SearchK_Point').click(function(){
+        var keyword = $('.SearchKk').val();
+
+        window.location.href="/search/"+keyword;
     })
+
+
 </script>

@@ -19,6 +19,7 @@ return array(
 	    'activit/:state/:time' =>'Home/Index/activity',
 	    'activitContent/:content_id' =>'Home/Index/activityContent',
 	    'search/:keyword' =>'Home/Index/searchPage',
+	    'Apply' =>'Home/Index/apply',
 	    
 	    
 	    
