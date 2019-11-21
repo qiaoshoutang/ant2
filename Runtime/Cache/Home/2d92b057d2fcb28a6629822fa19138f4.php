@@ -118,7 +118,7 @@
                                 <?php echo ($vo["title"]); ?>
                             </div>
                             <div class="HotNewsTTT">
-                                <?php echo ($vo["content"]); ?>...
+                                <?php echo ($vo["content"]); ?>
                             </div>
                             <div class="Favorable-BadProfit">
                                 <span ><img src="images/up.png" alt=""> 利好<span class="count-f"><?php echo ($vo["up"]); ?></span></span>
