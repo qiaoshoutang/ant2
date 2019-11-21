@@ -35,7 +35,9 @@
     height: 80px;
     text-align: center;
 }
-
+.wrap .wrapper{
+    margin-top: 100px;
+}
 
 .service-types{
     width: 100%;
@@ -43,6 +45,9 @@
     background: white;
     text-align: center;
     clear: both;
+    overflow: hidden;
+    z-index: 999;
+    position: relative;
 }
 .Tiele-service-img{
     margin-top:60px;
@@ -315,14 +320,14 @@
     bottom: -60px;
 }
 .management-text{
-    width: 65%;
+    width: 70%;
     text-align: right;
     color: white;
     float: left;
 
 }
 .Community-text{
-    width: 66%;
+    width: 65%;
     text-align: left;
     color: white;
     float: right;
@@ -332,24 +337,23 @@
     float: right;
     height: 100%;
 }
-.management-img img{}
 .Community-img{
     width: 35%;
     float: left;
     height: 100%;
 }
 .management-img img,.Community-img img{
-    margin-top: 40px;
+    margin-top: 37px;
 }
 .management-Title{
     font-size: 23px;
-    margin-top: 22px;
+    margin-top: 12px;
 }
 .font-Mana{
     font-size: 15px;
 }
 .font-margin{
-   
+    margin-top: 10px;
 }
 
 @keyframes tida {
@@ -456,6 +460,10 @@
     font-size: 18px;
     font-weight: bold;
     display: none;
+}
+.QR-Code img{
+    width: 135px;
+    height: 135px;
 }
 .Cooperative-partner-box{
     width: 1200px;

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>申请收录</title>
+    <link rel="stylesheet" href="css/includeApply.css">
+    <script src="js/jquery.js"></script>
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="form_box">
+            <div class="formTitle">
+                导航申请表单
+            </div>
+            <!--导航栏-->
+            <div class="InpBox">
+                <ul>
+                    <!--分类-->
+                    <li class="InpList">
+                        <div class="InpTitle">
+                            分类*
+                        </div>
+                        <div class="InpText">
+                            <input type="text" placeholder="请选择分类" disabled="disabled" class="InpTextInfo" name="InpText">
+
+                            <!--右边选择按钮-->
+                            <div class="styleBtn">
+                              >
+
+                            </div>
+                        </div>
+
+                    </li>
+                    <!--名称-->
+                    <li class="InpList">
+                        <div class="InpTitle">
+                            名称*
+                        </div>
+                        <div class="InpText">
+                            <input type="text" placeholder="名称" name="InputName">
+                        </div>
+                    </li>
+                    <!--官方网站-->
+                    <li class="InpList">
+                        <div class="InpTitle">
+                            官方网站*
+                        </div>
+                        <div class="InpText">
+                            <input type="text" placeholder="官方网站" name="InputWz">
+                        </div>
+                    </li>
+                    <!--简介-->
+                    <li class="InpList">
+                        <div class="InpTitle">
+                            简介*
+                        </div>
+                        <div class="InpText">
+                            <textarea  placeholder="简介(建议20字左右)" name="InputTro"></textarea>
+                        </div>
+                    </li>
+                    <!--Logo-->
+                    <li class="InpList">
+                        <div class="InpTitle">
+                            Logo*
+                        </div>
+                        <div class="InpText">
+                            <input type="text" placeholder="点击上传" class="phone-input">
+                            <input type="file" class="file-opacity" style="opacity: 0" name="file-input">
+                        </div>
+                        <div class="styleImg">*支持jpg,png,git,bmp,psd,tiff 等图片格式</div>
+                        <div class="btn_Submit">
+                            提交
+
+                        </div>
+                        <div class="infomationS">
+                            信息将在提交成功后3日内审核
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <!--分类选项-->
+            <div class="sectionHtml">
+                <ul>
+                    <li>行情</li>
+                    <li>交易所</li>
+                    <li>TOP200</li>
+                    <li>钱包</li>
+                    <li>矿池</li>
+                    <li>媒体</li>
+                    <li>技术服务</li>
+                </ul>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+<script src="js/layui/layui.js"></script>
+</html>
+<script>
+
+    layui.use('layer', function(){  //layer弹框
+        var layer = layui.layer;
+    });
+
+    /*选择分类*/
+    var show=0
+    $(".styleBtn").click(function () {
+        console.log($(this).data())
+        if(show==0){
+            $(".sectionHtml").show();
+            show=1
+        }else {
+            $(".sectionHtml").hide();
+            show=0
+        }
+    });
+    $(".sectionHtml ul li").click(function () {
+        var styleHtml=$(this).html()
+        console.log(styleHtml);
+        $(".InpTextInfo").attr("placeholder",styleHtml)
+        $(".sectionHtml").hide()
+        show=0
+
+    })
+
+    /*上传图片*/
+    $(function() {
+        $(".file-opacity").click(function () {
+            $(this).on("change",function(){
+                var objUrl = getObjectURL(this.files[0]) ; //获取图片的路径，该路径不是图片在本地的路径
+                console.log(objUrl);
+                if (objUrl) {
+                    // $(this).parent().find(".pic").attr("src", objUrl) ; //将图片路径存入src中，显示出图片
+                    var file_val=  $(".file-opacity").val();
+                    $(".phone-input").val(file_val)
+                }
+            });
+        });
+    });
+    function getObjectURL(file) {
+        var url = null ;
+        if (window.createObjectURL!=undefined) { // basic
+            url = window.createObjectURL(file) ;
+        } else if (window.URL!=undefined) { // mozilla(firefox)
+            url = window.URL.createObjectURL(file) ;
+        } else if (window.webkitURL!=undefined) { // webkit or chrome
+            url = window.webkitURL.createObjectURL(file) ;
+        }
+        return url ;
+    }
+
+    $(".btn_Submit").click(function () {
+        var InpText=$("input[name='InpText']").val();
+        var InputName=$("input[name='InputName']").val();
+        var InputWz=$("input[name='InputWz']").val();
+        var InputTro=$("textarea[name='InputTro']").val();
+        var file_input=$("input[name='file-input']").val();
+
+        console.log($(".InpTextInfo").attr("placeholder"))
+        if(InpText==null||$(".InpTextInfo").attr("placeholder")=="请选择分类"){
+            layer.msg('分类选项不能为空');
+            return false
+        }if(InputName==null||InputName==""){
+            layer.msg('名称不能为空');
+            return false
+        }if(InputWz==null||InputWz==""){
+            layer.msg('网站地址不能为空');
+            return false
+        }if(InputTro==null||InputTro==""){
+            layer.msg('简介不能为空');
+            return false
+        }if(file_input==null||file_input==""){
+            layer.msg('上传照片不能为空');
+            return false
+        }else {
+
+            layer.msg('提交成功');
+            location.reload();
+            return true;
+        }
+
+
+    })
+
+</script>

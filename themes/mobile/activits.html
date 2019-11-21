@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>活动报名</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery.js"></script>
+</head>
+<style>
+    .activits{
+        width: 100%;
+    }
+    .act_box{
+        width: 90%;
+        margin: .3rem auto 0 auto;
+    }
+    .Title_Guan{
+        width: 100%;
+        height: .5rem;
+        line-height: .5rem;
+        margin-top: -.2rem;
+    }
+    .Title_Guan span:nth-child(1){
+        width: 65%;
+        text-align: left;
+        font-size:.3rem ;
+        float: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .Title_Guan span:nth-child(2){
+        width: 35%;
+        text-align: right;
+        font-size: .25rem;
+        color: #585858;
+        float: right;
+    }
+    .locationStyle{
+        width: 100%;
+        margin-top: .3rem;
+        display: inline-block;
+    }
+    .locationAct{
+        width: 60%;
+        font-size: .25rem;
+        float: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .EnrolmentAc{
+        width: 1.5rem;
+        height: .4rem;
+        background: #2e84fb;
+        color: white;
+        line-height: .4rem;
+        text-align: center;
+        float: right;
+        font-size: .24rem;
+        font-weight: 200;
+        border-radius: 2px;
+        margin-top: .2rem;
+        letter-spacing: 1px;
+
+    }
+    .FinishAc{
+        width: 1.5rem;
+        height: .4rem;
+        background: #aaaaaa;
+        color: white;
+        line-height: .4rem;
+        text-align: center;
+        float: right;
+        font-size: .28rem;
+        font-weight: 200;
+        border-radius: 2px;
+        margin-top: .2rem;
+        letter-spacing: 1px;
+        display: none;
+    }
+    .locationAct img{
+        position: relative;
+        top: .03rem;
+    }
+    .locationActA{
+        color: #585858;
+        margin-top: .05rem;
+    }
+</style>
+
+<body>
+   <div class="box">
+       <!--顶部导航栏-->
+       <!--#include file="header.html"-->
+       <div class="activits">
+           <div class="act_box">
+               <img src="images/ActImg.png" alt="" width="100%">
+               <div class="Title_Guan">
+                   <span>EOSIO只能开发者研讨会EOSIO只能开发者研讨会</span>
+                   <span>115人浏览</span>
+               </div>
+               <div class="locationStyle">
+                   <div class="locationAct">
+                       <div class="locationActA">
+                           <img src="images/location.png" alt="" width="6.5%">
+                           <span>中国·深圳</span>
+                       </div>
+                       <div class="locationActA">
+                           <img src="images/shijian.png" alt="" width="7%">
+                           <span>03月21日-03月26日</span>
+                       </div>
+
+                   </div>
+                   <div class="EnrolmentAc">
+                         报名中
+                   </div>
+                   <div class="FinishAc">
+                       已结束
+                   </div>
+
+               </div>
+           </div>
+           <div class="act_box">
+               <img src="images/ActImg.png" alt="" width="100%">
+               <div class="Title_Guan">
+                   <span>EOSIO只能开发者研讨会</span>
+                   <span>115人浏览</span>
+               </div>
+               <div class="locationStyle">
+                   <div class="locationAct">
+                       <div class="locationActA">
+                           <img src="images/location.png" alt="" width="6.5%">
+                           <span>中国·深圳</span>
+                       </div>
+                       <div class="locationActA">
+                           <img src="images/shijian.png" alt="" width="7%">
+                           <span>03月21日-03月26日</span>
+                       </div>
+
+                   </div>
+                   <div class="EnrolmentAc">
+                       报名中
+                   </div>
+                   <div class="FinishAc">
+                       已结束
+                   </div>
+
+               </div>
+           </div>
+       </div>
+       <!--底部框-->
+       <!--#include file="footer.html"-->
+   </div>
+
+</body>
+</html>

@@ -2,6 +2,9 @@
     padding: 0;
     margin: 0;
 }
+body{
+    font-family: 'open sans','PingFang SC','Lantinghei SC','Helvetica Neue',Helvetica,Arial,'Microsoft YaHei',"sans-serif"
+}
 ul li{
     list-style: none;
 }
@@ -111,3 +114,4 @@ ul li{
     float: right;
     padding-bottom: .1rem;
 }
+

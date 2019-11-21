@@ -23,12 +23,22 @@
         })(document, window);
     </script>
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/jquery.js"></script>
+
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="/themes/mobile/dist/jquery.flipster.min.css">
 
+    <link rel="stylesheet" href="/themes/mobile/dist/css/jquery.flipster.css">
 
+    <link rel="stylesheet" href="/themes/mobile/dist/css/default.css">
+    <link rel="stylesheet" href="/themes/mobile/dist/css/demo.css">
+    <link rel="stylesheet" href="/themes/mobile/dist/css/flipsternavtabs.css">
 
 </head>
+<style>
+    .Button{
+
+    }
+</style>
 <body>
      <div class="box">
          <!--顶部导航栏-->
@@ -112,15 +122,50 @@
          </div>
          <!--旗下产品-->
          <div class="Its_products">
-             <img src="images/itproduct.png" alt="">
+             <div class="zzsc-container">
+
+                 <div class="zzsc-content bgcolor-3">
+                     <div id="Main-Content">
+                         <div class="Container">
+                             <!-- Flipster List -->
+                             <div class="flipster">
+                                 <ul>
+                                     <li>
+                                         <div class="Button Block">
+                                             <img src="images/produ01.png" alt="" width="100%">
+                                         </div>
+                                     </li>
+                                     <li>
+                                         <div  class="Button Block">
+                                             <img src="images/produ2.png" alt="" width="100%">
+                                         </div>
+                                     </li>
+                                     <li>
+                                         <div  class="Button Block">
+                                             <img src="images/produ03.png" alt="" width="100%">
+                                         </div>
+                                     </li>
+
+                                 </ul>
+                             </div>
+                             <!-- End Flipster List -->
+
+                         </div>
+                     </div>
+                 </div>
+             </div>
          </div>
          <!--底部框-->
         <!--#include file="footer.html"-->
      </div>
 </body>
 </html>
+<script src="js/jquery.js"></script>
+<script src="/themes/mobile/dist/jquery.flipster.min.js"></script>
+<script src="/themes/mobile/dist/js/jquery.flipster.js"></script>
 <script src="js/common.js"></script>
 <script src="js/TouchSlide.1.1.js"></script>
+<script>$(function(){ $(".flipster").flipster({ style: 'carousel', start: 0 }); });</script>
 <script type="text/javascript">
     TouchSlide({
         slideCell:"#slideBox",
