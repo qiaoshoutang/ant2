@@ -14,8 +14,12 @@ return array(
 	    'contactus'=>'Home/Index/contactUs',
 	    'message' =>'Home/Index/shortMessage',
 	    'news/:class_id' =>'Home/Index/news',
+	    'newsContent/:content_id' =>'Home/Index/newsContent',
 	    'antmap/:class_id' =>'Home/Index/antMap',
 	    'activit/:state/:time' =>'Home/Index/activity',
+	    'activitContent/:content_id' =>'Home/Index/activityContent',
+	    'search/:keyword' =>'Home/Index/searchPage',
+	    'Apply' =>'Home/Index/apply',
 	    
 	    
 	    

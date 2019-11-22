@@ -16,7 +16,7 @@
     <!--合作伙伴链接窗-->
     <div class="Partner-Links">
         <ul>
-            <?php if(is_array($naviList)): foreach($naviList as $key=>$vo): ?><li>
+            <?php if(is_array($naviList)): foreach($naviList as $key=>$vo): ?><li onclick='window.location.href="<?php echo ($vo["target"]); ?>"'>
                 <div class="Partner-Links-WinD">
                     <div class="Partner-T">
                         <img src="<?php echo ($vo["icon"]); ?>" alt="" width="100%">
@@ -55,8 +55,10 @@
                                         <?php echo ($vo["content"]); ?>
                                     </div>
                                     <div class="Favorable-BadProfit">
-                                        <span ><img src="images/up.png" alt=""> 利好<span class="count-f"><?php echo ($vo["up"]); ?></span></span>
-                                        <span class="Fb-span">
+                                        <span onclick='message_operation(this)' data-id='<?php echo ($vo["id"]); ?>' data-type='up'>
+                                            <img src="images/up.png" alt=""> 利好<span class="count-f"><?php echo ($vo["up"]); ?></span>
+                                        </span>
+                                        <span class="Fb-span" onclick='message_operation(this)' data-id='<?php echo ($vo["id"]); ?>' data-type='down'>
                                             <img src="images/down.png" alt=""> 利空<span class="count-f"><?php echo ($vo["down"]); ?></span>
                                         </span>
                                     </div>
@@ -92,7 +94,7 @@
                             国内外大事件
                         </div>
                         <ul class="hot_NewContent_ul">
-                            <?php if(is_array($newsList)): foreach($newsList as $key=>$vo): ?><li>
+                            <?php if(is_array($newsList)): foreach($newsList as $key=>$vo): ?><li onclick='window.location.href="/newsContent/<?php echo ($vo["content_id"]); ?>"'>
                                 <div class="hot_NewContentImg_Left">
                                     <img src="<?php echo ((isset($vo["image"]) && ($vo["image"] !== ""))?($vo["image"]):'images/news_default.png'); ?>" alt="" width="100%">
                                 </div>
@@ -144,5 +146,24 @@ var page_num = 2;
             }
           }
         });
-    })
+    });
+    function message_operation(param){
+        
+        var obj = $(param);
+        var id = obj.attr('data-id');
+        var type = obj.attr('data-type');
+        $.ajax({
+          type:"post",
+          url:"/Home/Ajax/opera_message",
+          data:{id:id,type:type},
+          dataType:'json',
+          success:function(rdata){
+            if(rdata.code==1){
+                obj.find('span').html(parseInt(obj.find('span').html())+1);
+            }else{
+
+            }
+          }
+        });
+    }
 </script>

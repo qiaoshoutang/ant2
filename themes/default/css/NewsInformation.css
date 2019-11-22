@@ -73,6 +73,9 @@ body{
     font-weight: 100;
     color: #808080;
 }
+.NewType-nav ul li.active{
+    color:#333;
+}
 .NewType-nav ul li a{
     color:#808080;
 }

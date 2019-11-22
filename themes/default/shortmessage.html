@@ -17,7 +17,7 @@
     <div class="Partner-Links">
         <ul>
             <!--{foreach name='naviList' item='vo' }-->
-            <li>
+            <li onclick='window.location.href="{$vo.target}"'>
                 <div class="Partner-Links-WinD">
                     <div class="Partner-T">
                         <img src="{$vo.icon}" alt="" width="100%">
@@ -58,8 +58,10 @@
                                         {$vo.content}
                                     </div>
                                     <div class="Favorable-BadProfit">
-                                        <span ><img src="images/up.png" alt=""> 利好<span class="count-f">{$vo.up}</span></span>
-                                        <span class="Fb-span">
+                                        <span onclick='message_operation(this)' data-id='{$vo.id}' data-type='up'>
+                                            <img src="images/up.png" alt=""> 利好<span class="count-f">{$vo.up}</span>
+                                        </span>
+                                        <span class="Fb-span" onclick='message_operation(this)' data-id='{$vo.id}' data-type='down'>
                                             <img src="images/down.png" alt=""> 利空<span class="count-f">{$vo.down}</span>
                                         </span>
                                     </div>
@@ -97,7 +99,7 @@
                         </div>
                         <ul class="hot_NewContent_ul">
                             <!--{foreach name='newsList' item='vo' }-->
-                            <li>
+                            <li onclick='window.location.href="/newsContent/{$vo.content_id}"'>
                                 <div class="hot_NewContentImg_Left">
                                     <img src="{$vo.image|default='images/news_default.png'}" alt="" width="100%">
                                 </div>
@@ -150,5 +152,24 @@ var page_num = 2;
             }
           }
         });
-    })
+    });
+    function message_operation(param){
+        
+        var obj = $(param);
+        var id = obj.attr('data-id');
+        var type = obj.attr('data-type');
+        $.ajax({
+          type:"post",
+          url:"/Home/Ajax/opera_message",
+          data:{id:id,type:type},
+          dataType:'json',
+          success:function(rdata){
+            if(rdata.code==1){
+                obj.find('span').html(parseInt(obj.find('span').html())+1);
+            }else{
+
+            }
+          }
+        });
+    }
 </script>

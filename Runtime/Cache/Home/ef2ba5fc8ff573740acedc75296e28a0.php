@@ -64,7 +64,7 @@
         <!--活动详情-->
         <div class="Activity-Details">
             <ul>
-                <?php if(is_array($acitvityList)): foreach($acitvityList as $key=>$vo): ?><li>
+                <?php if(is_array($acitvityList)): foreach($acitvityList as $key=>$vo): ?><li onclick='window.location.href="/activitContent/<?php echo ($vo["id"]); ?>"'>
                     <div class="Img_Ac">
                         <img src="<?php echo ($vo["cover_url"]); ?>" alt="">
                     </div>

@@ -76,7 +76,7 @@ class NaviController extends AdminController
         }
         $this->assign('classArr',$classArr);
         
-        $this->assign('stateArr',array(1=>'展示',2=>'隐藏'));
+        $this->assign('stateArr',array(1=>'展示',2=>'隐藏',3=>'待审核',4=>'不通过'));
         $this -> assign('pageMaps',$pageMaps);
         $this->assign('page',$this->getPageShow($pageMaps));
         $this->assign('list',$list);

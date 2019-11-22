@@ -104,6 +104,39 @@ class IndexController extends SiteController {
         $this -> siteDisplay('news');
     }
     
+    //新闻详情
+    public function newsContent(){
+        
+        $content_id = I('request.content_id',0);
+        
+        $contentMod = D('Article/ContentArticle');
+        
+        $contentInfo = $contentMod->getInfo($content_id);
+        
+//         dd($contentInfo);
+        //热门新闻
+        $newsList = M('content')->where(['status'=>2])->field('content_id,title,description,image,time,views')->limit(5)
+                    ->order('content_id desc')->select();
+        
+        
+        //快讯
+        $map['state'] = 2;
+        $messageMod = D('Article/Message');
+        
+        $messageList = $messageMod->loadList($map,3);
+        
+        
+        //推荐导航
+        $naviList = D('Admin/Navi')->loadList(['recom'=>1],'0,5');
+        
+
+        $this->assign('newsList',$newsList);
+        $this->assign('messageList',$messageList);
+        $this->assign('naviList',$naviList);
+        
+        $this->assign('contentInfo',$contentInfo);
+        $this -> siteDisplay('newsContent');
+    }
 
     //蚂蚁导航
     public function antMap(){
@@ -202,71 +235,71 @@ class IndexController extends SiteController {
         $this -> siteDisplay('activity');
     }
     
-    //理事单位
-    public function council(){
+    //活动详情
+    public function activityContent(){
+        $content_id = I('request.content_id',0);
         
-        $where['status']=2;
-        $councilMod=D('Admin/Council');
-        $cw_list = $councilMod->loadList($where,$limit,'id desc');
+        $activityMod = M('activity');
         
-        $where['status']=3;
-        $councilMod=D('Admin/Council');
-        $pt_list = $councilMod->loadList($where,$limit,'id desc');
+        $activityInfo = $activityMod->where(['id'=>$content_id])->find();
+        $activityInfo['content'] = html_out($activityInfo['content']);
         
+        //推荐导航
+        $naviList = D('Admin/Navi')->loadList(['recom'=>1],'0,5');
         
-        $this->assign('cw_list',$cw_list);
-        $this->assign('pt_list',$pt_list);
-        $this->assign('navi_num',6);
-        $this -> siteDisplay('council');
+        $this->assign('contentInfo',$activityInfo);
+        $this->assign('naviList',$naviList);
+        $this ->siteDisplay('activityContent');
+    }
+
+    //搜索
+    public function searchPage(){
+        $keyword =  I('request.keyword',0);
+
+        $contentMod = M('content');
+        $messageMod = M('message');
+        
+        //搜索内容
+        $newsList = $contentMod->where(['status'=>2,'title'=>['like','%'.$keyword.'%']])->order('content_id desc')->select();
+        $messageList = $messageMod->where(['state'=>2,'title'=>['like','%'.$keyword.'%']])->order('id desc')->select();
+        $activityList = M('activity')->where(['name'=>['like','%'.$keyword.'%']])->order('id desc')->select();
+
+        //推荐导航
+        $naviList = D('Admin/Navi')->loadList(['recom'=>1],'0,5');
+        
+        //最新快讯
+        $messageList2 = $messageMod->where(['state'=>2])->limit(0,3)->order('id desc')->select();
+        
+        //热门新闻
+        $newsList2 = $contentMod->where(['status'=>2])->limit(0,5)->order('content_id desc')->select();
+        
+        $this->assign('keyword',$keyword);
+        $this->assign('newsList',$newsList);
+        $this->assign('newsList2',$newsList2);
+        $this->assign('messageList',$messageList);
+        $this->assign('messageList2',$messageList2);
+        $this->assign('activityList',$activityList);
+        $this->assign('naviList',$naviList);
+        $this ->siteDisplay('searchPage');
+        
     }
     
-    //理事提交
-    public function council_submit(){
-        
-        $contactname=I('post.contactname','','trim');
-        $name=I('post.name','','trim');
-        
-        $councilMod=D('Admin/Council');
-        
-        $where['contactname']=$contactname;
-        $where['name']=$name;
-        
-        $councilInfo=$councilMod->getWhereInfo($where);
-        
-        if($councilInfo){
-            $data['code']=0;
-            $data['msg']='该理事单位申请已经提交，请勿重复提交';
-            
-            $this->ajaxReturn($data);
+    //申请收录
+    public function apply(){
+        $list = M('navi_category')->where(['state'=>1])->select();
+        $classList = [];
+        foreach($list as $val){
+            $classList[$val['id']] = $val['name'];
         }
-        
-        
-        $councilMod=D('Admin/Council');
-        $re=$councilMod->saveData();
-        if($re){
-            $data['code']=1;
-            $data['msg']='申请提交成功';
-        }else{
-            $data['code']=0;
-            $data['msg']='申请提交失败，请重新提交';
-        }
-        
-        $this->ajaxReturn($data);
+
+        $this->assign('classList',$classList);
+        $this ->siteDisplay('apply');
     }
-    
-    //人才招聘
-    public function recruit(){
-        $this->assign('navi_num',6);
-        $this -> siteDisplay('recruit');
-    }
-    
     /**********************************************************************/
     
     //采集
     public function collection(){
         $this->article_collection();
-        $this->twitter_collection();
-        $this->weibo_collection();
     }
     
     //快讯
@@ -452,94 +485,6 @@ class IndexController extends SiteController {
         }
     }
     
-    /**
-     *动态采集
-     */
-    public function twitter_collection(){
-        header("Content-Type:text/html; charset=utf-8");
-        
-        $url="https://www.jinse.com/ajax/twitters/getList?flag=down&id=0";
-        $allInfo=$this->curl_get_contents($url);
-        
-        $allInfo=json_decode($allInfo,true);
-        
-        $list=array_reverse($allInfo['data']);
-        
-        $twitterMod=D('Admin/Twitter');
-        
-        foreach($list as $val){
-            
-            $re=$twitterMod->getUniqueNum(array('unique_num'=>$val['id']));
-            if($re){//已存在该记录  跳过
-                continue;
-            }
-            
-            $_POST['auth_avatar']=$val['user']['avatar'];
-            $_POST['auth_name']=$val['user']['name'];
-            $_POST['unique_num']=$val['id'];
-            $_POST['time']=strtotime($val['published_at']);
-            $_POST['content']=preg_replace("/<(\/?a.*?)>/si","",$val['content']);//过滤所有a标签
-            $_POST['content_zh']=preg_replace("/<(\/?a.*?)>/si","",$val['chinese']);//过滤所有a标签
-            $_POST['country']=$val['user']['country_name'];
-            $_POST['type']=$val['user']['type_name'];
-            $_POST['status']=1;
-            $_POST['remark']=json_encode($val);
-            
-            $re=$twitterMod->saveData('add');
-            if($re){
-                echo $val['id'].'动态采集成功<br>';
-                $status=1;
-            }
-            
-        }
-        if(!$status){
-            echo '无新动态';
-        }
-    }
-    
-    /**
-     *微博采集
-     */
-    public function weibo_collection(){
-        header("Content-Type:text/html; charset=utf-8");
-        
-        $url="https://www.jinse.com/ajax/weibo/getList?flag=down&id=0";
-        $allInfo=$this->curl_get_contents($url);
-        
-        $allInfo=json_decode($allInfo,true);
-        
-        $list=array_reverse($allInfo['data']);
-        
-        $weiboMod=D('Admin/Weibo');
-        
-        foreach($list as $val){
-            
-            $re=$weiboMod->getUniqueNum(array('unique_num'=>$val['id']));
-            
-            if($re){//已存在该记录  跳过
-                continue;
-            }
-            
-            $_POST['unique_num']=$val['id'];
-            $_POST['auth_name']=$val['user']['name'];
-            $_POST['auth_avatar']=$val['user']['avatar'];
-            
-            $_POST['content']=$val['content'];
-            $_POST['time']=strtotime($val['published_at']);
-            $_POST['status']=1;
-            
-            $re=$weiboMod->saveData('add');
-            
-            if($re){
-                echo $val['id'].'微博采集成功<br>';
-                $status=1;
-            }
-        }
-        if(!$status){
-            echo '无新微博';
-        }
-        
-    }
     
     
     //采集快讯

@@ -63,6 +63,27 @@ class AjaxController extends SiteController {
     }
     
     /*
+     * 快讯操作
+     */
+    public function opera_message(){
+        $id = I('request.id',0,'intval');
+        $type = I('request.type','up','trim');
+        if($type == 'up')
+            $re = M('message')->where(['id'=>$id])->setInc('up');
+        if($type == 'down')
+            $re = M('message')->where(['id'=>$id])->setInc('down');
+        
+        if(!$re){
+            $rdata['code'] = 0;
+            $rdata['info'] = '请求失败';
+            $this->ajaxReturn($rdata);
+        }
+        $rdata['code'] = 1;
+        $rdata['info'] = '请求成功';
+        $this->ajaxReturn($rdata);
+    }
+    
+    /*
      * 更多导航
      */
     public function get_navi(){
@@ -144,46 +165,42 @@ class AjaxController extends SiteController {
         $rdata['data'] = $data;
         $this->ajaxReturn($rdata);
     }
-    //活动详情加载更多图片
-    public function get_activity_image(){
+    //图片上传
+    public function upload(){
         
-        $page_num = I('post.pageNum',0,'intval');
-        $album_id = I('post.album_id',0,'intval');
-        
-        
-        if(!($album_id&&$page_num)){
-            $data['code'] = 0;
-            $data['info'] = '参数不能为空';
-            $this->ajaxReturn($data);
-            exit;
+        $return = array('status' => 1, 'info' => '上传成功', 'data' => '');
+        $file = D('DuxCms/File');
+        $info = $file->uploadData($_FILES);
+        if ($info)
+        {
+            $return['data'] = $info;
         }
-        $imageMod  = D('Admin/Image');
-        
-        $where['fid'] = $album_id;
-        $where['status'] = 1;
-
-        $page_record_num = 6;
-        $limit = $page_record_num*$page_num.','.$page_record_num;
-        
-        $image_list = $imageMod->loadList($where,$limit,'order_id asc');
-
-
-        $imageArr=array();
-        foreach($image_list as $val){
-            $imageArr[]['articlePic'] = C('cdnurl').$val['img_url'];
+        else
+        {
+            $return['status'] = 0;
+            $return['info'] = $file->getError();
         }
 
-        if($imageArr){
-            
-            $data['code'] = 1;
-            $data['info'] = '获取数据成功';
-            $data['list'] = $imageArr;
-        }else{
-            $data['code'] = 2;
-            $data['info'] = '没有数据了';
-        }
-        $this->ajaxReturn($data);
+        $this->ajaxReturn($return);
+
     }
+    //申请收录提交
+    public function apply_submit(){
+        $data = I('post.');
+        
+        $_POST['state'] = 3;
+        $naviMod = D('Admin/Navi');
+        $re = $naviMod->saveData('add');
+        if(!$re){
+            $rdata['code'] = 0;
+            $rdata['info'] = '提交失败';
+            $this->ajaxReturn($rdata);
+        }
+        $rdata['code'] = 1;
+        $rdata['info'] = '提交成功，请等待审核。';
+        $this->ajaxReturn($rdata);
+    }
+
    
     
 }
