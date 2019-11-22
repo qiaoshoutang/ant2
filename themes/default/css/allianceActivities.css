@@ -91,6 +91,11 @@
 .Title_Ac_P span:nth-child(1){
     float: left;
     font-size: 19px;
+    width: 70%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
 }
 .Title_Ac_P span:nth-child(2){
     float: right;
@@ -100,6 +105,7 @@
 }
 .LocationTime{
     width: 95%;
+
     margin: 0 auto;
 }
 .Location{
@@ -107,6 +113,7 @@
     font-size: 13px;
     width: 50%;
     margin-top: 15px;
+
 }
 .Location img{
     width: 14px;
@@ -117,6 +124,10 @@
 }
 .Location p{
     color:#585858 ;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .Location p:nth-child(1){
     font-size: 18px;

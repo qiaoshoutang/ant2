@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="css/searchPage.css">
     <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
 </head>
+<style>
+    .KxDx ul li{
+        width: 90%;
+        margin: 30px auto;
+        height: 100%;
+    }
+    .DtNew{
+        margin-bottom: 50px;
+    }
+</style>
 <body>
 <div class="box">
     <!--导航栏-->
@@ -101,7 +111,8 @@
             </div>
             <!--{/if}-->
         </div>
-        <div class="NewType-Content tab-content" style='display: none'>
+
+        <div class="NewType-Content tab-content KxDx" style='display: none'>
             <!--有结果的的时候-->
             <!--{if condition="empty($messageList)"}-->
             <div class="haveN">
@@ -142,6 +153,7 @@
 
             <!--{/if}-->
         </div>
+
         <div class="NewType-Content tab-content"  style='display: none'>
             <!--有结果的的时候-->
             <!--{if condition="empty($activityList)"}-->
@@ -236,7 +248,7 @@
 
             </div>
             <!--热门新闻-->
-            <div class="Hot-News Hot-v">
+            <div class="Hot-News Hot-v DtNew">
                 <div class="Hot-News-content">
                     <!--标题-->
                     <div class="HotNewsTitle">
@@ -299,9 +311,27 @@
 
     $('.SearchK_Point').click(function(){
         var keyword = $('.SearchKk').val();
-
         window.location.href="/search/"+keyword;
     })
+
+
+   $(".NewType-nav ul li").click(function () {
+       var ContentHeigint = $(".NewType-Content").height();
+       console.log(ContentHeigint)
+       return false;
+       if(ContentHeigint.display=="block"){
+       }
+
+   })
+
+
+
+
+
+
+
+
+
 
 
 </script>
