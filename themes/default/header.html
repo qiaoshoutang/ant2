@@ -64,8 +64,19 @@
 <script>
 $('.search-s').click(function(){
     var keyword = $('.search-i').val();
-
+    // console.log(keyword)
     window.location.href="/search/"+keyword;
 })
+
+$( '.search-i').focus( function(){
+    document.onkeydown = function(e){
+        var ev = document.all ? window.event : e;
+        if(ev.keyCode==13) {
+            var keyword = $('.search-i').val();
+            // console.log(keyword)
+            window.location.href="/search/"+keyword;
+        }
+    }
+} )
 </script>
         

@@ -52,82 +52,85 @@
             <div class="statement">*声明：本文为文章作者或转发者的投稿，观点非蚂蚁节点联盟立场，亦不构成任何投资意见或建议。</div>
 
         </div>
-        <!--热门快讯-->
-        <div class="Hot-News Hot-v">
-            <div class="Hot-News-content">
-                <!--标题-->
-                <div class="HotNewsTitle">
-                    <span>热门快讯</span>
-                    <span class="HotMore">
+        <div style="float: right;width: 325px;margin-bottom: 50px">
+            <!--热门快讯-->
+            <div class="Hot-News Hot-v">
+                <div class="Hot-News-content">
+                    <!--标题-->
+                    <div class="HotNewsTitle">
+                        <span>热门快讯</span>
+                        <span class="HotMore">
                         更多>
                     </span>
-                </div>
-                <!--内容-->
-                <div class="HotNewsText">
-                    <!--{foreach name='messageList' item='vo' }-->
-                    <div class="HotNewsText-box">
-                        <div class="TuoY">
-                            <img src="images/TuoY.png" alt="" width="100%">
-                        </div>
-                        <div class="HotNewsText-Article">
-                            <div class="HotNewsTime">
-                                {$vo.time|format_time='H:i'}
-                            </div>
-                            <div class="HotNewsA-T">
-                                {$vo.title}
-                            </div>
-                            <div class="HotNewsTTT">
-                                {$vo.content}
-                            </div>
-                            <div class="Favorable-BadProfit">
-                                <span ><img src="images/up.png" alt=""> 利好<span class="count-f">{$vo.up}</span></span>
-                                <span class="Fb-span"><img src="images/down.png" alt=""> 利空<span class="count-f">{$vo.down}</span></span>
-                            </div>
-                        </div>
                     </div>
-                    <!--{/foreach}-->
+                    <!--内容-->
+                    <div class="HotNewsText">
+                        <!--{foreach name='messageList' item='vo' }-->
+                        <div class="HotNewsText-box">
+                            <div class="TuoY">
+                                <img src="images/TuoY.png" alt="" width="100%">
+                            </div>
+                            <div class="HotNewsText-Article">
+                                <div class="HotNewsTime">
+                                    {$vo.time|format_time='H:i'}
+                                </div>
+                                <div class="HotNewsA-T">
+                                    {$vo.title}
+                                </div>
+                                <div class="HotNewsTTT">
+                                    {$vo.content}
+                                </div>
+                                <div class="Favorable-BadProfit">
+                                    <span ><img src="images/up.png" alt=""> 利好<span class="count-f">{$vo.up}</span></span>
+                                    <span class="Fb-span"><img src="images/down.png" alt=""> 利空<span class="count-f">{$vo.down}</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--{/foreach}-->
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--热门新闻-->
-        <div class="Hot-News Hot-v">
-            <div class="Hot-News-content">
-                <!--标题-->
-                <div class="HotNewsTitle">
-                    <span>热门新闻</span>
-                    <span class="HotMore">
+            <!--热门新闻-->
+            <div class="Hot-News Hot-v DtNew">
+                <div class="Hot-News-content">
+                    <!--标题-->
+                    <div class="HotNewsTitle">
+                        <span>热门新闻</span>
+                        <span class="HotMore">
                         更多>
                     </span>
-                </div>
-                <!--内容-->
-                <div class="hot_New_Img">
-                    <div class="hot_Img_TT">
-                        <img src="images/NewTypr-img.png" alt="" width="100%">
-                        <div class="hot_Hover_A">
-                            国内外大事件
-                        </div>
-                        <ul class="hot_NewContent_ul">
-                            <!--{foreach name='newsList' item='vo' }-->
-                            <li onclick='window.location.href="/newsContent/{$vo.content_id}"'>
-                                <div class="hot_NewContentImg_Left">
-                                    <img src="{$vo.image}" alt="" width="100%">
-                                </div>
-                                <div class="hot_NewContent_Right">
-                                    <div class="">
-                                        {$vo.title}
+                    </div>
+                    <!--内容-->
+                    <div class="hot_New_Img">
+                        <div class="hot_Img_TT">
+                            <img src="images/NewTypr-img.png" alt="" width="100%">
+                            <div class="hot_Hover_A">
+                                国内外大事件
+                            </div>
+                            <ul class="hot_NewContent_ul">
+                                <!--{foreach name='newsList' item='vo' }-->
+                                <li onclick='window.location.href="/newsContent/{$vo.content_id}"'>
+                                    <div class="hot_NewContentImg_Left">
+                                        <img src="{$vo.image}" alt="" width="100%">
                                     </div>
-                                    <div>
-                                        {$vo.time|format_time='Y-m-d'}
-                                    </div>
+                                    <div class="hot_NewContent_Right">
+                                        <div class="">
+                                            {$vo.title}
+                                        </div>
+                                        <div>
+                                            {$vo.time|format_time='Y-m-d'}
+                                        </div>
 
-                                </div>
-                            </li>
-                            <!--{/foreach}-->
-                        </ul>
+                                    </div>
+                                </li>
+                                <!--{/foreach}-->
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 
     <!--底部-->
@@ -150,4 +153,10 @@
             })
         }
     )
+
+
+    var ContentHeigint = $(".News-Dynamic-Content-box").height();
+    if(ContentHeigint<=780){
+        $(".DtNew").hide()
+    }
 </script>
