@@ -14,13 +14,13 @@
     line-height: 80px;
     text-align: center;
     font-size: 25px;
-    font-weight: 200;
 }
 .RecentnavList_ul li a{
     color:#808080;
 }
 .RecentnavList_ul li.active a{
     color:#333;
+    font-weight: bold;
 }
 .RecentnavList_ul li:hover{
     font-weight: bold;
@@ -41,7 +41,6 @@
     text-align: center;
     height: 100%;
     font-size: 20px;
-    font-weight: 200;
     color: #aaaaaa;
 }
 .Recent-time ul li a{
@@ -49,6 +48,7 @@
 }
 .Recent-time ul li.active a{
     color:#333;
+    font-weight: bold;
 }
 
 .Recent-time ul li:hover{
@@ -147,7 +147,6 @@
     line-height: 60px;
     color: #2e84fb;
     font-size: 18px;
-    border: 1px silver solid;
     clear: both;
     position: relative;
     top: 40px;

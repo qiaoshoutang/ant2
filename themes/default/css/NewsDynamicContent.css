@@ -24,9 +24,8 @@
 }
 .authorAndTime span{
     font-size: 18px;
-    color: #585858;
+    color: #999999;
     font-weight: 400;
-    margin-right: 20px;
 }
 .authorAndTime span:nth-child(1){
     font-size: 21px;
@@ -34,9 +33,7 @@
     color: black;
 }
 .DynamicArticle{
-
     font-size: 18px;
-    font-weight: 200;
     text-align: justify;
     letter-spacing: 1px;
     line-height: 180%;

@@ -19,10 +19,10 @@
         <div class="in exhibition_hall">
             <div id="" class="roundabout_box">
                 <ul>
-                    <li><a href="#"><img src="images/zt1.png" alt=""><span class="text">Picture information 1</span></a></li>
-                    <li><a href="#"><img src="images/zt2.png" alt=""><span class="text">Picture information 2</span></a></li>
-                    <li><a href="#"><img src="images/zt3.png" alt=""><span class="text">Picture information 3</span></a></li>
-                    <li><a href="#"><img src="images/zt4.png" alt=""><span class="text">Picture information 4</span></a></li>
+                    <li><a href="#"><img src="images/zt1.png" alt=""><span class="text"></span></a></li>
+                    <li><a href="#"><img src="images/zt2.png" alt=""><span class="text"></span></a></li>
+                    <li><a href="#"><img src="images/zt3.png" alt=""><span class="text"></span></a></li>
+                    <li><a href="#"><img src="images/zt4.png" alt=""><span class="text"></span></a></li>
                 </ul>
             </div>
             <div class="clear"></div>

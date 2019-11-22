@@ -45,7 +45,7 @@
                 <div class=page_wp id=page_wp>
                     <div class="page page_1">
                         <span class="page_bg scale_box"></span>
-                        <div class=img_box><img src="images/bannerImg01.png" alt=""></div>
+                        <div class=img_box><img src="images/wangyuxiang.png" alt=""></div>
                         <div class="txt_box scale_box">
                             <!--<h2>12</h2>-->
                             <!--<p class=txt_brief>123</p>-->
