@@ -4,7 +4,7 @@ body{
 .Partner-Links{
     width: 1200px;
     height:115px ;
-    border: 1px solid silver;
+    border: 1px solid #dadada;
     margin: 50px auto 0 auto;
     background: white;
 }
@@ -27,6 +27,7 @@ body{
     left: 0;
     top: 0;
     bottom: 0;
+    cursor: pointer;
 }
 .Partner-T{
     width: 46px;
@@ -66,7 +67,7 @@ body{
     width: 112.5px;
     float: left;
     text-align: center;
-    font-size: 28px;
+    font-size: 26px;
     height: 75px;
     line-height: 75px;
     color: #808080;
@@ -170,7 +171,7 @@ body{
 .Hot-News{
     width: 325px;
     height: 780px;
-    border: 1px silver solid;
+    border: 1px #dadada solid;
     float: right;
     background: white;
 
@@ -229,7 +230,7 @@ body{
     font-size: 25px;
     color: grey;
     font-weight: 300;
-    margin-top: 4px;
+    margin-top: 2px;
 }
 .HotNewsA-T{
     font-size: 18px;

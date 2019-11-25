@@ -3,19 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d651e91c-2a79-4b79-88fe-9046f73e9574" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime/Cache/Home/11c85bc88bca1904370df9e0c496be53.php" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime/Cache/Home/11c85bc88bca1904370df9e0c496be53.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Runtime/Cache/Home/34cd80b9a2032737c38dc746f7d5576f.php" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime/Cache/Home/34cd80b9a2032737c38dc746f7d5576f.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime/Cache/Home/952bcd0ed818d54529f8e3f4955cd9c9.php" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime/Cache/Home/952bcd0ed818d54529f8e3f4955cd9c9.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Runtime/Cache/Home/ef2ba5fc8ff573740acedc75296e28a0.php" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime/Cache/Home/ef2ba5fc8ff573740acedc75296e28a0.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/default/activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/activity.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/default/antmap.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/antmap.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/css/AntNavigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/AntNavigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/css/NewsDynamicContent.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/NewsDynamicContent.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/default/css/NewsFlash.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/NewsFlash.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/default/css/NewsInformation.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/NewsInformation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/css/allianceActivities.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/allianceActivities.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/newsContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/newsContent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/shortmessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/shortmessage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/default/images/zt1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/default/images/zt2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/default/images/zt4.png" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,7 +69,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="48" />
-          <entry key="html" value="21" />
+          <entry key="html" value="23" />
           <entry key="js" value="1" />
           <entry key="php" value="3" />
         </counts>
@@ -81,22 +77,22 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="48" />
-          <entry key="HTML" value="21" />
+          <entry key="HTML" value="23" />
           <entry key="JavaScript" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="519" />
-          <entry key="html" value="714" />
+          <entry key="css" value="551" />
+          <entry key="html" value="773" />
           <entry key="js" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="519" />
-          <entry key="HTML" value="714" />
+          <entry key="CSS" value="551" />
+          <entry key="HTML" value="773" />
           <entry key="JavaScript" value="9" />
         </counts>
       </usages-collector>
@@ -105,98 +101,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/css/NewsInformation.css">
+        <entry file="file://$PROJECT_DIR$/themes/default/activity.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3480">
-              <caret line="116" column="14" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/css/AntNavigation.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2460">
-              <caret line="82" column="18" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/css/NewsDynamicContent.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2820">
-              <caret line="94" column="16" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1560">
-              <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4860">
-              <caret line="162" column="88" selection-start-line="162" selection-start-column="88" selection-end-line="162" selection-end-column="88" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#5;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/themes/default/css/NewsFlash.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/shortmessage.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/css/activitiesDetail.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="155" column="23" selection-start-line="155" selection-start-column="23" selection-end-line="155" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/css/allianceActivities.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="137" column="6" lean-forward="true" selection-start-line="137" selection-start-column="6" selection-end-line="137" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/default/antmap.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2490">
-              <caret line="83" column="86" selection-start-line="83" selection-start-column="86" selection-end-line="83" selection-end-column="86" />
+            <state relative-caret-position="180">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -213,13 +130,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.Title_Ac_P span:nth-child(1)</find>
-      <find>Location</find>
-      <find>.TextSource span:nth-child(2), .TextSource span:nth-child(3)</find>
-      <find>NewType-Content tab-content</find>
-      <find>SearchK_Point</find>
-      <find>keyword</find>
-      <find>Hot-News Hot-v</find>
       <find>.DynamicArticle</find>
       <find>.Partner-Links-WinD</find>
       <find>HotMore</find>
@@ -243,6 +153,13 @@
       <find>.hot_NewContentImg_Left img</find>
       <find>.hot_NewContentImg_Left</find>
       <find>LOOKMMM</find>
+      <find>KxText</find>
+      <find>.NewType-nav ul li</find>
+      <find>.Partner-Links</find>
+      <find>.HotNewsTime</find>
+      <find>Partner-Links-WinD</find>
+      <find>class=&quot;navList&quot;</find>
+      <find>RecentnavList_ul</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -278,18 +195,18 @@
         <option value="$PROJECT_DIR$/themes/default/js/commom.js" />
         <option value="$PROJECT_DIR$/themes/default/header.html" />
         <option value="$PROJECT_DIR$/themes/default/searchPage.html" />
-        <option value="$PROJECT_DIR$/themes/default/activity.html" />
         <option value="$PROJECT_DIR$/themes/default/css/activitiesDetail.css" />
         <option value="$PROJECT_DIR$/themes/default/newsContent.html" />
-        <option value="$PROJECT_DIR$/themes/default/antmap.html" />
         <option value="$PROJECT_DIR$/themes/default/css/AntNavigation.css" />
         <option value="$PROJECT_DIR$/themes/default/css/index.css" />
         <option value="$PROJECT_DIR$/themes/default/index.html" />
-        <option value="$PROJECT_DIR$/themes/default/css/NewsInformation.css" />
         <option value="$PROJECT_DIR$/themes/default/css/NewsDynamicContent.css" />
         <option value="$PROJECT_DIR$/themes/default/shortmessage.html" />
         <option value="$PROJECT_DIR$/themes/default/css/allianceActivities.css" />
         <option value="$PROJECT_DIR$/themes/default/css/NewsFlash.css" />
+        <option value="$PROJECT_DIR$/themes/default/css/NewsInformation.css" />
+        <option value="$PROJECT_DIR$/themes/default/activity.html" />
+        <option value="$PROJECT_DIR$/themes/default/antmap.html" />
       </list>
     </option>
   </component>
@@ -397,12 +314,12 @@
       <workItem from="1574124718440" duration="13187000" />
       <workItem from="1574230281590" duration="6975000" />
       <workItem from="1574239076239" duration="2840000" />
-      <workItem from="1574642597409" duration="1235000" />
+      <workItem from="1574642597409" duration="7099000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107315000" />
+    <option name="totallyTimeSpent" value="113179000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
@@ -610,13 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/activity.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="24" column="88" selection-start-line="24" selection-start-column="88" selection-end-line="24" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/default/newsContent.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2580">
@@ -632,20 +542,6 @@
     <entry file="file://$PROJECT_DIR$/themes/default/activityContent.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/css/NewsInformation.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3480">
-          <caret line="116" column="14" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/css/AntNavigation.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2460">
-          <caret line="82" column="18" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/default/css/NewsDynamicContent.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2820">
@@ -657,27 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1560">
           <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4860">
-          <caret line="162" column="88" selection-start-line="162" selection-start-column="88" selection-end-line="162" selection-end-column="88" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#5;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/antmap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2490">
-          <caret line="83" column="86" selection-start-line="83" selection-start-column="86" selection-end-line="83" selection-end-column="86" />
         </state>
       </provider>
     </entry>
@@ -704,8 +579,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/default/css/NewsFlash.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+        <state relative-caret-position="797">
+          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="162" column="88" selection-start-line="162" selection-start-column="88" selection-end-line="162" selection-end-column="88" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#5;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/css/AntNavigation.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="82" column="18" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/css/NewsInformation.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/activity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/antmap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
         </state>
       </provider>
     </entry>

@@ -19,10 +19,9 @@
         <div class="in exhibition_hall">
             <div id="" class="roundabout_box">
                 <ul>
-                    <li><a href="#"><img src="images/zt1.png" alt=""><span class="text"></span></a></li>
-                    <li><a href="#"><img src="images/zt2.png" alt=""><span class="text"></span></a></li>
-                    <li><a href="#"><img src="images/zt3.png" alt=""><span class="text"></span></a></li>
-                    <li><a href="#"><img src="images/zt4.png" alt=""><span class="text"></span></a></li>
+                    <li><a href="#"><img src="images/Antamp.jpg" alt=""><span class="text"></span></a></li>
+                    <li><a href="#"><img src="images/Antamp02.jpg" alt=""><span class="text"></span></a></li>
+                    <li><a href="#"><img src="images/Antamp03.jpg" alt=""><span class="text"></span></a></li>
                 </ul>
             </div>
             <div class="clear"></div>
@@ -111,10 +110,10 @@
     $(document).ready(function(){
         $('.roundabout_box ul').roundabout({
             duration: 1000,
-            minScale: 0.6,
+            minScale: 0.8,
             autoplay: true,
             autoplayDuration: 5000,
-            minOpacity: 0,
+            minOpacity: .5,
             maxOpacity: 1,
             reflect: true,
             startingChild: 3,
