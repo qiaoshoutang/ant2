@@ -93,10 +93,12 @@
     width: 35%;
     margin-top: 10px;
     float: left;
+    border-radius: 4px;
+    overflow: hidden;
 }
 .hot_NewContentImg_Left img{
-    width: 80px;
-    height: 80px;
+   width: 120px;
+    height: 70px;
 }
 .hot_NewContent_Right{
     width: 60%;

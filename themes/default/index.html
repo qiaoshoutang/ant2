@@ -155,12 +155,12 @@
                 <!--教育培训-->
                 <div class="Education-training serviceType">
                     <div class="management-text">
-                        <div class="management-Title">教育培训</div>
+                        <div class="management-Title" style="margin-top: 23px">教育培训</div>
                         <div class="font-Mana font-margin">依托国家级教育培训资源</div>
                         <div class="font-Mana">提供专业教育咨询服务</div>
                     </div>
                     <div class="management-img">
-                        <img src="images/55.png" alt="" width="73%">
+                        <img src="images/55.png" alt="" width="73%" style="margin-top: 40px">
 
                     </div>
 
@@ -168,11 +168,11 @@
                 <!--社群运营-->
                 <div class="Community-operation serviceType">
                     <div class="Community-img">
-                        <img src="images/22.png" alt="" width="65%">
+                        <img src="images/22.png" alt="" width="65%" style="margin-top: 40px">
 
                     </div>
                     <div class="Community-text">
-                        <div class="management-Title">社群运营</div>
+                        <div class="management-Title" style="margin-top: 23px">社群运营</div>
                         <div class="font-Mana font-margin">线上专业的微信社群</div>
                         <div class="font-Mana">管理团队</div>
                     </div>
@@ -184,7 +184,7 @@
 
                     </div>
                     <div class="Community-text">
-                        <div class="management-Title">媒体公关</div>
+                        <div class="management-Title" style="margin-top: 23px">媒体公关</div>
                         <div class="font-Mana font-margin">覆盖40+行业主流媒体</div>
                         <div class="font-Mana">提供全方位媒体宣传服务</div>
                     </div>
@@ -196,7 +196,7 @@
 
                     </div>
                     <div class="Community-text">
-                        <div class="management-Title">投行上所</div>
+                        <div class="management-Title" style="margin-top: 23px">投行上所</div>
                         <div class="font-Mana font-margin">全球Top30</div>
                         <div class="font-Mana">主流交易所资源对接</div>
                     </div>

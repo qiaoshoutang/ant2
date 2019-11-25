@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <ul class="type_NavList">
-                    <?php if(is_array($naviList1)): foreach($naviList1 as $key=>$vo): ?><li onclick='window.location.href="<?php echo ($vo["target"]); ?>"'>
+                    <?php if(is_array($naviList1)): foreach($naviList1 as $key=>$vo): ?><li onclick='window.location.href="<?php echo ($vo["target"]); ?>"' target="_blank">
                          <div class="type_NavList_box">
                              <div class="Partner-T">
                                  <img src="<?php echo ($vo["icon"]); ?>" alt="" width="100%">
@@ -171,7 +171,7 @@
                     </div>
                 </div>
                 <ul class="type_NavList">
-                    <?php if(is_array($naviList5)): foreach($naviList5 as $key=>$vo): ?><li onclick='window.location.href="<?php echo ($vo["target"]); ?>"'>
+                    <?php if(is_array($naviList5)): foreach($naviList5 as $key=>$vo): ?><li onclick='window.location.href="<?php echo ($vo["target"]); ?>"' >
                          <div class="type_NavList_box">
                              <div class="Partner-T">
                                  <img src="<?php echo ($vo["icon"]); ?>" alt="" width="100%">
