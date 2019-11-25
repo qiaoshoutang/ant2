@@ -309,7 +309,7 @@ K.options = {
 		pre : ['id', 'class'],
 		hr : ['id', 'class', '.page-break-after'],
 		'br,tbody,tr,strong,b,sub,sup,em,i,u,strike,s,del' : ['id', 'class'],
-		 video : ['src', 'type', 'width','height','autostart','loop'],
+		video : ['src', 'type', 'width','height','autostart','loop','controls'],
 		iframe : ['id', 'class', 'src', 'frameborder', 'width', 'height', '.width', '.height']
 	},
 	layout : '<div class="container"><div class="toolbar"></div><div class="edit"></div><div class="statusbar"></div></div>'
@@ -938,7 +938,7 @@ function _mediaAttrs(srcTag) {
 	return _getAttrList(unescape(srcTag));
 }
 function _mediaEmbed(attrs) {
-	var html = '<embed ';
+	var html = '<video ';
 	_each(attrs, function(key, val) {
 		html += key + '="' + val + '" ';
 	});
@@ -7736,7 +7736,8 @@ KindEditor.plugin('media', function(K) {
 								width : width,
 								height : height,
 								autostart : autostartBox[0].checked ? 'true' : 'false',
-								loop : 'true'
+								loop : 'true',
+								controls:'true'
 							});
 						self.insertHtml(html).hideDialog().focus();
 					}

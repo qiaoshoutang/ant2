@@ -24,7 +24,7 @@
                 <div class="sub-page-first">蚂蚁导航</div>
                 <div class="sub-page-navH">
                     <div class="sub-page-nav" onclick='window.location.href="/antmap/1"'>行情</div>
-                    <div class="sub-page-nav" onclick='window.location.href="/antmap/2"'>交易所</div>
+                    <div class="sub-page-nav" onclick='window.location.href="/antmap/2"'>资产管理</div>
                     <div class="sub-page-nav" onclick='window.location.href="/antmap/3"'>TOP200</div>
                     <div class="sub-page-nav" onclick='window.location.href="/antmap/4"'>钱包</div>
                     <div class="sub-page-nav" onclick='window.location.href="/antmap/5"'>矿池</div>
