@@ -8,8 +8,8 @@ legend{display:none;}
 .roundabout_box ul {}
 .roundabout_box img {width:100%;}
 /**********roundabout**********/
-.roundabout_box {height:425px;width:980px;margin:0px auto 20px auto;}
-.roundabout-holder{list-style:none;width:500px;height:425px;margin:0px auto;}
+.roundabout_box {height:425px;width:1200px;margin:0px auto 20px auto;}
+.roundabout-holder{list-style:none;width:800px;height:425px;margin:0px auto;}
 .roundabout-moveable-item{font-size:12px!important;height:300px;width:580px;cursor:pointer;background:#f9f9f9;}
 .roundabout-moveable-item img{height:100%;width:100%;background-color:#FFFFFF;margin:0;}
 .roundabout-in-focus{cursor:auto;border-left:1px #fff solid;border-right:1px #fff solid;}
@@ -35,12 +35,12 @@ legend{display:none;}
 }
 .navList ul li{
     float: left;
-    margin:0 2%;
+    margin-right: 3.5%;
     height: 80px;
     line-height: 80px;
     text-align: center;
     font-size: 25px;
-    font-weight: 200;
+    /*border-bottom: #2e84fb 3px solid;*/
 }
 .navList ul li.active a{
     font-weight:bold;
@@ -70,15 +70,17 @@ legend{display:none;}
     text-align: center;
     line-height: 35px;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 20px;
     letter-spacing: 1px;
     position: absolute;
     right: 0;
     top: 22px;
+    cursor: pointer;
 }
 .Market_view_ul{
     width: 100%;
+    padding-top: 30px;
 }
 .Market_view_ul_list{
     width: 100%;
@@ -101,17 +103,19 @@ legend{display:none;}
 .Market{
     font-size: 25px;
     float: left;
-    font-weight: 200;
     letter-spacing: 1px;
 }
 .LookMore{
-    font-size: 22px;
+    font-size: 18px;
     float: right;
-    font-weight: 200;
     letter-spacing: 1px;
-    color: #aaaaaa;
+    margin-right: 15px;
 
 }
+.LookMore a{
+    color: #aaaaaa;
+}
+
 .type_NavList{
     width: 125%;
 }
@@ -128,7 +132,7 @@ legend{display:none;}
 .type_NavList li:hover .type_NavList_box{
     top: -5px;
     transition: .2s linear;
-    box-shadow: 0 .5px 2px 1px rgba(0,0,0,.3);
+    box-shadow: 0 .5px 2px 1px rgba(0,0,0,.2);
     border-radius: 2px;
 }
 @keyframes animation {
@@ -155,7 +159,12 @@ legend{display:none;}
 .Partner-LinksText p{
     font-size: 13px;
     color: silver;
-
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
 }
 .Partner-LinksText p:nth-child(1){
     font-size: 18px;
@@ -169,14 +178,13 @@ legend{display:none;}
     width: 380px;
     height: 60px;
     margin: 0 auto 0 auto;
-    border: 1px silver solid;
     text-align: center;
     line-height: 60px;
-    font-size: 20px;
     clear: both;
     color: #2e84fb;
     position: relative;
     top: 30px;
+    font-size: 25px;
 }
 .font-cx{
     font-weight: bold!important;

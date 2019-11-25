@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="css/NewsDynamicContent.css">
 </head>
 <body>
+<style>
+    .box{
+        background:#f9f7f6 ;
+    }
+</style>
 <div class="box">
     <!--导航栏-->
     <!--#include file="header.html"-->
@@ -42,7 +47,7 @@
                         {$contentInfo.title}
                     </div>
                     <div class="authorAndTime">
-                        <span>{$contentInfo.author}</span><span>{$vo.time|format_time='Y-m-d H:i:s'}</span><span>{$contentInfo.views}</span>
+                        <span>{$contentInfo.author}</span><span> {$vo.time|format_time='Y-m-d H:i:s'}</span><span>{$contentInfo.views}</span>
                     </div>
                     <div class="DynamicArticle">
                         {$contentInfo.content}

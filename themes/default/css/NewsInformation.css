@@ -4,7 +4,7 @@ body{
 .Partner-Links{
     width: 1200px;
     height:115px ;
-    border: 1px solid silver;
+    border: 1px solid #dadada;
     margin: 50px auto 0 auto;
     background: white;
 }
@@ -21,13 +21,13 @@ body{
 .Partner-Links-WinD{
     width: 210px;
     height: 80px;
-    border: 1px solid silver;
     position: absolute;
     margin: auto;
     right: 0;
     left: 0;
     top: 0;
     bottom: 0;
+    cursor: pointer;
 }
 .Partner-T{
     width: 46px;
@@ -67,11 +67,11 @@ body{
     width: 112.5px;
     float: left;
     text-align: center;
-    font-size: 28px;
+    font-size: 26px;
     height: 75px;
     line-height: 75px;
-    font-weight: 100;
     color: #808080;
+    font-weight: 400
 }
 .NewType-nav ul li.active{
     color:#333;
@@ -81,7 +81,7 @@ body{
 }
 .NewType-nav ul li.active a{ 
     color: #111216;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .NewType-Content{
@@ -156,10 +156,12 @@ body{
 .LookMore{
     width: 100%;
     height: 55px;
-    border: 1px silver solid;
     line-height: 55px;
     text-align: center;
     margin-top: 20px;
+    color: #2e84fb;
+    font-size: 20px;
+    cursor: pointer;
 }
 .LookMore a{
     color: #2e84fb;
@@ -169,8 +171,9 @@ body{
 .Hot-News{
     width: 325px;
     height: 780px;
-    border: 1px silver solid;
+    border: 1px #dadada solid;
     float: right;
+    background: white;
 
 }
 .HotNewsTitle{
@@ -182,9 +185,12 @@ body{
 .HotMore{
     position: absolute;
     right: 0;
-    color: silver;
-    font-weight: 200;
+
+    font-weight: normal;
     font-size: 18px;
+}
+.HotMore a{
+    color: silver;
 }
 .HotNewsTitle span:nth-child(1){
     position: absolute;
@@ -198,7 +204,7 @@ body{
 }
 .HotNewsText{
     width: 92%;
-    border-left: 1px black solid;
+    border-left: 1px silver solid;
     height: 710px;
     margin: 0 auto;
 
@@ -224,7 +230,7 @@ body{
     font-size: 25px;
     color: grey;
     font-weight: 300;
-    margin-top: 4px;
+    margin-top: 2px;
 }
 .HotNewsA-T{
     font-size: 18px;
@@ -237,7 +243,6 @@ body{
 }
 .HotNewsTTT{
     font-size: 14px;
-    font-weight: 200;
     margin-top: 8px;
     line-height: 160%;
     letter-spacing: .5px;
