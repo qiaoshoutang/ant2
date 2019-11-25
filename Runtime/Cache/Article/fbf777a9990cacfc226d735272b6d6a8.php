@@ -22,16 +22,14 @@
                 </form>
             </div></div>
 
-  <div class="m-table-mobile"><table id="table" class="m-table "><thead><tr><th width="30">选择</th><th width="30">编号</th><th width="80">标题</th><th width="30">分类</th><th>内容</th><th width="100">状态</th><th width="170">更新时间</th><th width="130">操作</th></tr></thead><tbody><?php if(is_array($list)): foreach($list as $key=>$vo): ?><tr>
+  <div class="m-table-mobile"><table id="table" class="m-table "><thead><tr><th width="30">选择</th><th width="30">编号</th><th width="80">标题</th><th width="30">分类</th><th width="100">状态</th><th width="170">更新时间</th><th width="130">操作</th></tr></thead><tbody><?php if(is_array($list)): foreach($list as $key=>$vo): ?><tr>
         <td>
         	<input type="checkbox" name="id[]" value="<?php echo ($vo["content_id"]); ?>" />
         </td>
         <td><?php echo ($vo["content_id"]); ?></td>
         <td><?php echo ($vo["title"]); ?></td>
         <td><?php echo ($vo["class_name"]); ?></td>
-        <td>
-            <?php echo ($vo["content"]); ?>
-        </td>
+
         <td>
           <?php if($vo['status']==1): ?><span class="u-badge u-badge-primary">草稿</span><?php endif; ?>
 
