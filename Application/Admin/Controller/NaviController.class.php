@@ -54,6 +54,11 @@ class NaviController extends AdminController
             $where['state'] = $state;
             $pageMaps['state'] = $state;
         }
+        $recom = I('request.recom','');
+        if(!empty($recom)){
+            $where['recom'] = $recom;
+            $pageMaps['recom'] = $recom;
+        }
         $class = I('request.class_id','');
         if(!empty($class)){
             $where['class_id'] = $class;

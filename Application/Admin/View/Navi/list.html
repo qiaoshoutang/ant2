@@ -11,7 +11,8 @@
         </option>
     </foreach>
   </select>
-  <admin:select name="state" item="==状态==,展示,隐藏,待审核,不通过" value="0,1,2,3,4" selected="$pageMaps['state']" /> 
+  <admin:select name="state" item="==状态==,展示,隐藏,待审核,不通过" value="0,1,2,3,4" selected="$pageMaps['state']" />
+  <admin:select name="recom" item="==是否推荐==,推荐,不推荐" value="0,1,2" selected="$pageMaps['recom']" /> 
 </admin:tabletool>
 
 <admin:table id="table" show="选择,编号|80,权重,类别,名称,简介,图标,添加时间,状态,操作|130">

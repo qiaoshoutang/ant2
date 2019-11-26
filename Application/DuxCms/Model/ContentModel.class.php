@@ -10,7 +10,7 @@ class ContentModel extends Model {
         //全部
         array('class_id','intval',3,'function'), //栏目ID
         array('urltitle','getUrlTitle',3,'callback'), //URL
-        array('description','getDescription',3,'callback'), //描述
+//         array('description','getDescription',3,'callback'), //描述
         array('image','getImage',3,'callback'), //形象图
         array('time','strtotime',3,'function'), //时间
         array('status','intval',3,'function'), //状态
@@ -95,13 +95,11 @@ class ContentModel extends Model {
      * @return bool 更新状态
      */
     public function saveData($type = 'add'){
+
+
+
         
-//         $data=I('post.');
-//         var_dump($data);
-//         exit;
-
         $data=$this->create();
-
 
 
         if(!$data){
@@ -121,7 +119,8 @@ class ContentModel extends Model {
             if(empty($data['content_id'])){
                 return false;
             }
-            $status = $this->save();
+            $status = $this->save($data);
+
             if($status === false){
                 return false;
             }
