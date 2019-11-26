@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蚂蚁导航</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/antmap.css">
+
+
+
+</head>
+<body>
+<div class="box">
+    <!--顶部导航栏-->
+    <!--#include file="header.html"-->
+    <!--轮播-->
+    <div id="slideBox" class="slideBox">
+
+        <div class="bd">
+            <ul>
+                <li>
+                    <a class="pic" href="#"><img src="images/banner.png" /></a>
+                    <a class="tit" href="#"></a>
+                </li>
+                <li>
+                    <a class="pic" href="#"><img src="images/bannerTow.png"/></a>
+                    <a class="tit" href="#"></a>
+                </li>
+                <li>
+                    <a class="pic" href="#"><img src="images/bannerTow.png"/></a>
+                    <a class="tit" href="#"></a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="hd">
+            <ul></ul>
+        </div>
+    </div>
+    <!--导航-->
+    <div class="nav_ss">
+      <ul>
+          <li><a href="" class="active">推荐</a></li>
+          <li><a href="">行情</a></li>
+          <li><a href="">交易所</a></li>
+          <li><a href="">钱包</a></li>
+          <li><a href="">矿池</a></li>
+          <li><a href="">媒体</a></li>
+          <li><a href="">技术服务</a></li>
+          <li><a href="">其他</a></li>
+      </ul>
+    </div>
+    <!--交易所-->
+    <div class="nav_Content nav_Top">
+        <p class="nav_Title">交易所</p>
+        <ul class="nav_Content_ul">
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+        </ul>
+    </div>
+    <!--行情-->
+    <div class="nav_Content">
+        <p class="nav_Title">行情</p>
+        <ul class="nav_Content_ul">
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+        </ul>
+    </div>
+    <!--行情-->
+    <div class="nav_Content">
+        <p class="nav_Title">钱包</p>
+        <ul class="nav_Content_ul">
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+            <li>
+                <div class="Content_ulBall">
+                    <img src="images/BtcLogo.png" alt="">
+                </div>
+                <div class="BzName">BTC</div>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    <!--底部框-->
+    <!--#include file="footer.html"-->
+</div>
+
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/TouchSlide.1.1.js"></script>
+<script src="js/common.js"></script>
+</html>
+<script type="text/javascript">
+    TouchSlide({
+        slideCell:"#slideBox",
+        titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+        mainCell:".bd ul",
+        effect:"leftLoop",
+        autoPage:true,//自动分页
+        autoPlay:true //自动播放
+    });
+</script>

@@ -140,6 +140,7 @@ a{
 }
 .text-bottom ul li p:hover{
     color: white;
+    cursor: pointer;
 }
 .Right-belonging{
     width: 100%;
