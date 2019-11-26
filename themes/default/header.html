@@ -2,7 +2,7 @@
 <div class="nav-header">
     <!--蚂蚁logo-->
     <div class="My-logo">
-        <img src="images/logo.png" alt="">
+        <a href="http://mayi.org/"><img src="images/logo.png" alt=""></a>
     </div>
     <ul class="header-list">
         <li>

@@ -9,9 +9,28 @@
     <script src="js/jquery.fancybox.pack.js"></script>
 </head>
 <style>
-    .navList ul li{
-        border-bottom: 3px solid #2e84fb;
-        
+    .navList ul{
+        /*border-bottom: 3px solid #2e84fb;*/
+
+    }
+    /*.line_Ac{*/
+        /*height: 3px;*/
+        /*border-radius: 4px;*/
+        /*background: #2e84fb;*/
+        /*position: relative;*/
+        /*transition:1s all;*/
+        /*top:70px;*/
+    /*}*/
+    /*.navList ul li{*/
+        /*font-size: 22px;*/
+    /*}*/
+    .active a{
+        font-size: 25px;
+        color: black;
+    }
+    .LookMore img{
+        position: relative;
+        top: 2px;
     }
 </style>
 <body>
@@ -25,10 +44,9 @@
             <div id="" class="roundabout_box">
                 <ul>
 
-                    <li><a href="#"><img src="images/zt2.jpg" alt=""><span class="text"></span></a></li>
-                    <li><a href="#"><img src="images/zt1.jpg" alt=""><span class="text"></span></a></li>
-                    <li><a href="#"><img src="images/zt3.jpg" alt=""><span class="text"></span></a></li>
-
+                    <li><a href="#"><img src="images/Antamp.jpg" alt=""><span class="text"></span></a></li>
+                    <li><a href="#"><img src="images/Antamp02.jpg" alt=""><span class="text"></span></a></li>
+                    <li><a href="#"><img src="images/Antamp03.jpg" alt=""><span class="text"></span></a></li>
                     <!--<li><a href="#"><img src="images/zt4.png" alt=""><span class="text"></span></a></li>-->
                 </ul>
             </div>
@@ -65,6 +83,7 @@
             <li class='<?php if($class_id == 8): ?>active<?php endif; ?>'>
                 <a href='/antmap/8'>其他</a>
             </li>
+            <div class="line_Ac"></div>
         </ul>
         <div class="ApplyIncluded">
             <div class="ApplyIncluded_btn" onclick='window.location.href="/Apply"'>
@@ -83,7 +102,9 @@
                         行情
                     </div>
                     <div class="LookMore" >
-                        <a href='/antmap/1'>查看更多></a>
+                        <a href='/antmap/1'>
+                            查看更多 <img src="images/MoreMoreM.png" alt="" width="5%">
+                        </a>
                     </div>
                 </div>
                 <ul class="type_NavList">
@@ -106,7 +127,7 @@
                         交易所
                     </div>
                     <div class="LookMore">
-                        <a href='/antmap/2'>查看更多></a>
+                        <a href='/antmap/2'>查看更多 <img src="images/MoreMoreM.png" alt="" width="5%"></a>
                     </div>
                 </div>
                 <ul class="type_NavList">
@@ -129,7 +150,7 @@
                         TOP200
                     </div>
                     <div class="LookMore">
-                        <a href='/antmap/3'>查看更多></a>
+                        <a href='/antmap/3'>查看更多 <img src="images/MoreMoreM.png" alt="" width="5%"></a>
                     </div>
                 </div>
                 <ul class="type_NavList">
@@ -152,7 +173,7 @@
                         钱包
                     </div>
                     <div class="LookMore">
-                        <a href='/antmap/4'>查看更多></a>
+                        <a href='/antmap/4'>查看更多 <img src="images/MoreMoreM.png" alt="" width="5%"></a>
                     </div>
                 </div>
                 <ul class="type_NavList">
@@ -175,7 +196,7 @@
                         矿池
                     </div>
                     <div class="LookMore">
-                        <a href='/antmap/5'>查看更多></a>
+                        <a href='/antmap/5'>查看更多 <img src="images/MoreMoreM.png" alt="" width="5%"></a>
                     </div>
                 </div>
                 <ul class="type_NavList">
@@ -198,7 +219,7 @@
                         媒体
                     </div>
                     <div class="LookMore">
-                        <a href='/antmap/6'>查看更多></a>
+                        <a href='/antmap/6'>查看更多 <img src="images/MoreMoreM.png" alt="" width="5%"></a>
                     </div>
                 </div>
                 <ul class="type_NavList">
@@ -221,7 +242,7 @@
                         技术服务
                     </div>
                     <div class="LookMore">
-                        <a href='/antmap/7'>查看更多></a>
+                        <a href='/antmap/7'>查看更多 <img src="images/MoreMoreM.png" alt="" width="5%"></a>
                     </div>
                 </div>
                 <ul class="type_NavList">
@@ -244,7 +265,7 @@
                         其他
                     </div>
                     <div class="LookMore">
-                        <a href='/antmap/8'>查看更多></a>
+                        <a href='/antmap/8'>查看更多 <img src="images/MoreMoreM.png" alt="" width="5%"></a>
                     </div>
                 </div>
                 <ul class="type_NavList">
@@ -340,5 +361,24 @@
 </script>
 
 <script>
-
+  //   $(".line_Ac").width($(".navList ul li").eq(0).width())
+  // $(".navList ul li").mousemove(function () {
+  //     var index=$(this).index();
+  //     // console.log(index);
+  //     var widthLine=$(this).width();
+  //     $(".line_Ac").width(widthLine);
+  //     $(".line_Ac").css("marginLeft",index*(80)+"px");
+  //     if(index==3){
+  //         $(".line_Ac").css("marginLeft",(index*(80)+25)+"px");
+  //     }if(index>=4&&index<8){
+  //         $(".line_Ac").css("marginLeft",(index*(80)+25+46)+"px");
+  //     }if(index==8){
+  //         $(".line_Ac").css("marginLeft",(index*(80)+25+46+50)+"px");
+  //     }
+  // })
+  //   $(".navList ul li").mouseout(function () {
+  //       setTimeout(function () {
+  //           $(".line_Ac").css("marginLeft",0+"px");
+  //       },2000)
+  //   })
 </script>

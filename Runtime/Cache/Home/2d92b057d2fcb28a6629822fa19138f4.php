@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="css/common.css">
 
 </head>
+<style>
+    .Hot-News{
+        margin-bottom: 30px;
+    }
+</style>
 <body>
 <div class="box">
     <!--导航栏-->
@@ -65,7 +70,10 @@
             <?php if(is_array($newsList)): foreach($newsList as $key=>$vo): ?><li onclick='window.location.href="/newsContent/<?php echo ($vo["content_id"]); ?>"'>
                     <div class="NewType-Detail">
                         <div class="NewTypeImg">
-                            <img src="<?php echo ($vo["image"]); ?>" alt="">
+                            <div class="NewTypeImgBox">
+                                <img src="<?php echo ($vo["image"]); ?>" alt="">
+                            </div>
+
                         </div>
                         <div class="NewTypeText">
                             <div class="TextTitle">
@@ -99,7 +107,7 @@
                     <span>热门快讯</span>
                     <span class="HotMore">
                         <a href='/message'>
-                            更多>
+                            更多 <img src="images/MoreMoreM.png" alt="" width="5%">
                         </a>
                     </span>
                 </div>

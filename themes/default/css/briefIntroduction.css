@@ -11,7 +11,7 @@
     background: #ffffff;
     position: relative;
     bottom:115px ;
-    border: 2px silver solid;
+    border: 2px #eeeeee solid;
     text-align: center;
 }
 .AntVideo_Title{
@@ -187,7 +187,7 @@
     width: 1200px;
     height: 655px;
     margin: 75px auto 0 auto;
-    border: 1px silver solid;
+    border: 1px #eeeeee solid;
     background: white;
     text-align: center;
     position: relative;
