@@ -99,9 +99,9 @@
                     <!--标题-->
                     <div class="HotNewsTitle">
                         <span>热门新闻</span>
-                        <span class="HotMore">
-                        更多 <img src="images/MoreMoreM.png" alt="" width="5%">
-                    </span>
+                        <span class="HotMore" onclick='window.location.href="/news"' width="5%">
+                          更多>
+                        </span>
                     </div>
                     <!--内容-->
                     <div class="hot_New_Img">
@@ -123,7 +123,6 @@
                                         <div>
                                             {$vo.time|format_time='Y-m-d'}
                                         </div>
-
                                     </div>
                                 </li>
                                 <!--{/foreach}-->

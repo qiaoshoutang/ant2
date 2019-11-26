@@ -19,6 +19,7 @@
         </option><?php endforeach; endif; ?>
   </select>
   <select name="state" id="state"  class="form-element "><option value="0" <?php if(0 == $pageMaps['state']){ ?> selected="selected"  <?php } ?> >==状态==</option><option value="1" <?php if(1 == $pageMaps['state']){ ?> selected="selected"  <?php } ?> >展示</option><option value="2" <?php if(2 == $pageMaps['state']){ ?> selected="selected"  <?php } ?> >隐藏</option><option value="3" <?php if(3 == $pageMaps['state']){ ?> selected="selected"  <?php } ?> >待审核</option><option value="4" <?php if(4 == $pageMaps['state']){ ?> selected="selected"  <?php } ?> >不通过</option></select>
+  <select name="recom" id="recom"  class="form-element "><option value="0" <?php if(0 == $pageMaps['recom']){ ?> selected="selected"  <?php } ?> >==是否推荐==</option><option value="1" <?php if(1 == $pageMaps['recom']){ ?> selected="selected"  <?php } ?> >推荐</option><option value="2" <?php if(2 == $pageMaps['recom']){ ?> selected="selected"  <?php } ?> >不推荐</option></select>
                     <button class="u-btn u-btn-primary" type="submit">筛选</button>
                 </form>
             </div></div>

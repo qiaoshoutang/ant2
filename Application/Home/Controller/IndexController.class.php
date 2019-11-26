@@ -85,8 +85,11 @@ class IndexController extends SiteController {
         //热门新闻
         $newsList = M('content')->where($where)->field('content_id,title,description,image,time,views')->limit(10)
                                 ->order('content_id desc')->select();
-        
-        
+//                                 
+        foreach($newsList as $key=>$val){
+            $newsList[$key]['description'] = html_out($val['description']);
+        }
+//         dd($newsList);
         //快讯
         $map['state'] = 2;
         $messageMod = D('Article/Message');
@@ -113,7 +116,7 @@ class IndexController extends SiteController {
         
         $contentInfo = $contentMod->getInfo($content_id);
         $contentInfo['content'] = html_out($contentInfo['content']);
-//         dd($contentInfo);
+
         //热门新闻
         $newsList = M('content')->where(['status'=>2])->field('content_id,title,description,image,time,views')->limit(5)
                     ->order('content_id desc')->select();
