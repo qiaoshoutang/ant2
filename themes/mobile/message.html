@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快讯</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        .NewFlash{
+            width: 95%;
+            margin: 0.1rem auto 0 auto;
+        }
+        .FlashTitle{
+            width: 100%;
+            text-align: left;
+            color: #2e84fb;
+            height: 1rem;
+            line-height: 1rem;
+            font-size: .3rem;
+        }
+        .NewFlash_List{
+            width: 95%;
+            margin: 0 auto;
+            height: 100%;
+
+        }
+        .NewFlash_List li{
+            width: 100%;
+            position: relative;
+            height: 100%;
+            display: inline-block;
+            border-left: 1px #b2b2b2 solid;
+        }
+        .tuoyuan{
+            width: .3rem;
+            height: .3rem;
+            border-radius: 50%;
+            position: absolute;
+            top: -.1rem;
+            left: -.155rem;
+            background: url("/themes/mobile/images/tuoyuan.png")no-repeat center top;
+            background-size: 100% 100%;
+        }
+        .mainContent{
+            width: 95%;
+            float: right;
+            height: 100%;
+        }
+        .timeF{
+            font-size: .23rem;
+            color: #b2b2b2;
+            position: absolute;
+            top: -.1rem;
+        }
+        .maintitle{
+            margin-top: .3rem;
+            text-align: left;
+            font-size: .28rem;
+            letter-spacing: .5px;
+            font-weight: bold;
+        }
+        .mainText{
+            padding-top: .15rem;
+            font-size: .25rem;
+            color: #b2b2b2;
+            font-weight: 300;
+            text-align: justify;
+            letter-spacing: 1.5px;
+        }
+        .GoodUp_badDown{
+            width: 100%;
+            font-size: .25rem;
+            color: #b2b2b2;
+            text-align: right;
+            margin-top: .2rem;
+            padding-bottom: .2rem;
+        }
+        .GoodUp_badDown img{
+            width:6%;
+        }
+        .num_G,.num_B{
+          margin-left: .2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <!--顶部导航栏-->
+    <!--#include file="header.html"-->
+    <!--快讯-->
+    <div class="NewFlash">
+        <div class="FlashTitle">
+            快讯
+        </div>
+        <!--主要内容-->
+        <ul class="NewFlash_List">
+            <!--{foreach name='messageList' item='vo' }-->
+            <li>
+                <div class="tuoyuan"></div>
+                <div class="mainContent">
+                    <div class="timeF">
+                        {$vo.time|format_time='H:i'}
+                    </div>
+
+                    <div class="maintitle">
+                        {$vo.title}
+                    </div>
+                    <div class="mainText">
+                        {$vo.content}
+                    </div>
+                    <div class="GoodUp_badDown">
+                        <span onclick='message_operation(this)' data-id='{$vo.id}' data-type='up'>
+                            <img src="images/UpC.png" alt="">
+                            <span>利好</span><span class="num_G numb_count">{$vo.up}</span>
+                        </span>
+                        <span  onclick='message_operation(this)' data-id='{$vo.id}' data-type='down'>
+                            <img src="images/downC.png" alt="">
+                            <span>利空</span><span class="num_B numb_count">{$vo.down}</span>
+                        </span>
+
+                    </div>
+                </div>
+            </li>
+            <!--{/foreach}-->
+        </ul>
+    </div>
+    <div>
+        <span id='message_more'>加载更多</span>
+    </div>
+    <!--底部框-->
+    <!--#include file="footer.html"-->
+</div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
+<script>
+    var page_num = 2;
+  
+    $('#message_more').click(function(){
+        $.ajax({
+          type:"post",
+          url:"/Home/Ajax/get_message",
+          data:{page_num:page_num},
+          dataType:'json',
+          success:function(rdata){
+
+            if(rdata.code==1){
+                $('.NewFlash_List').append(rdata.data);
+                page_num++;
+            }else{
+                $('#message_more').html(rdata.info);
+            }
+          }
+        });
+    });
+    function message_operation(param){
+        
+        var obj = $(param);
+        var id = obj.attr('data-id');
+        var type = obj.attr('data-type');
+        $.ajax({
+          type:"post",
+          url:"/Home/Ajax/opera_message",
+          data:{id:id,type:type},
+          dataType:'json',
+          success:function(rdata){
+            if(rdata.code==1){
+                obj.find('.numb_count').html(parseInt(obj.find('.numb_count').html())+1);
+            }else{
+
+            }
+          }
+        });
+    }
+</script>
+</html>

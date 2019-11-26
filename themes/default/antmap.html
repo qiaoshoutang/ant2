@@ -372,7 +372,7 @@
           success:function(rdata){
 
             if(rdata.code==1){
-                $('.type_NavList ul').append(rdata.data);
+                $('.type_NavList').append(rdata.data);
                 page_num++;
             }else{
                 $('#navi_more').html(rdata.info);

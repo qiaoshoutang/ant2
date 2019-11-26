@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>活动报名</title>
+    <title>蚂蚁活动</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <script>
         (function (doc, win) {
@@ -96,7 +96,6 @@
         border-radius: 2px;
         margin-top: .2rem;
         letter-spacing: 1px;
-        display: none;
     }
     .locationAct img{
         position: relative;
@@ -113,64 +112,65 @@
        <!--顶部导航栏-->
        <!--#include file="header.html"-->
        <div class="activits">
-           <div class="act_box">
-               <img src="images/ActImg.png" alt="" width="100%">
+          <!--{foreach name='activityList' item='vo' }-->
+          <div class="act_box">
+               <img src="{$vo.cover_url}" alt="" width="100%">
                <div class="Title_Guan">
-                   <span>EOSIO只能开发者研讨会EOSIO只能开发者研讨会</span>
-                   <span>115人浏览</span>
+                   <span>{$vo.name}</span>
+                   <span>{$vo.views}人浏览</span>
                </div>
                <div class="locationStyle">
                    <div class="locationAct">
                        <div class="locationActA">
                            <img src="images/location.png" alt="" width="6.5%">
-                           <span>中国·深圳</span>
+                           <span>{$vo.position}</span>
                        </div>
                        <div class="locationActA">
                            <img src="images/shijian.png" alt="" width="7%">
-                           <span>03月21日-03月26日</span>
+                           <span>{$vo.duration}</span>
                        </div>
-
                    </div>
+                   <!--{if condition="$vo.state eq 1"}-->
                    <div class="EnrolmentAc">
                          报名中
                    </div>
+                   <!--{/if}-->
+                   <!--{if condition="$vo.state eq 2"}-->
                    <div class="FinishAc">
                        已结束
                    </div>
-
+                   <!--{/if}-->
                </div>
-           </div>
-           <div class="act_box">
-               <img src="images/ActImg.png" alt="" width="100%">
-               <div class="Title_Guan">
-                   <span>EOSIO只能开发者研讨会</span>
-                   <span>115人浏览</span>
-               </div>
-               <div class="locationStyle">
-                   <div class="locationAct">
-                       <div class="locationActA">
-                           <img src="images/location.png" alt="" width="6.5%">
-                           <span>中国·深圳</span>
-                       </div>
-                       <div class="locationActA">
-                           <img src="images/shijian.png" alt="" width="7%">
-                           <span>03月21日-03月26日</span>
-                       </div>
-
-                   </div>
-                   <div class="EnrolmentAc">
-                       报名中
-                   </div>
-                   <div class="FinishAc">
-                       已结束
-                   </div>
-
-               </div>
-           </div>
+          </div>
+           <!--{/foreach}-->
        </div>
+       <div class="LOOKMMM" id='acti_more'>
+                查看更多
+          </div>
        <!--底部框-->
        <!--#include file="footer.html"-->
    </div>
-
 </body>
+<script src="js/common.js"></script>
+<script>
+    var page_num = 2;
+
+    $('#acti_more').click(function(){
+        $.ajax({
+          type:"post",
+          url:"/Home/Ajax/get_acti",
+          data:{page_num:page_num},
+          dataType:'json',
+          success:function(rdata){
+
+            if(rdata.code==1){
+                $('.activits').append(rdata.data);
+                page_num++;
+            }else{
+                $('#acti_more').html(rdata.info);
+            }
+          }
+        });
+    })
+</script>
 </html>

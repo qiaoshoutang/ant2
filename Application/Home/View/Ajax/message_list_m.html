@@ -1,0 +1,29 @@
+
+<foreach name='messageList' item='vo'>
+    <li>
+        <div class="tuoyuan"></div>
+        <div class="mainContent">
+            <div class="timeF">
+                {$vo.time|format_time='H:i'}
+            </div>
+
+            <div class="maintitle">
+                {$vo.title}
+            </div>
+            <div class="mainText">
+                {$vo.content}
+            </div>
+            <div class="GoodUp_badDown">
+                <span onclick='message_operation(this)' data-id='{$vo.id}' data-type='up'>
+                    <img src="/themes/mobile/images/UpC.png" alt="">
+                    <span>利好</span><span class="num_G">{$vo.up}</span>
+                </span>
+                <span  onclick='message_operation(this)' data-id='{$vo.id}' data-type='down'>
+                    <img src="/themes/mobile/images/downC.png" alt="">
+                    <span>利空</span><span class="num_B">{$vo.down}</span>
+                </span>
+
+            </div>
+        </div>
+    </li>
+</foreach>

@@ -54,7 +54,6 @@
         width: 90%;
         margin: 0.4rem auto 0 auto;
         text-align: justify;
-        font-weight: bold;
     }
     .ZxNr_Title{
         width: 100%;
@@ -77,38 +76,18 @@
     <!--#include file="header.html"-->
     <div class="NewsContent">
         <div class="NewsContent_Titile">
-            <p>金色荐读|平安证券首席经济学家张明:Libra对全球经济的潜在影响</p>
+            <p>{$contentInfo['title']}</p>
             <p class="Time_Num">
-                <span>蚂蚁节点联盟 · 2019-10-30 17:30:09</span>
+                <span>{$contentInfo['author']} · {$contentInfo['time']|format_time="Y-m-d H:i:s"}</span>
                 <span class="Num">
                     <img src="images/guankan.png" alt="" class="guankan">
-                    <span>650</span>
+                    <span>{$contentInfo['views']}</span>
                 </span>
             </p>
         </div>
         <!--资讯内容-->
         <div class="ZxNr">
-            <div class="ZxNr_Title">
-                金色荐读|平安证券首席经济学家张明:Libra对全球
-                经济的潜在影响
-            </div>
-            <div class="ZxNr_Content">
-                2019首届GETS“新风向”全球加密大会由CoinKaola考拉财经主办， 世界数字经济联盟WDEA和Cyberpunk Lab联合主办方，由月亮财经承办。本次会议定向邀约超过100位全球行业权威加密技术专家、100家投资机构，1000名行业精英、多家上市公司，全球头部财经媒体共同参与，汇聚区块链行业最专业、最具代表性人群，共同探讨加密技术在未来百年的行业创新变革与应用。考拉财经带你走进加密技术，走进POW矿业芯动力，走进高交会!
-            </div>
-
-            <div class="ZxNr_Title">
-                亮点1：海量媒体流量，全球瞩目
-            </div>
-
-            <div class="ZxNr_Img">
-                <img src="images/ZxNr.png" alt="" width="100%">
-            </div>
-            <div class="ZxNr_Content">
-                2019首届GETS“新风向”全球加密大会由CoinKaola考拉财经主办， 世界数字经济联盟WDEA和Cyberpunk Lab联合主办方，由月亮财经承办。本次会议定向邀约超过100位全球行业权威加密技术专家、100家投资机构，1000名行业精英、多家上市公司，全球头部财经媒体共同参与，汇聚区块链行业最专业、最具代表性人群，共同探讨加密技术在未来百年的行业创新变革与应用。考拉财经带你走进加密技术，走进POW矿业芯动力，走进高交会!
-            </div>
-
-
-
+            {$contentInfo['content']}
         </div>
 
     </div>

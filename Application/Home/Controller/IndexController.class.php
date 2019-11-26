@@ -83,9 +83,9 @@ class IndexController extends SiteController {
             $where['class_id'] = $class_id;
         }
         //热门新闻
-        $newsList = M('content')->where($where)->field('content_id,title,description,image,time,views')->limit(10)
+        $newsList = M('content')->where($where)->field('content_id,title,description,image,time,views,author')->limit(10)
                                 ->order('content_id desc')->select();
-//                                 
+//                                 dd($newsList);
         foreach($newsList as $key=>$val){
             $newsList[$key]['description'] = html_out($val['description']);
         }

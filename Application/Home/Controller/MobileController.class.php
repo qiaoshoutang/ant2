@@ -20,46 +20,123 @@ class MobileController extends SiteController {
         $this -> siteDisplay('index');
     }
     
-    //蚂蚁记事
-    public function memo(){
+    //快讯列表
+    public function message(){
+        $where['state'] = 2;
+        $messageMod = D('Article/Message');
         
-        //快讯列表
-        $where['A.status']=1;
-        $where['A.class_id']=6;
-        $contentMod=D('Article/ContentArticle');
-        // 	    $count = $contentMod->countList($where);
-        // 	    $limit = $this->getPageLimit($count,20);
+        $messageCount = $messageMod->countList($where);
+        $limit = $this->getPageLimit($messageCount,10);
+        $messageList = $messageMod->loadList($where,$limit);
         
-        $list = $contentMod->loadList($where);
-        
-        $this->assign('list',$list);
-        $this -> siteDisplay('memo');
+        $this->assign('messageList',$messageList);
+        $this -> siteDisplay('message');
     }
-    //蚂蚁记事
-    public function alliance_act(){
+    //新闻列表
+    public function news(){
         
-        $activityMod=D('Admin/Activity');
-        $where['status'] = 1;
-        $activity_list = $activityMod->loadList($where,0,'order_id asc');
+        $where['status'] = 2;
+
+        //热门新闻
+        $newsList = M('content')->where($where)->field('content_id,title,description,image,time,views,author')->limit(10)
+                                ->order('content_id desc')->select();
         
-        $activity_first = array_shift($activity_list);
-        
-        $list_num=count($activity_list);
-        $line_num = 2;  //每一行子项目数
-        $lastline_num = $list_num%$line_num;
-        
-        if($lastline_num){
-            $need_num = $line_num-$lastline_num;
-            $data['cover_url'] = '/Public/img/activity_m_default.png';
-            for($i=0;$i<$need_num;$i++){
-                $activity_list[] = $data;
+        foreach($newsList as $key=>$val){
+            $newsList[$key]['description'] = html_out($val['description']);
+            if($val['time']>(time()-3600)){ //一小时内
+                $newsList[$key]['time'] = ceil((time()-$val['time'])/60).'分钟前';
+            }else{
+                $newsList[$key]['time'] = date('Y-m-d H:i');
             }
         }
         
+        $this->assign('newsList',$newsList);
+        $this -> siteDisplay('news');
+    }
+    
+    //新闻详情
+    public function newsContent(){
         
-        $this->assign('activity_first',$activity_first);
-        $this->assign('activity_list',$activity_list);
-        $this -> siteDisplay('alliance_act');
+        $content_id = I('request.content_id',0);
+        
+        $contentMod = D('Article/ContentArticle');
+        
+        $contentInfo = $contentMod->getInfo($content_id);
+        $contentInfo['content'] = html_out($contentInfo['content']);
+//         dd($contentInfo);
+        $this->assign('contentInfo',$contentInfo);
+        $this -> siteDisplay('newsContent');
+    }
+    
+    //蚂蚁导航
+    public function antMap(){
+        
+//         $class_id = I('request.class_id','recom');
+        
+//         $naviMod = D('Admin/Navi');
+        
+//         $where['state'] = 1;
+//         if($class_id == 'recom'){
+            
+//             $where['recom'] = 1;
+            
+//             $where['class_id'] = 1;
+//             $naviList1 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            
+//             $where['class_id'] = 2;
+//             $naviList2 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            
+//             $where['class_id'] = 3;
+//             $naviList3 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            
+//             $where['class_id'] = 4;
+//             $naviList4 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            
+//             $where['class_id'] = 5;
+//             $naviList5 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            
+//             $where['class_id'] = 6;
+//             $naviList6 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            
+//             $where['class_id'] = 7;
+//             $naviList7 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            
+//             $where['class_id'] = 8;
+//             $naviList8 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            
+//             $this->assign('naviList1',$naviList1);
+//             $this->assign('naviList2',$naviList2);
+//             $this->assign('naviList3',$naviList3);
+//             $this->assign('naviList4',$naviList4);
+//             $this->assign('naviList5',$naviList5);
+//             $this->assign('naviList6',$naviList6);
+//             $this->assign('naviList7',$naviList7);
+//             $this->assign('naviList8',$naviList8);
+//         }else{
+//             $where['class_id'] = $class_id;
+            
+//             $naviList = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+//             $this->assign('naviList',$naviList);
+//         }
+        
+        
+        
+        
+//         $this->assign('class_id',$class_id);
+        
+        $this -> siteDisplay('antmap');
+    }
+    
+    
+    //蚂蚁活动
+    public function activity(){
+
+        $activityMod = D('Admin/Activity');
+        
+        $activityList = $activityMod->loadList($where,9,'order_id desc,id desc');
+
+        $this->assign('activityList',$activityList);
+        $this -> siteDisplay('activity');
     }
     
     //联盟活动相册
@@ -167,78 +244,6 @@ class MobileController extends SiteController {
         $this -> siteDisplay('aboutus');
     }
     
-    //理事单位
-    public function council(){
-        
-        $where['status']=2;
-        $councilMod=D('Admin/Council');
-        $cw_list = $councilMod->loadList($where,$limit,'id desc');
-        
-        $where['status']=3;
-        $councilMod=D('Admin/Council');
-        $pt_list = $councilMod->loadList($where,$limit,'id desc');
-        
-        
-        $this->assign('cw_list',$cw_list);
-        $this->assign('pt_list',$pt_list);
-        $this -> siteDisplay('council');
-    }
-    public function council_2(){
-        
-        $where['status']=2;
-        $councilMod=D('Admin/Council');
-        $cw_list = $councilMod->loadList($where,$limit,'id desc');
-        
-        $where['status']=3;
-        $councilMod=D('Admin/Council');
-        $pt_list = $councilMod->loadList($where,$limit,'id desc');
-        
-        
-        $this->assign('cw_list',$cw_list);
-        $this->assign('pt_list',$pt_list);
-        $this -> siteDisplay('council_2');
-    }
-    
-    //理事提交
-    public function council_submit(){
-        
-        $contactname=I('post.contactname','','trim');
-        $name=I('post.name','','trim');
-        
-        $councilMod=D('Admin/Council');
-        
-        $where['contactname']=$contactname;
-        $where['name']=$name;
-        
-        $councilInfo=$councilMod->getWhereInfo($where);
-        
-        if($councilInfo){
-            $data['code']=0;
-            $data['msg']='该理事单位申请已经提交，请勿重复提交';
-            
-            $this->ajaxReturn($data);
-        }
-        
-        
-        $councilMod=D('Admin/Council');
-        $re=$councilMod->saveData();
-        if($re){
-            $data['code']=1;
-            $data['msg']='申请提交成功';
-        }else{
-            $data['code']=0;
-            $data['msg']='申请提交失败，请重新提交';
-        }
-        
-        $this->ajaxReturn($data);
-    }
-    
-    //人才招聘
-    public function recruit(){
-
-        $this -> siteDisplay('recruit');
-    }
-    
     //采集
     public function collection(){
         $this->article_collection();
@@ -246,78 +251,7 @@ class MobileController extends SiteController {
         $this->weibo_collection();
     }
     
-    //快讯
-    public function message(){
-        header("Content-Type:text/html; charset=utf-8");
-        
-        $gzh_num=I('request.gzh_num',1,'intval');
-        $info=array();
-        
-        switch ($gzh_num){  //海报默认二维码
-            
-            case 1 : {
-                $info['gzh_code']=C('qr_code_a');
-                break;
-            }
-            case 2 : {
-                $info['gzh_code']=C('qr_code_b');
-                break;
-            }
-            case 3 : {
-                $info['gzh_code']=C('qr_code_c');
-                break;
-            }
-        }
-        
-        
-        //快讯列表
-        $where_a['A.status']=1;
-        $where_a['A.class_id']=5;
-        $contentMod=D('Article/ContentArticle');
-        $count = $contentMod->countList($where_a);
-        $limit = $this->getPageLimit($count,20);
-        
-        $article_list = $contentMod->loadList($where_a,$limit);
-        $weekname=array('星期天','星期一','星期二','星期三','星期四','星期五','星期六');
-        
-        foreach($article_list as $key=>$val){
-            $article_list[$key]['content']=html_out($val['content']);
-            $article_list[$key]['time_top']=date('m.d',$val['time']).' '.$weekname[date('w',$val['time'])];
-        }
-        
-        //动态列表
-        $where_t['status']=1;
-        $twitterMod=D('Admin/Twitter');
-        $count = $twitterMod->countList($where_t);
-        $limit = $this->getPageLimit($count,20);
-        
-        $twitter_list = $twitterMod->loadList($where_t,$limit);
-        
-        foreach($twitter_list as $key=>$val){
-            $twitter_list[$key]['content']=html_out($val['content']);
-        }
-        
-        //微博列表
-        $where_w['status']=1;
-        $weiboMod=D('Admin/Weibo');
-        $count = $weiboMod->countList($where_w);
-        $limit = $this->getPageLimit($count,20);
-        
-        $weibo_list = $weiboMod->loadList($where_w,$limit);
-        foreach($weibo_list as $key=>$val){
-            $weibo_list[$key]['content']=html_out($val['content']);
-        }
-        
-        
-        $this->assign('page_num','1');
-        
-        $this->assign('article_list',$article_list);
-        $this->assign('twitter_list',$twitter_list);
-        $this->assign('weibo_list',$weibo_list);
-        
-        $this->assign('info',$info);
-        $this -> siteDisplay('message');
-    }
+   
     
     /**
      *

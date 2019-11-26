@@ -24,13 +24,16 @@ return array(
 	    
 	    
 	    'home_m'          =>  'Home/Mobile/index',
-	    'memo_m'          =>  'Home/Mobile/memo',
-	    'alliance_act_m'  => 'Home/Mobile/alliance_act',
-	    'alliance_act_details_m/:activity_id'=>'Home/Mobile/alliance_act_details',
-	    'alliance_album_details_m/:album_id/:p'=>'Home/Mobile/alliance_album_details',
-	    'business_m'      =>  'Home/Mobile/business',
-	    'team_m'          =>  'Home/Mobile/team',
+	    'message_m'       =>  'Home/Mobile/message',
+	    'news_m'          =>  'Home/Mobile/news',
+	    'newsContent_m/:content_id' =>'Home/Mobile/newsContent',
+	    'antmap_m'        =>  'Home/Mobile/antmap',
+	    'activit_m'        =>  'Home/Mobile/activity',
+	    
+	    
 	    'aboutus_m'         =>  'Home/Mobile/aboutus',
+	    'team_m'          =>  'Home/Mobile/team',
+	    
 	    'cooperation_m'   =>  'Home/Mobile/cooperation',
 	    'councils_m'      =>  'Home/Mobile/council',
 	    'recruit_m'       =>  'Home/Mobile/recruit',

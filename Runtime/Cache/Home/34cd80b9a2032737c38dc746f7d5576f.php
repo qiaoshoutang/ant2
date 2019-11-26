@@ -63,7 +63,7 @@
                 <a href='/antmap/1'>行情</a>
             </li>
             <li class='<?php if($class_id == 2): ?>active<?php endif; ?>'>
-                <a href='/antmap/2'>交易所</a>
+                <a href='/antmap/2'>资产管理</a>
             </li>
             <li class='<?php if($class_id == 3): ?>active<?php endif; ?>'>
                 <a href='/antmap/3'>TOP200</a>
@@ -350,7 +350,7 @@
           success:function(rdata){
 
             if(rdata.code==1){
-                $('.type_NavList ul').append(rdata.data);
+                $('.type_NavList').append(rdata.data);
                 page_num++;
             }else{
                 $('#navi_more').html(rdata.info);

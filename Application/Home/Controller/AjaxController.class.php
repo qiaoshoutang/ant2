@@ -11,6 +11,7 @@ class AjaxController extends SiteController {
      * 更多新闻
      */
     public function get_news(){
+
         $page_num = I('post.page_num',0,'intval');
         $class_id = I('post.class_id','all','intval');
 
@@ -28,7 +29,15 @@ class AjaxController extends SiteController {
             $this->ajaxReturn($rdata);
         }
         $this->assign('newsList',$newsList);
-        $data = $this->fetch('news_list');
+        
+        $detect = new \Common\Util\Mobile_Detect();
+
+        if($detect->isMobile()){
+            $data = $this->fetch('news_list_m');
+        }else{
+            $data = $this->fetch('news_list');
+        }
+        
         
         $rdata['code'] = 1;
         $rdata['info'] = '获取信息成功';
@@ -54,7 +63,15 @@ class AjaxController extends SiteController {
             $this->ajaxReturn($rdata);
         }
         $this->assign('messageList',$messageList);
-        $data = $this->fetch('message_list');
+        
+        $detect = new \Common\Util\Mobile_Detect();
+        
+        if($detect->isMobile()){
+            $data = $this->fetch('message_list_m');
+        }else{
+            $data = $this->fetch('message_list');
+        }
+        
         
         $rdata['code'] = 1;
         $rdata['info'] = '获取信息成功';
@@ -90,7 +107,7 @@ class AjaxController extends SiteController {
         $page_num = I('post.page_num',0,'intval');
         $class_id = I('post.class_id','all','intval');
   
-        $where['state'] = 2;
+        $where['state'] = 1;
 
         if($class_id != 'recom'){
             $where['class_id'] = $class_id;
@@ -98,7 +115,7 @@ class AjaxController extends SiteController {
         
         $naviMod = D('Admin/Navi');
         
-        $naviList = $naviMod->where($where)->page($page_num,10)
+        $naviList = $naviMod->where($where)->page($page_num,20)
                                 ->order('id desc')->select();
         
         if(empty($naviList)){
@@ -158,7 +175,15 @@ class AjaxController extends SiteController {
             $this->ajaxReturn($rdata);
         }
         $this->assign('actiList',$actiList);
-        $data = $this->fetch('acti_list');
+        
+        $detect = new \Common\Util\Mobile_Detect();
+        
+        if($detect->isMobile()){
+            $data = $this->fetch('acti_list_m');
+        }else{
+            $data = $this->fetch('acti_list');
+        }
+        
         
         $rdata['code'] = 1;
         $rdata['info'] = '获取信息成功';

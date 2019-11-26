@@ -23,12 +23,9 @@
         })(document, window);
     </script>
     <link rel="stylesheet" href="css/index.css">
-
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="/themes/mobile/dist/jquery.flipster.min.css">
-
     <link rel="stylesheet" href="/themes/mobile/dist/css/jquery.flipster.css">
-
     <link rel="stylesheet" href="/themes/mobile/dist/css/default.css">
     <link rel="stylesheet" href="/themes/mobile/dist/css/demo.css">
     <link rel="stylesheet" href="/themes/mobile/dist/css/flipsternavtabs.css">
@@ -47,7 +44,6 @@
 
          <!--轮播-->
          <div id="slideBox" class="slideBox">
-
              <div class="bd">
                  <ul>
                      <li>
@@ -60,12 +56,10 @@
                      </li>
                  </ul>
              </div>
-
              <div class="hd">
                  <ul></ul>
              </div>
          </div>
-
 
          <!--服务类型-->
          <div class="serviceTypes">
@@ -117,9 +111,7 @@
                      <li><img src="images/patner14.png" alt=""></li>
                      <li><img src="images/patner15.png" alt=""></li>
                  </ul>
-
              </div>
-
          </div>
          <!--旗下产品-->
          <div class="Its_products">
@@ -150,7 +142,6 @@
                                  </ul>
                              </div>
                              <!-- End Flipster List -->
-
                          </div>
                      </div>
                  </div>
