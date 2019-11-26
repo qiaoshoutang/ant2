@@ -71,58 +71,44 @@ class MobileController extends SiteController {
     //蚂蚁导航
     public function antMap(){
         
-//         $class_id = I('request.class_id','recom');
+        $class_id = I('request.class_id','recom');
         
-//         $naviMod = D('Admin/Navi');
+        $naviMod = D('Admin/Navi');
         
-//         $where['state'] = 1;
-//         if($class_id == 'recom'){
+        $where['state'] = 1;
+        if($class_id == 'recom'){
             
-//             $where['recom'] = 1;
+            $where['recom'] = 1;
             
-//             $where['class_id'] = 1;
-//             $naviList1 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            //行情
+            $where['class_id'] = 1;
+            $naviList1 = $naviMod->where($where)->limit(0,8)->order('order_id desc,id desc')->select();
             
-//             $where['class_id'] = 2;
-//             $naviList2 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            //资产管理
+            $where['class_id'] = 2;
+            $naviList2 = $naviMod->where($where)->limit(0,8)->order('order_id desc,id desc')->select();
             
-//             $where['class_id'] = 3;
-//             $naviList3 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            //钱包
+            $where['class_id'] = 4;
+            $naviList4 = $naviMod->where($where)->limit(0,8)->order('order_id desc,id desc')->select();
             
-//             $where['class_id'] = 4;
-//             $naviList4 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
             
-//             $where['class_id'] = 5;
-//             $naviList5 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            $this->assign('naviList1',$naviList1);
+            $this->assign('naviList2',$naviList2);
+
+            $this->assign('naviList4',$naviList4);
+
+        }else{
+            $where['class_id'] = $class_id;
             
-//             $where['class_id'] = 6;
-//             $naviList6 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
-            
-//             $where['class_id'] = 7;
-//             $naviList7 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
-            
-//             $where['class_id'] = 8;
-//             $naviList8 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
-            
-//             $this->assign('naviList1',$naviList1);
-//             $this->assign('naviList2',$naviList2);
-//             $this->assign('naviList3',$naviList3);
-//             $this->assign('naviList4',$naviList4);
-//             $this->assign('naviList5',$naviList5);
-//             $this->assign('naviList6',$naviList6);
-//             $this->assign('naviList7',$naviList7);
-//             $this->assign('naviList8',$naviList8);
-//         }else{
-//             $where['class_id'] = $class_id;
-            
-//             $naviList = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
-//             $this->assign('naviList',$naviList);
-//         }
+            $naviList = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            $this->assign('naviList',$naviList);
+        }
         
         
         
         
-//         $this->assign('class_id',$class_id);
+        $this->assign('class_id',$class_id);
         
         $this -> siteDisplay('antmap');
     }

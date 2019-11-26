@@ -27,7 +27,7 @@ return array(
 	    'message_m'       =>  'Home/Mobile/message',
 	    'news_m'          =>  'Home/Mobile/news',
 	    'newsContent_m/:content_id' =>'Home/Mobile/newsContent',
-	    'antmap_m'        =>  'Home/Mobile/antmap',
+	    'antmap_m/:class_id'=>  'Home/Mobile/antmap',
 	    'activit_m'        =>  'Home/Mobile/activity',
 	    
 	    
