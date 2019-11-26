@@ -32,7 +32,7 @@
 .Recent-time ul {
     width: 1200px;
     height: 60px;
-    border: 1px silver solid;
+    border: 1px #eeeeee solid;
     line-height: 60px;
 }
 .Recent-time ul li{

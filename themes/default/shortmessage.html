@@ -19,7 +19,9 @@
         display: inline-block;
         position: relative;
         top: 60px;
+        cursor: pointer;
     }
+
 </style>
 <div class="box">
     <!--导航栏-->

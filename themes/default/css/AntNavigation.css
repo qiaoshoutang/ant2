@@ -35,23 +35,25 @@ legend{display:none;}
 }
 .navList ul li{
     float: left;
-    margin-right: 3.5%;
+    margin-right: 30px;
     height: 80px;
     line-height: 80px;
     text-align: center;
-    font-size: 25px;
-    /*border-bottom: #2e84fb 3px solid;*/
+    font-size: 22px;
 }
 .navList ul li.active a{
     font-weight:bold;
     color:#333;
+    font-size: 25px;
 }
 .navList ul li a{
     color:#808080;
 }
-.navList ul li:hover{
-    font-weight: bold;
+.navList ul li a:hover{
+    /*font-weight: bold;*/
+    /*color:#333;*/
     cursor: pointer;
+    /*font-size: 25px;*/
 }
 
 /*.navList ul li:nth-child(8){
@@ -93,7 +95,7 @@ legend{display:none;}
     width: 1200px;
     margin: 0px auto 0 auto;
     clear: both;
-    min-height: 1300px;
+    padding-bottom: 100px;
 }
 .Market_view_order{
     width: 100%;
@@ -110,6 +112,7 @@ legend{display:none;}
     float: right;
     letter-spacing: 1px;
     margin-right: 15px;
+    text-align: right;
 
 }
 .LookMore a{
@@ -139,7 +142,7 @@ legend{display:none;}
 
 }
 .type_NavList_box{
-    border: 1px silver solid;
+    border: 1px #eeeeee solid;
     width: 100%;
     height: 100%;
     position: absolute;

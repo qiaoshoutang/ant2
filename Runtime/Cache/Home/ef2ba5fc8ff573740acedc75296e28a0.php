@@ -19,9 +19,11 @@
         <div class="in exhibition_hall">
             <div id="" class="roundabout_box">
                 <ul>
-                    <li><a href="#"><img src="images/Antamp.jpg" alt=""><span class="text"></span></a></li>
-                    <li><a href="#"><img src="images/Antamp02.jpg" alt=""><span class="text"></span></a></li>
-                    <li><a href="#"><img src="images/Antamp03.jpg" alt=""><span class="text"></span></a></li>
+
+
+                    <li><a href="#"><img src="images/zt2.jpg" alt=""><span class="text"></span></a></li>
+                    <li><a href="#"><img src="images/zt1.jpg" alt=""><span class="text"></span></a></li>
+                    <li><a href="#"><img src="images/zt3.jpg" alt=""><span class="text"></span></a></li>
                 </ul>
             </div>
             <div class="clear"></div>

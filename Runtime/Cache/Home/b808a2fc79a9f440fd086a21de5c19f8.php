@@ -55,7 +55,7 @@
     </div>
     <div class="Right-belonging">
         <div style="margin-right: 25px">
-            Copyright @2018 mayi.org <span style="margin-left: 50px">蚂蚁节点联盟版权所有</span>
+            Copyright ©2019 mayi.org <span style="margin-left: 50px">蚂蚁节点联盟版权所有</span>
         </div>
 
     </div>
