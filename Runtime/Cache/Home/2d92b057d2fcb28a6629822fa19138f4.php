@@ -87,7 +87,6 @@
                                 <span><?php echo (format_time($vo["time"],'Y-m-d H:i:s')); ?></span>
                                 <span><?php echo ($vo["view"]); ?></span>
                             </div>
-
                         </div>
                     </div>
                 </li><?php endforeach; endif; ?>

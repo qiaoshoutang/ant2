@@ -48,6 +48,13 @@
             </div>
         </div>
         
+        <div class="formitm">
+            <label class="lab">浏览量</label>
+            <div class="ipt">
+                <input name="views" type="text"  class="form-element u-width-full  " id="views" value="<?php echo ($info["views"]); ?>" maxlength="50"   >
+                <p class="help-block"></p>
+            </div>
+        </div>
         
         <div class="formitm">
             <label class="lab">缩略图</label>

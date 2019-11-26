@@ -14,7 +14,7 @@ class ContentArticleModel extends Model {
      * 获取列表
      * @return array 列表
      */
-    public function loadList($where = array(), $limit = 0, $order = 'A.time desc,A.content_id desc'){
+    public function loadList($where = array(), $limit = 0, $order = 'A.content_id desc'){
 
         $pageList = $this->table("__CONTENT__ as A")
                     ->join('__CONTENT_ARTICLE__ as B ON A.content_id = B.content_id')

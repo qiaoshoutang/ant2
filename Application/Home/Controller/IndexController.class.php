@@ -112,7 +112,7 @@ class IndexController extends SiteController {
         $contentMod = D('Article/ContentArticle');
         
         $contentInfo = $contentMod->getInfo($content_id);
-        
+        $contentInfo['content'] = html_out($contentInfo['content']);
 //         dd($contentInfo);
         //热门新闻
         $newsList = M('content')->where(['status'=>2])->field('content_id,title,description,image,time,views')->limit(5)

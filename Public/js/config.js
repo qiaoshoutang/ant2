@@ -32,7 +32,7 @@ Do.add('editorCss',{
     type : 'css'
 });
 Do.add('editorSrc', {
-    path: baseDir + 'keditor/kindeditor-all-min.js',
+    path: baseDir + 'keditor/kindeditor-all.js',
     requires : ['editorCss']
 });
 Do.add('editor', {
