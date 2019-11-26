@@ -11,19 +11,30 @@
 <style>
     .navList ul{
         /*border-bottom: 3px solid #2e84fb;*/
+    }
+    .line_Ac{
+        height: 4px;
+        border-radius: 12px;
+        background: #2e84fb;
+        position: relative;
+        transition:1s all cubic-bezier(.23, 1, .23, 1);;
+        bottom: 20px;
+        width: 0%;
+        /*display: inline-block;*/
 
     }
-    /*.line_Ac{*/
-        /*height: 3px;*/
-        /*border-radius: 4px;*/
-        /*background: #2e84fb;*/
-        /*position: relative;*/
-        /*transition:1s all;*/
-        /*top:70px;*/
-    /*}*/
-    /*.navList ul li{*/
-        /*font-size: 22px;*/
-    /*}*/
+    .AcLine{
+        width: 100%;
+        text-align: center;
+    }
+    .navList ul li{
+        font-size: 22px;
+
+    }
+    .navList ul li a{
+        display: inline-block;
+        vertical-align:top;
+    }
     .active a{
         font-size: 25px;
         color: black;
@@ -58,32 +69,41 @@
         <ul>
             <li class='<!--{if condition="$class_id eq recom"}--> active <!--{/if}-->'>
                 <a href='/antmap/recom'>推荐</a>
+                <div class="line_Ac"></div>
             </li>
             <li class='<!--{if condition="$class_id eq 1"}--> active <!--{/if}-->'>
                 <a href='/antmap/1'>行情</a>
+                <div class="line_Ac"></div>
             </li>
             <li class='<!--{if condition="$class_id eq 2"}--> active <!--{/if}-->'>
                 <a href='/antmap/2'>资产管理</a>
+                <div class="line_Ac"></div>
             </li>
             <li class='<!--{if condition="$class_id eq 3"}--> active <!--{/if}-->'>
                 <a href='/antmap/3'>TOP200</a>
+                <div class="line_Ac"></div>
             </li>
             <li class='<!--{if condition="$class_id eq 4"}--> active <!--{/if}-->'>
                 <a href='/antmap/4'>钱包</a>
+                <div class="line_Ac"></div>
             </li>
             <li class='<!--{if condition="$class_id eq 5"}--> active <!--{/if}-->'>
                 <a href='/antmap/5'>矿池</a>
+                <div class="line_Ac"></div>
             </li>
             <li class='<!--{if condition="$class_id eq 6"}--> active <!--{/if}-->'>
                 <a href='/antmap/6'>媒体</a>
+                <div class="line_Ac"></div>
             </li>
             <li class='<!--{if condition="$class_id eq 7"}--> active <!--{/if}-->'>
                 <a href='/antmap/7'>技术服务</a>
+                <div class="line_Ac"></div>
             </li>
             <li class='<!--{if condition="$class_id eq 8"}--> active <!--{/if}-->'>
                 <a href='/antmap/8'>其他</a>
+                <div class="line_Ac"></div>
             </li>
-            <div class="line_Ac"></div>
+
         </ul>
         <div class="ApplyIncluded">
             <div class="ApplyIncluded_btn" onclick='window.location.href="/Apply"'>
@@ -383,24 +403,22 @@
 </script>
 
 <script>
-  //   $(".line_Ac").width($(".navList ul li").eq(0).width())
-  // $(".navList ul li").mousemove(function () {
-  //     var index=$(this).index();
-  //     // console.log(index);
-  //     var widthLine=$(this).width();
-  //     $(".line_Ac").width(widthLine);
-  //     $(".line_Ac").css("marginLeft",index*(80)+"px");
-  //     if(index==3){
-  //         $(".line_Ac").css("marginLeft",(index*(80)+25)+"px");
-  //     }if(index>=4&&index<8){
-  //         $(".line_Ac").css("marginLeft",(index*(80)+25+46)+"px");
-  //     }if(index==8){
-  //         $(".line_Ac").css("marginLeft",(index*(80)+25+46+50)+"px");
-  //     }
-  // })
-  //   $(".navList ul li").mouseout(function () {
-  //       setTimeout(function () {
-  //           $(".line_Ac").css("marginLeft",0+"px");
-  //       },2000)
-  //   })
+    window.onload=function (ev) {
+        if($(".navList ul li").hasClass("active")=="true"){
+             console.log($(this))
+        }
+    };
+
+  // $(".line_Ac").eq(0).addClass("AcLine");
+
+  $(".navList ul li").hover(function () {
+      $(this).find(".line_Ac").addClass("AcLine");
+      $(this).siblings("li").find(".line_Ac").removeClass("AcLine");
+  },function () {
+      setTimeout(function () {
+          $(this).find(".line_Ac").removeClass("AcLine");
+      },1000)
+
+  })
+
 </script>
