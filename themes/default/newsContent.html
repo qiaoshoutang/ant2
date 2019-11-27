@@ -106,9 +106,11 @@
                     <!--内容-->
                     <div class="hot_New_Img">
                         <div class="hot_Img_TT">
-                            <img src="images/NewTypr-img.png" alt="" width="100%">
-                            <div class="hot_Hover_A">
-                                国内外大事件
+                            <div onclick='window.location.href="/newsContent/{$newsFirst.content_id}"'>
+                                <img src="{$newsFirst['image']|default='images/news_default.png'}" alt="" width="100%">
+                                <div class="hot_Hover_A">
+                                    {$newsFirst['title']}
+                                </div>
                             </div>
                             <ul class="hot_NewContent_ul">
                                 <!--{foreach name='newsList' item='vo' }-->

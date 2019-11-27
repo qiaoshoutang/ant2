@@ -63,10 +63,16 @@ class IndexController extends SiteController {
         $messageList = $messageMod->loadList($where,$limit);
         
         //热门新闻
-        $newsList = M('content')->where(['status'=>2])->field('content_id,title,image,time')->limit('0,5')->order('content_id desc')->select();
+        $newsList = M('content')->where(['status'=>2])->field('content_id,title,image,time')->limit('0,5')->order('sequence desc,content_id desc')->select();
         
+        if($newsList){
+            $newsFirst = array_shift($newsList);
+            $this->assign('newsFirst',$newsFirst);
+        }
+
         //推荐导航
         $naviList = D('Admin/Navi')->loadList(['recom'=>1],'0,5');
+        
         
         $this->assign('newsList',$newsList);
         $this->assign('messageList',$messageList);
@@ -84,8 +90,8 @@ class IndexController extends SiteController {
         }
         //热门新闻
         $newsList = M('content')->where($where)->field('content_id,title,description,image,time,views,author')->limit(10)
-                                ->order('content_id desc')->select();
-//                                 dd($newsList);
+                                ->order('sequence desc,content_id desc')->select();
+
         foreach($newsList as $key=>$val){
             $newsList[$key]['description'] = html_out($val['description']);
         }
@@ -119,8 +125,12 @@ class IndexController extends SiteController {
 
         //热门新闻
         $newsList = M('content')->where(['status'=>2])->field('content_id,title,description,image,time,views')->limit(5)
-                    ->order('content_id desc')->select();
-        
+                    ->order('sequence desc,content_id desc')->select();
+        if($newsList){
+            $newsFirst = array_shift($newsList);
+            $this->assign('newsFirst',$newsFirst);
+        }
+                    
         
         //快讯
         $map['state'] = 2;
@@ -263,7 +273,7 @@ class IndexController extends SiteController {
         $messageMod = M('message');
         
         //搜索内容
-        $newsList = $contentMod->where(['status'=>2,'title'=>['like','%'.$keyword.'%']])->order('content_id desc')->select();
+        $newsList = $contentMod->where(['status'=>2,'title'=>['like','%'.$keyword.'%']])->order('sequence desc,content_id desc')->select();
         $messageList = $messageMod->where(['state'=>2,'title'=>['like','%'.$keyword.'%']])->order('id desc')->select();
         $activityList = M('activity')->where(['name'=>['like','%'.$keyword.'%']])->order('id desc')->select();
 
@@ -274,7 +284,11 @@ class IndexController extends SiteController {
         $messageList2 = $messageMod->where(['state'=>2])->limit(0,3)->order('id desc')->select();
         
         //热门新闻
-        $newsList2 = $contentMod->where(['status'=>2])->limit(0,5)->order('content_id desc')->select();
+        $newsList2 = $contentMod->where(['status'=>2])->limit(0,5)->order('sequence desc,content_id desc')->select();
+        if($newsList2){
+            $newsFirst = array_shift($newsList2);
+            $this->assign('newsFirst',$newsFirst);
+        }
         
         $this->assign('keyword',$keyword);
         $this->assign('newsList',$newsList);
