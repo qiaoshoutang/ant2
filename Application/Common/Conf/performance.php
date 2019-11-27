@@ -33,12 +33,6 @@ return array(
 	    
 	    'aboutus_m'         =>  'Home/Mobile/aboutus',
 	    'team_m'          =>  'Home/Mobile/team',
-	    
-	    'cooperation_m'   =>  'Home/Mobile/cooperation',
-	    'councils_m'      =>  'Home/Mobile/council',
-	    'recruit_m'       =>  'Home/Mobile/recruit',
-	    
-	    'test_m'          =>  'Home/Mobile/council_2',
 
 	),
     'URL_HTML_SUFFIX'=>'html', // 伪静态后缀
