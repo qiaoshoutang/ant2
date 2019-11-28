@@ -29,6 +29,9 @@
         <admin:formrow title="简介" tip=""  >
           <admin:textarea name="description" rows="10" width="full" >{$info.description}</admin:textarea>
         </admin:formrow>
+        <admin:formrow title="权重" tip="越大越靠前">
+          <admin:text name="sequence" value="{$info.sequence}" len="50"  width="full" />
+        </admin:formrow>
         <admin:formrow title="浏览量" tip="">
           <admin:text name="views" value="{$info.views}" len="50"  width="full" />
         </admin:formrow>
