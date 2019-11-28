@@ -14,13 +14,13 @@
                 {$vo.content}
             </div>
             <div class="GoodUp_badDown">
-                <span onclick='message_operation(this)' data-id='{$vo.id}' data-type='up'>
+                <span  data-id='{$vo.id}' data-type='up' class="badDownGood">
                     <img src="/themes/mobile/images/UpC.png" alt="">
-                    <span>利好</span><span class="num_G">{$vo.up}</span>
+                    <span>利好</span><span class="num_G numb_count">{$vo.up}</span>
                 </span>
-                <span  onclick='message_operation(this)' data-id='{$vo.id}' data-type='down'>
+                <span   data-id='{$vo.id}' data-type='down' class="badDownGood">
                     <img src="/themes/mobile/images/downC.png" alt="">
-                    <span>利空</span><span class="num_B">{$vo.down}</span>
+                    <span>利空</span><span class="num_B numb_count">{$vo.down}</span>
                 </span>
 
             </div>

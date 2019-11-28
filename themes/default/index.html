@@ -369,7 +369,22 @@
     $(".crossCode").click(function () {
         $(this).parent().hide();
         $(this).parent().prev().show()
-    })
+    });
+
+
+    var index=1
+    setTimeout(function () {
+        setInterval(function () {
+            index++; //index的值每次+1
+            if (index==3) { //判断如果index的值为5（图片最后一张）
+                index=1;   //index值变为1
+            }
+            $(".page_4 .txt_box img").attr("src","/themes/default/images/bannerImg0"+index+".png")
+        },10000)
+    },1000)
+
+
+
 </script>
 <script src="js/vendors.js"></script>
 <script src="js/banner.js"></script>
