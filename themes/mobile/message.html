@@ -110,6 +110,8 @@
             display: inline-block;
         }
     </style>
+
+
 </head>
 <body>
 <div class="box">
@@ -137,11 +139,11 @@
                         {$vo.content}
                     </div>
                     <div class="GoodUp_badDown">
-                        <span onclick='message_operation(this)' data-id='{$vo.id}' data-type='up'>
+                        <span  data-id='{$vo.id}' data-type='up' class="badDownGood">
                             <img src="images/UpC.png" alt="">
                             <span>利好</span><span class="num_G numb_count">{$vo.up}</span>
                         </span>
-                        <span  onclick='message_operation(this)' data-id='{$vo.id}' data-type='down'>
+                        <span data-id='{$vo.id}' data-type='down' class="badDownGood"><!--onclick='message_operation(this)' -->
                             <img src="images/downC.png" alt="">
                             <span>利空</span><span class="num_B numb_count">{$vo.down}</span>
                         </span>
@@ -160,10 +162,45 @@
 </div>
 </body>
 <script src="js/jquery.js"></script>
+<script src="js/jquery.cookie.js"></script>
 <script src="js/common.js"></script>
+<script src="js/layui/layui.all.js"></script>
 <script>
+
+
+
+</script>
+<script>
+
+    function setCookie(c_name,value,expiredays)
+    {
+        var exdate=new Date();
+        exdate.setDate(exdate.getDate()+expiredays);
+        document.cookie=c_name+ "=" +escape(value)+ ((expiredays==null) ? "" : ";expires="+exdate.toGMTString());
+    }
+
+    //取回cookie
+    function getCookie(c_name)
+    {
+        if (document.cookie.length>0)
+        {
+            c_start=document.cookie.indexOf(c_name + "=");
+            if (c_start!=-1)
+            {
+                c_start=c_start + c_name.length+1;
+                c_end=document.cookie.indexOf(";",c_start);
+                if (c_end==-1) c_end=document.cookie.length;
+                return unescape(document.cookie.substring(c_start,c_end))
+            }
+        }
+        return "";
+    }
+
+
+    layui.use('layer', function(){  //layer弹框
+        var layer = layui.layer;
+    });
     var page_num = 2;
-  
     $('#message_more').click(function(){
         $.ajax({
           type:"post",
@@ -171,7 +208,6 @@
           data:{page_num:page_num},
           dataType:'json',
           success:function(rdata){
-
             if(rdata.code==1){
                 $('.NewFlash_List').append(rdata.data);
                 page_num++;
@@ -181,24 +217,34 @@
           }
         });
     });
-    function message_operation(param){
-        
-        var obj = $(param);
+
+    $(document).on("click",".badDownGood",function () {
+        var obj =$(this);
         var id = obj.attr('data-id');
         var type = obj.attr('data-type');
+        var aaa=getCookie(type+id);
+        var cida=type+id;
+        if(aaa==cida){
+            return false
+        }
         $.ajax({
-          type:"post",
-          url:"/Home/Ajax/opera_message",
-          data:{id:id,type:type},
-          dataType:'json',
-          success:function(rdata){
-            if(rdata.code==1){
-                obj.find('.numb_count').html(parseInt(obj.find('.numb_count').html())+1);
-            }else{
+            type:"post",
+            url:"/Home/Ajax/opera_message",
+            data:{id:id,type:type},
+            dataType:'json',
+            success:function(rdata){
+                if(rdata.code==1){
+                        obj.find('.numb_count').addClass("wyx");
+                        obj.css({"pointer-events":"none"});
+                        obj.find('.numb_count').html(parseInt(obj.find('.numb_count').html())+1);
+                        var cid = obj.find('.numb_count').html()
+                        setCookie(type+id,type+id, 365);
+                }else{
 
+                }
             }
-          }
         });
-    }
+    })
+
 </script>
 </html>
