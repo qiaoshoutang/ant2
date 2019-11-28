@@ -202,11 +202,12 @@ class IndexController extends SiteController {
             $this->assign('naviList',$naviList);
         }
         
-        $naviList = M('navi_category')->where(['state'=>1])->select();
-        dd($naviList);
+        $cateList = M('navi_category')->where(['state'=>1])->select();
+
         
         
         $this->assign('class_id',$class_id);
+        $this->assign('cateList',$cateList);
         
         $this -> siteDisplay('antmap');
     }

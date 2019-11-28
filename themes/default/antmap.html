@@ -78,38 +78,13 @@
                 <a href='/antmap/recom'>推荐</a>
                 <div class="line_Ac"></div>
             </li>
-            <li class='<!--{if condition="$class_id eq 1"}--> active <!--{/if}-->'>
-                <a href='/antmap/1'>行情</a>
+            <!--{foreach name='cateList' item='vo' }-->
+            <li class='<!--{if condition="$class_id eq $vo['id']"}--> active <!--{/if}-->'>
+                <a href="/antmap/{$vo['id']}">{$vo.name}</a>
                 <div class="line_Ac"></div>
             </li>
-            <li class='<!--{if condition="$class_id eq 2"}--> active <!--{/if}-->'>
-                <a href='/antmap/2'>资产管理</a>
-                <div class="line_Ac"></div>
-            </li>
-            <li class='<!--{if condition="$class_id eq 3"}--> active <!--{/if}-->'>
-                <a href='/antmap/3'>TOP200</a>
-                <div class="line_Ac"></div>
-            </li>
-            <li class='<!--{if condition="$class_id eq 4"}--> active <!--{/if}-->'>
-                <a href='/antmap/4'>钱包</a>
-                <div class="line_Ac"></div>
-            </li>
-            <li class='<!--{if condition="$class_id eq 5"}--> active <!--{/if}-->'>
-                <a href='/antmap/5'>矿池</a>
-                <div class="line_Ac"></div>
-            </li>
-            <li class='<!--{if condition="$class_id eq 6"}--> active <!--{/if}-->'>
-                <a href='/antmap/6'>媒体</a>
-                <div class="line_Ac"></div>
-            </li>
-            <li class='<!--{if condition="$class_id eq 7"}--> active <!--{/if}-->'>
-                <a href='/antmap/7'>技术服务</a>
-                <div class="line_Ac"></div>
-            </li>
-            <li class='<!--{if condition="$class_id eq 8"}--> active <!--{/if}-->'>
-                <a href='/antmap/8'>其他</a>
-                <div class="line_Ac"></div>
-            </li>
+            <!--{/foreach}-->
+
 
         </ul>
         <div class="ApplyIncluded">
