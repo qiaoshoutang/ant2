@@ -143,17 +143,21 @@
            <img src="images/AcTextImg.png" alt="" width="100%">
        </div>
        <div class="AcName">
-           EO四O只能开发者研讨会
+           {$activityInfo.name}
        </div>
        <div class="AcNameLocTim">
-           <p><span class="leftAc">主办方</span> :蚂蚁节点联盟  厦门区块链云科技有限公司</p>
-           <p><span class="leftAc">联合主办</span> :厦门市蚂蚁节点联盟   厦门市四海智慧园</p>
-           <p><span class="leftAc">地点</span> :厦门市闽南风情</p>
-           <p><span class="leftAc">时间</span> :2019年03月21日-03月26日</p>
+           <p><span class="leftAc">主办方</span> :{$activityInfo.master_name_1}  {$activityInfo.master_name_2}</p>
+           <p><span class="leftAc">地点</span> :{$activityInfo.position}</p>
+           <p><span class="leftAc">时间</span> :{$activityInfo.duration}</p>
            <p>
-               <span class="LookPeople"><span>115</span>人浏览</span>
+               <span class="LookPeople"><span>{$activityInfo.views}</span>人浏览</span>
+
+              <!--{if condition="$activityInfo.state eq 1"}-->
                <span class="BmzBtn">报名中</span>
-               <!--<span class="YjsBtn">已结束</span>-->
+               <!--{/if}-->
+               <!--{if condition="$activityInfo.state eq 2"}-->
+               <span class="YjsBtn">已结束</span>
+               <!--{/if}-->
            </p>
        </div>
        <!--活动介绍-->
@@ -162,25 +166,17 @@
                <div class="AcInfor_Title">
                    <span>活动介绍</span>
                </div>
-               <div class="contentA">
-                   2019首届GETS“新风向”全球加密大会由CoinKaola考拉财经主办， 世界数字经济联盟WDEA和Cyberpunk Lab联合主办方，由月亮财经承办。本次会议定向邀约超过100位全球行业权威加密技术专家、100家投资机构，1000名行业精英、多家上市公司，全球头部财经媒体共同参与，汇聚区块链行业最专业、最具代表性人群，共同探讨加密技术在未来百年的行业创新变革与应用。考拉财经带你走进加密技术，走进POW矿业芯动力，走进高交会！
-               </div>
-               <div class="Ld">
-                   亮点1：海量媒体流量，全球瞩目
-               </div>
-               <img src="images/ZxNr.png" alt="">
-               <div class="contentA">
-                   2019首届GETS“新风向”全球加密大会由CoinKaola考拉财经主办， 世界数字经济联盟WDEA和Cyberpunk Lab联合主办方，由月亮财经承办。本次会议定向邀约超过100位全球行业权威加密技术专家、100家投资机构，1000名行业精英、多家上市公司，全球头部财经媒体共同参与，汇聚区块链行业最专业、最具代表性人群，共同探讨加密技术在未来百年的行业创新变革与应用。考拉财经带你走进加密技术，走进POW矿业芯动力，走进高交会！
+               <div>
+               {$activityInfo.content}
                </div>
            </div>
-
        </div>
-
-
 
        <!--底部框-->
        <!--#include file="footer.html"-->
    </div>
 
 </body>
+<script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
 </html>

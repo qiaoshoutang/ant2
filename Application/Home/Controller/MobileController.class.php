@@ -59,6 +59,8 @@ class MobileController extends SiteController {
         
         $content_id = I('request.content_id',0);
         
+        M('content')->where(['content_id'=>$content_id])->setInc('views'); //浏览自增1
+        
         $contentMod = D('Article/ContentArticle');
         
         $contentInfo = $contentMod->getInfo($content_id);
@@ -123,6 +125,21 @@ class MobileController extends SiteController {
 
         $this->assign('activityList',$activityList);
         $this -> siteDisplay('activity');
+    }
+    //蚂蚁活动详情
+    public function activityContent(){
+
+        $content_id = I('request.content_id',0);
+        
+        $activityMod = D('Admin/Activity');
+        
+        $activityMod->where(['id'=>$content_id])->setInc('views'); //浏览自增1
+        
+        $activityInfo = $activityMod->getInfoById($content_id);
+        $activityInfo['content'] = html_out($activityInfo['content']);
+//         dd($activityInfo);
+        $this->assign('activityInfo',$activityInfo);
+        $this -> siteDisplay('activityContent');
     }
     
     //联盟活动相册
