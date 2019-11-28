@@ -67,7 +67,9 @@
                     <!--标题-->
                     <div class="HotNewsTitle">
                         <span>热门快讯</span>
-                        <span class="HotMore">更多 <img src="images/MoreMoreM.png" alt="" width="5%"></span>
+                        <span class="HotMore" onclick='window.location.href="/message"'>
+                            更多 <img src="images/MoreMoreM.png" alt="" width="5%">
+                        </span>
                     </div>
                     <!--内容-->
                     <div class="HotNewsText">
@@ -137,7 +139,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <!--底部-->
@@ -160,7 +161,6 @@
             })
         }
     )
-
 
     var ContentHeigint = $(".News-Dynamic-Content-box").height();
     if(ContentHeigint<=780){

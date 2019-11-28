@@ -203,8 +203,6 @@ class IndexController extends SiteController {
         }
         
         $cateList = M('navi_category')->where(['state'=>1])->select();
-
-        
         
         $this->assign('class_id',$class_id);
         $this->assign('cateList',$cateList);
