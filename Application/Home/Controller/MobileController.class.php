@@ -108,7 +108,9 @@ class MobileController extends SiteController {
         }
         
         
+        $cateList = M('navi_category')->where(['state'=>1])->select();
         
+        $this->assign('cateList',$cateList);
         
         $this->assign('class_id',$class_id);
         
