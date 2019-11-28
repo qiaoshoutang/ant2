@@ -12,20 +12,21 @@
     .navList ul{
         /*border-bottom: 3px solid #2e84fb;*/
     }
-    /*.line_Ac{*/
-        /*height: 4px;*/
-        /*border-radius: 12px;*/
-        /*background: #2e84fb;*/
-        /*position: relative;*/
-        /*transition:1s all cubic-bezier(.23, 1, .23, 1);;*/
-        /*bottom: 20px;*/
-        /*width: 0%;*/
-        /*!*display: inline-block;*!*/
-    /*}*/
-    /*.AcLine{*/
-        /*width: 100%;*/
-        /*text-align: center;*/
-    /*}*/
+    .line_Ac{
+        height: 4px;
+        border-radius: 12px;
+        background: #2e84fb;
+        position: relative;
+        transition:1s all cubic-bezier(.23, 1, .23, 1);;
+        bottom: 20px;
+        width: 0%;
+        /*display: inline-block;*/
+    }
+    .AcLine{
+        width: 100%;
+        text-align: center;
+    }
+
     .navList ul li{
         font-size: 22px;
 
@@ -410,22 +411,15 @@
 </script>
 
 <script>
-  //   window.onload=function (ev) {
-  //       if($(".navList ul li").hasClass("active")=="true"){
-  //            console.log($(this))
-  //       }
-  //   };
-  //
-  // // $(".line_Ac").eq(0).addClass("AcLine");
-  //
-  // $(".navList ul li").hover(function () {
-  //     $(this).find(".line_Ac").addClass("AcLine");
-  //     $(this).siblings("li").find(".line_Ac").removeClass("AcLine");
-  // },function () {
-  //     setTimeout(function () {
-  //         $(this).find(".line_Ac").removeClass("AcLine");
-  //     },1000)
-  //
-  // })
+
+  // $(".line_Ac").eq(0).addClass("AcLine");
+
+  $(".navList ul li").hover(function () {
+      $(this).find(".line_Ac").addClass("AcLine");
+      $(this).siblings("li").find(".line_Ac").removeClass("AcLine");
+  },function () {
+          $(this).find(".line_Ac").removeClass("AcLine");
+          $(".active").find(".line_Ac").addClass("AcLine");
+  })
 
 </script>
