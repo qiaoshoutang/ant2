@@ -10,8 +10,8 @@
     position: absolute;
     line-height:.3rem;
     bottom:.2rem;
-    width: 20%;
-    right: 40%;
+    width: 100%;
+    text-align: center;
     z-index:1;
 
 }
