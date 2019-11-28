@@ -95,6 +95,7 @@
             padding-bottom: .2rem;
             z-index: 999;
             position: relative;
+            display: inline-block;
         }
         .GoodUp_badDown img{
             width:6%;
@@ -220,7 +221,7 @@
         });
     });
 
-    $(document).on("click",".badDownGood",function () {
+    $("body").on("click",".badDownGood",function () {
         var obj =$(this);
         var id = obj.attr('data-id');
         var type = obj.attr('data-type');
