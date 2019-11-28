@@ -68,7 +68,10 @@
 }
 .InfoImg{
     width: 35%;
-    float: right
+    float: right;
+    height: 1.2rem;
+    overflow: hidden;
+    border-radius: 4px;
 }
 .InfoImg img{
     width: 100%;

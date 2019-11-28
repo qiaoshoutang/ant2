@@ -22,10 +22,15 @@
     width: 17%;
 }
 .TeamStylePicture{
-    width: 100%;
+    width: 90%;
     text-align: center;
-    margin-top: .3rem;
+    margin: 0 auto;
+    margin-top: .5rem;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    overflow: hidden;
+    height: 2.8rem;
 }
 .TeamStylePicture img{
-    width: 90%;
+    width: 100%;
 }
