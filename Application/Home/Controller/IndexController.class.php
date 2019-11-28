@@ -120,6 +120,8 @@ class IndexController extends SiteController {
         
         $contentMod = D('Article/ContentArticle');
         
+        M('content')->where(['content_id'=>$content_id])->setInc('views'); //浏览自增1
+        
         $contentInfo = $contentMod->getInfo($content_id);
         $contentInfo['content'] = html_out($contentInfo['content']);
 
@@ -203,8 +205,6 @@ class IndexController extends SiteController {
         }
         
         $cateList = M('navi_category')->where(['state'=>1])->select();
-
-        
         
         $this->assign('class_id',$class_id);
         $this->assign('cateList',$cateList);
@@ -256,8 +256,11 @@ class IndexController extends SiteController {
         
         $activityMod = M('activity');
         
+        $activityMod->where(['id'=>$content_id])->setInc('views'); //浏览自增1
+        
         $activityInfo = $activityMod->where(['id'=>$content_id])->find();
         $activityInfo['content'] = html_out($activityInfo['content']);
+        
         
         //推荐导航
         $naviList = D('Admin/Navi')->loadList(['recom'=>1],'0,5');

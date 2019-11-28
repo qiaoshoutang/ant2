@@ -122,7 +122,7 @@
             <div class="haveY" >
                 <ul>
                     <!--{foreach name='newsList' item='vo' }-->
-                    <li>
+                    <li onclick='window.location.href="/newsContent/{$vo.content_id}"'>
                         <div class="NewType-Detail">
                             <div class="NewTypeImg">
                                 <div class="NewTypeImgBox">
@@ -311,7 +311,7 @@
                             </div>
                             <ul class="hot_NewContent_ul">
                                 <!--{foreach name='newsList2' item='vo' }-->
-                                <li>
+                                <li onclick='window.location.href="/newsContent/{$vo.content_id}"'>
                                     <div class="hot_NewContentImg_Left">
                                         <img src="{$vo.image}" alt="" width="100%">
                                     </div>
