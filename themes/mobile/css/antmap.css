@@ -84,6 +84,8 @@ a{
     text-align: center;
     width: 25%;
     float: left;
+    margin-top: .2rem;
+    height: 1.5rem;
 }
 .nav_Title{
     font-size: .3rem;
@@ -105,5 +107,5 @@ a{
     right: 0;
 }
 .BzName{
-    font-size: .23rem;
+    font-size: .2rem;
 }

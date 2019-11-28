@@ -269,7 +269,7 @@ body{
     margin-top: 7px;
 }
 .hot_NewContent_ul{
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .HotNewsTTT{
     font-size: 14px;
@@ -309,3 +309,16 @@ body{
     cursor: pointer;
 }
 
+.hot_Hover_A{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.hot_Img_TT_Im{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.hot_Img_TT_Im img{
+    width: 100%;
+}
