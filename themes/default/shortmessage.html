@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/NewsFlash.css">
     <link rel="stylesheet" href="css/NewsDynamicContent.css">
+
 </head>
 <body>
 <style>
@@ -21,7 +22,6 @@
         top: 60px;
         cursor: pointer;
     }
-
 
 </style>
 <div class="box">
@@ -73,10 +73,10 @@
                                         {$vo.content}
                                     </div>
                                     <div class="Favorable-BadProfit">
-                                        <span onclick='message_operation(this)' data-id='{$vo.id}' data-type='up'>
+                                        <span class="badDownGood" data-id='{$vo.id}' data-type='up'>
                                             <img src="images/up.png" alt=""> 利好<span class="count-f">{$vo.up}</span>
                                         </span>
-                                        <span class="Fb-span" onclick='message_operation(this)' data-id='{$vo.id}' data-type='down'>
+                                        <span class="badDownGood" data-id='{$vo.id}' data-type='down'>
                                             <img src="images/down.png" alt=""> 利空<span class="count-f">{$vo.down}</span>
                                         </span>
                                     </div>
@@ -149,8 +149,34 @@
 </html>
 <script src="js/jquery.js"></script>
 <script src="js/commom.js"></script>
+<script src="/themes/mobile/js/jquery.cookie.js"></script>
 <script>
-var page_num = 2;
+
+    function setCookie(c_name,value,expiredays)
+    {
+        var exdate=new Date();
+        exdate.setDate(exdate.getDate()+expiredays);
+        document.cookie=c_name+ "=" +escape(value)+ ((expiredays==null) ? "" : ";expires="+exdate.toGMTString());
+    }
+
+    //取回cookie
+    function getCookie(c_name)
+    {
+        if (document.cookie.length>0)
+        {
+            c_start=document.cookie.indexOf(c_name + "=");
+            if (c_start!=-1)
+            {
+                c_start=c_start + c_name.length+1;
+                c_end=document.cookie.indexOf(";",c_start);
+                if (c_end==-1) c_end=document.cookie.length;
+                return unescape(document.cookie.substring(c_start,c_end))
+            }
+        }
+        return "";
+    }
+
+    var page_num = 2;
   
     $('#message_more').click(function(){
         
@@ -170,11 +196,17 @@ var page_num = 2;
           }
         });
     });
-    function message_operation(param){
-        
-        var obj = $(param);
+
+
+    $("body").on("click",".badDownGood",function () {
+        var obj =$(this);
         var id = obj.attr('data-id');
         var type = obj.attr('data-type');
+        var aaa=getCookie(type+id);
+        var cida=type+id;
+        if(aaa==cida){
+            return false
+        }
         $.ajax({
           type:"post",
           url:"/Home/Ajax/opera_message",
@@ -182,11 +214,15 @@ var page_num = 2;
           dataType:'json',
           success:function(rdata){
             if(rdata.code==1){
-                obj.find('span').html(parseInt(obj.find('span').html())+1);
+                obj.find('.count-f').addClass("wyx");
+                obj.css({"pointer-events":"none"});
+                obj.find('.count-f').html(parseInt(obj.find('.count-f').html())+1);
+                var cid = obj.find('.count-f').html();
+                setCookie(type+id,type+id, 365);
             }else{
 
             }
           }
         });
-    }
+    })
 </script>

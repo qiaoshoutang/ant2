@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d651e91c-2a79-4b79-88fe-9046f73e9574" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/css/allianceActivities.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/allianceActivities.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/activityContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/activityContent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/default/shortmessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/shortmessage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/mobile/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/mobile/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/mobile/images/patner04.png" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/images/patner04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/mobile/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/mobile/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/message.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,25 +18,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DockManager">
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/themes/default/footer.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="330">
-                    <caret line="23" column="78" lean-forward="true" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-2054047261">
@@ -88,31 +70,31 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="101" />
-          <entry key="html" value="107" />
+          <entry key="css" value="103" />
+          <entry key="html" value="114" />
           <entry key="js" value="3" />
           <entry key="php" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="101" />
-          <entry key="HTML" value="107" />
+          <entry key="CSS" value="103" />
+          <entry key="HTML" value="114" />
           <entry key="JavaScript" value="3" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="1427" />
-          <entry key="html" value="4453" />
+          <entry key="css" value="1473" />
+          <entry key="html" value="4562" />
           <entry key="js" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="1427" />
-          <entry key="HTML" value="4453" />
+          <entry key="CSS" value="1473" />
+          <entry key="HTML" value="4562" />
           <entry key="JavaScript" value="9" />
         </counts>
       </usages-collector>
@@ -120,20 +102,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/themes/default/header.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/mobile/message.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1340">
-              <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+            <state relative-caret-position="225">
+              <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/news.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/mobile/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-960">
-              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            <state relative-caret-position="510">
+              <caret line="125" column="65" selection-start-line="125" selection-start-column="65" selection-end-line="125" selection-end-column="65" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,14 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>layer</find>
-      <find>.search-i</find>
-      <find>message_operation</find>
-      <find>hayden</find>
-      <find>olid</find>
-      <find>NewFlash_List</find>
-      <find>hot_Img_TT</find>
-      <find>search-i</find>
       <find>.hot_NewContent_ul</find>
       <find>Img_Ac</find>
       <find>Title_Ac</find>
@@ -166,7 +144,6 @@
       <find>.InfoImg</find>
       <find>Organizer-Text</find>
       <find>ZxNr</find>
-      <find>badDownGood</find>
       <find>.slideBox</find>
       <find>.TeamStylePicture</find>
       <find>GoodUp_badDown</find>
@@ -180,6 +157,15 @@
       <find>AcNameLocTim</find>
       <find>Content_ulBall</find>
       <find>.Activity-Details ul li</find>
+      <find>numb_count</find>
+      <find>badDownGood</find>
+      <find>.slideBox .hd</find>
+      <find>.slideBox .hd li</find>
+      <find>.Partner_Title img</find>
+      <find>count-f</find>
+      <find>.num_G, .num_B</find>
+      <find>num_G numb_count</find>
+      <find>.FlashTitle</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -191,14 +177,12 @@
         <option value="$PROJECT_DIR$/themes/default/includedApply.html" />
         <option value="$PROJECT_DIR$/themes/default/css/includeApply.css" />
         <option value="$PROJECT_DIR$/themes/mobile/NewsAndinformation.html" />
-        <option value="$PROJECT_DIR$/themes/mobile/css/common.css" />
         <option value="$PROJECT_DIR$/themes/mobile/旧的.html" />
         <option value="$PROJECT_DIR$/themes/mobile/css/Allianceprofile.css" />
         <option value="$PROJECT_DIR$/themes/mobile/activits.html" />
         <option value="$PROJECT_DIR$/themes/default/aboutus.html" />
         <option value="$PROJECT_DIR$/themes/default/css/contactUs.css" />
         <option value="$PROJECT_DIR$/themes/default/css/style.css" />
-        <option value="$PROJECT_DIR$/themes/mobile/css/index.css" />
         <option value="$PROJECT_DIR$/themes/mobile/dist/css/jquery.flipster.css" />
         <option value="$PROJECT_DIR$/themes/mobile/dist/css/demo.css" />
         <option value="$PROJECT_DIR$/themes/mobile/css/abouts.css" />
@@ -219,26 +203,28 @@
         <option value="$PROJECT_DIR$/themes/default/css/common.css" />
         <option value="$PROJECT_DIR$/themes/default/index.html" />
         <option value="$PROJECT_DIR$/themes/default/antmap.html" />
-        <option value="$PROJECT_DIR$/themes/default/shortmessage.html" />
         <option value="$PROJECT_DIR$/themes/default/css/NewsInformation.css" />
-        <option value="$PROJECT_DIR$/themes/default/searchPage.html" />
         <option value="$PROJECT_DIR$/themes/mobile/css/NewAndInformation.css" />
         <option value="$PROJECT_DIR$/themes/default/css/activitiesDetail.css" />
         <option value="$PROJECT_DIR$/themes/mobile/NewsContent.html" />
         <option value="$PROJECT_DIR$/themes/mobile/newsContent.html" />
         <option value="$PROJECT_DIR$/themes/mobile/css/team.css" />
         <option value="$PROJECT_DIR$/themes/mobile/aboutus.html" />
-        <option value="$PROJECT_DIR$/themes/mobile/index.html" />
         <option value="$PROJECT_DIR$/themes/mobile/news.html" />
         <option value="$PROJECT_DIR$/themes/mobile/activitContent.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Ajax/news_list.html" />
         <option value="$PROJECT_DIR$/themes/mobile/antmap.html" />
-        <option value="$PROJECT_DIR$/themes/mobile/message.html" />
         <option value="$PROJECT_DIR$/themes/mobile/css/antmap.css" />
         <option value="$PROJECT_DIR$/themes/mobile/activityContent.html" />
         <option value="$PROJECT_DIR$/themes/default/css/allianceActivities.css" />
         <option value="$PROJECT_DIR$/themes/default/news.html" />
         <option value="$PROJECT_DIR$/themes/default/footer.html" />
+        <option value="$PROJECT_DIR$/themes/default/searchPage.html" />
+        <option value="$PROJECT_DIR$/themes/default/shortmessage.html" />
+        <option value="$PROJECT_DIR$/themes/mobile/css/common.css" />
+        <option value="$PROJECT_DIR$/themes/mobile/css/index.css" />
+        <option value="$PROJECT_DIR$/themes/mobile/message.html" />
+        <option value="$PROJECT_DIR$/themes/mobile/index.html" />
       </list>
     </option>
   </component>
@@ -247,6 +233,12 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1912" />
@@ -302,8 +294,21 @@
               <item name="ant" type="b2602c69:ProjectViewProjectNode" />
               <item name="ant2" type="462c0819:PsiDirectoryNode" />
               <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="mobile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ant2" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="mobile" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ant2" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="mobile" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -316,7 +321,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574930315913" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574932827714" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../xxcj" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -354,12 +359,12 @@
       <workItem from="1574642597409" duration="21505000" />
       <workItem from="1574729547097" duration="18981000" />
       <workItem from="1574816088139" duration="26506000" />
-      <workItem from="1574902744685" duration="22515000" />
+      <workItem from="1574902744685" duration="25083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195587000" />
+    <option name="totallyTimeSpent" value="198155000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
@@ -391,7 +396,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32995737" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,6 +404,18 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/themes/mobile/message.html</url>
+          <line>191</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/themes/default/css/index.css">
@@ -454,13 +471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="97" column="21" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mobile/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="120" lean-forward="true" selection-start-line="90" selection-end-line="120" />
         </state>
       </provider>
     </entry>
@@ -523,13 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mobile/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="26" column="10" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../MovableWall/Activits_Detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -583,25 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/shortmessage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/searchPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="39" column="19" lean-forward="true" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-          <folding>
-            <element signature="n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#li#0;n#ul#0;n#div#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#li#0;n#ul#0;n#div#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/default/css/activitiesDetail.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -639,13 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
           <caret line="98" column="14" lean-forward="true" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mobile/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -714,13 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mobile/message.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="230" column="24" selection-start-line="230" selection-start-column="19" selection-end-line="230" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/default/css/allianceActivities.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -735,10 +705,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/searchPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="353" column="7" lean-forward="true" selection-start-line="353" selection-start-column="7" selection-end-line="353" selection-end-column="7" />
+          <folding>
+            <element signature="n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#li#0;n#ul#0;n#div#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#li#0;n#ul#0;n#div#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="74" column="44" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/themes/default/news.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-960">
           <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mobile/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mobile/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/shortmessage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+          <folding>
+            <element signature="e#5695#5900#0" />
+            <element signature="e#5952#6398#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -749,10 +763,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/header.html">
+    <entry file="file://$PROJECT_DIR$/themes/mobile/message.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1340">
-          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        <state relative-caret-position="225">
+          <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mobile/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="125" column="65" selection-start-line="125" selection-start-column="65" selection-end-line="125" selection-end-column="65" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
