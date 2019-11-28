@@ -124,6 +124,19 @@ class MobileController extends SiteController {
         $this->assign('activityList',$activityList);
         $this -> siteDisplay('activity');
     }
+    //蚂蚁活动详情
+    public function activityContent(){
+
+        $content_id = I('request.content_id',0);
+        
+        $activityMod = D('Admin/Activity');
+        
+        $activityInfo = $activityMod->getInfoById($content_id);
+        $activityInfo['content'] = html_out($activityInfo['content']);
+//         dd($activityInfo);
+        $this->assign('activityInfo',$activityInfo);
+        $this -> siteDisplay('activityContent');
+    }
     
     //联盟活动相册
     public function alliance_act_details(){

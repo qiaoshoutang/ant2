@@ -29,6 +29,7 @@ return array(
 	    'newsContent_m/:content_id' =>'Home/Mobile/newsContent',
 	    'antmap_m/:class_id'=>  'Home/Mobile/antmap',
 	    'activit_m'        =>  'Home/Mobile/activity',
+	    'activitContent_m/:content_id'=>  'Home/Mobile/activityContent',
 	    
 	    
 	    'aboutus_m'         =>  'Home/Mobile/aboutus',
