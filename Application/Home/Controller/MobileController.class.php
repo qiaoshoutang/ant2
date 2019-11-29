@@ -89,35 +89,35 @@ class MobileController extends SiteController {
             
             //行情
             $where['class_id'] = 1;
-            $naviList1 = $naviMod->where($where)->limit(0,4)->order('order_id desc,id desc')->select();
+            $naviList1 = $naviMod->where($where)->limit(0,8)->order('order_id desc,id desc')->select();
             
             //资产管理
             $where['class_id'] = 2;
-            $naviList2 = $naviMod->where($where)->limit(0,4)->order('order_id desc,id desc')->select();
+            $naviList2 = $naviMod->where($where)->limit(0,8)->order('order_id desc,id desc')->select();
             
             //应用
             $where['class_id'] = 3;
-            $naviList3 = $naviMod->where($where)->limit(0,4)->order('order_id desc,id desc')->select();
+            $naviList3 = $naviMod->where($where)->limit(0,8)->order('order_id desc,id desc')->select();
             
             //钱包
             $where['class_id'] = 4;
-            $naviList4 = $naviMod->where($where)->limit(0,4)->order('order_id desc,id desc')->select();
+            $naviList4 = $naviMod->where($where)->limit(0,8)->order('order_id desc,id desc')->select();
             
             //矿池
             $where['class_id'] = 5;
-            $naviList5 = $naviMod->where($where)->limit(0,4)->order('order_id desc,id desc')->select();
+            $naviList5 = $naviMod->where($where)->limit(0,8)->order('order_id desc,id desc')->select();
             
             //媒体
             $where['class_id'] = 6;
-            $naviList6 = $naviMod->where($where)->limit(0,4)->order('order_id desc,id desc')->select();
+            $naviList6 = $naviMod->where($where)->limit(0,8)->order('order_id desc,id desc')->select();
             
             //技术服务
             $where['class_id'] = 7;
-            $naviList7 = $naviMod->where($where)->limit(0,4)->order('order_id desc,id desc')->select();
+            $naviList7 = $naviMod->where($where)->limit(0,8)->order('order_id desc,id desc')->select();
             
             //社区
             $where['class_id'] = 8;
-            $naviList8 = $naviMod->where($where)->limit(0,4)->order('order_id desc,id desc')->select();
+            $naviList8 = $naviMod->where($where)->limit(0,8)->order('order_id desc,id desc')->select();
             
             
             $this->assign('naviList1',$naviList1);
