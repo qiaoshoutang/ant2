@@ -26,6 +26,10 @@ class IndexController extends SiteController {
                 redirect('http://'.$_SERVER['HTTP_HOST'].'/home_m');
             }
         } 
+        
+        $cateList = M('navi_category')->where(['state'=>1])->select();
+        $this->assign('cateList',$cateList);
+        
     }
 
     //首页
@@ -204,11 +208,7 @@ class IndexController extends SiteController {
             $this->assign('naviList',$naviList);
         }
         
-        $cateList = M('navi_category')->where(['state'=>1])->select();
-        
         $this->assign('class_id',$class_id);
-        $this->assign('cateList',$cateList);
-        
         $this -> siteDisplay('antmap');
     }
     

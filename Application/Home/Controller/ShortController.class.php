@@ -215,8 +215,7 @@ class ShortController extends SiteController {
 	    $allInfo=$this->curl_get_contents($url);
 	    
 	    $allInfo=json_decode($allInfo,true);
-// 	    dump($allInfo);
-// 	    exit;
+
 	    $allList=array_reverse($allInfo['list']);
 	    
 	    $messageMod=D('Article/Message');
@@ -241,8 +240,8 @@ class ShortController extends SiteController {
 	            $_POST['class_id']=5;
 	            $_POST['title']=$title_temp[1];
 	            $_POST['time']=date('Y/m/d H:i:s',$valb['created_at']);
-	            $_POST['up']=$valb['up_counts'];
-	            $_POST['down']=$valb['down_counts'];
+	            $_POST['up']=rand(30,50);
+	            $_POST['down']=rand(1,10);
 	            
 	            
 	            if($isjscj){//如果包含‘金色财经’,则需要后台审核
@@ -255,7 +254,7 @@ class ShortController extends SiteController {
 	            if(!$_POST['content']){
 	                continue;
 	            }
-	            
+
 	            $re=$messageMod->saveData('add');
 	            if($re){
 	                echo $valb['id'].'快讯采集成功<br>';

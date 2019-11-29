@@ -75,7 +75,7 @@ class MessageModel extends Model {
 
 
         $data = $this->create();
-
+//         dd($data);
         if(!$data){
             return false;
         }

@@ -46,8 +46,13 @@ class MobileController extends SiteController {
             if($val['time']>(time()-3600)){ //一小时内
                 $newsList[$key]['time'] = ceil((time()-$val['time'])/60).'分钟前';
             }else{
-                $newsList[$key]['time'] = date('Y-m-d H:i');
+                $newsList[$key]['time'] = date('m-d H:i');
             }
+        }
+        
+        if($newsList){
+            $newsFirst = array_shift($newsList);
+            $this->assign('newsFirst',$newsFirst);
         }
         
         $this->assign('newsList',$newsList);
