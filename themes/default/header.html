@@ -23,13 +23,9 @@
             <div class="sub-page">
                 <div class="sub-page-first" onclick='window.location.href="/antmap/recom"'>蚂蚁导航</div>
                 <div class="sub-page-navH">
-                    <div class="sub-page-nav" onclick='window.location.href="/antmap/1"'>行情</div>
-                    <div class="sub-page-nav" onclick='window.location.href="/antmap/2"'>资产管理</div>
-                    <div class="sub-page-nav" onclick='window.location.href="/antmap/3"'>TOP200</div>
-                    <div class="sub-page-nav" onclick='window.location.href="/antmap/4"'>钱包</div>
-                    <div class="sub-page-nav" onclick='window.location.href="/antmap/5"'>矿池</div>
-                    <div class="sub-page-nav" onclick='window.location.href="/antmap/6"'>媒体</div>
-                    <div class="sub-page-nav padd-T" onclick='window.location.href="/antmap/7"'>技术服务</div>
+                    <!--{foreach name='cateList' item='vo' }-->
+                    <div class="sub-page-nav" onclick='window.location.href="/antmap/{$vo['id']}"'>{$vo.name}</div>
+                    <!--{/foreach}-->
                 </div>
             </div>
         </li>
