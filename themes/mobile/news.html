@@ -150,6 +150,7 @@
 <script type="text/javascript">
 
 var page_num = 2;
+var class_id = '{$class_id}'
 
     TouchSlide({
         slideCell:"#slideBox",
@@ -165,7 +166,7 @@ var page_num = 2;
         $.ajax({
           type:"post",
           url:"/Home/Ajax/get_news",
-          data:{page_num:page_num},
+          data:{class_id:class_id,page_num:page_num},
           dataType:'json',
           success:function(rdata){
 
