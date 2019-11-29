@@ -35,8 +35,12 @@ class MobileController extends SiteController {
     //新闻列表
     public function news(){
         
+        $class_id = I('request.class_id','all');
+        
         $where['status'] = 2;
-
+        if($class_id != 'all'){
+            $where['class_id'] = $class_id;
+        }
         //热门新闻
         $newsList = M('content')->where($where)->field('content_id,title,description,image,time,views,author')->limit(10)
                                 ->order('content_id desc')->select();
@@ -54,7 +58,9 @@ class MobileController extends SiteController {
             $newsFirst = array_shift($newsList);
             $this->assign('newsFirst',$newsFirst);
         }
-        
+
+        $this->assign('class_id',$class_id);
+        $this->assign('newsCate',M('category')->where(['show'=>1])->order('sequence asc')->select());
         $this->assign('newsList',$newsList);
         $this -> siteDisplay('news');
     }
