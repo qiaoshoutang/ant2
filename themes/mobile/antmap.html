@@ -80,15 +80,14 @@
     <!--导航-->
     <div class="nav_ss">
       <ul>
-            <li class='<!--{if condition="$class_id eq recom"}--> active <!--{/if}-->'><a href="/antmap_m/recom">推荐</a></li>
-            <li class='<!--{if condition="$class_id eq 1"}--> active <!--{/if}-->'><a href="/antmap_m/1">行情</a></li>
-            <li class='<!--{if condition="$class_id eq 2"}--> active <!--{/if}-->'><a href="/antmap_m/2">资产管理</a></li>
-            <li class='<!--{if condition="$class_id eq 3"}--> active <!--{/if}-->'><a href="/antmap_m/3">应用</a></li>
-            <li class='<!--{if condition="$class_id eq 4"}--> active <!--{/if}-->'><a href="/antmap_m/4">钱包</a></li>
-            <li class='<!--{if condition="$class_id eq 5"}--> active <!--{/if}-->'><a href="/antmap_m/5">矿池</a></li>
-            <li class='<!--{if condition="$class_id eq 6"}--> active <!--{/if}-->'><a href="/antmap_m/6">媒体</a></li>
-            <li class='<!--{if condition="$class_id eq 7"}--> active <!--{/if}-->'><a href="/antmap_m/7">技术服务</a></li>
-            <li class='<!--{if condition="$class_id eq 8"}--> active <!--{/if}-->'><a href="/antmap_m/8">其他</a></li>
+            <li class='<!--{if condition="$class_id eq recom"}--> active <!--{/if}-->'>
+                <a href="/antmap_m/recom">推荐</a>
+            </li>
+            <!--{foreach name='cateList' item='vo' }-->
+            <li class='<!--{if condition="$class_id eq $vo['id']"}--> active <!--{/if}-->'>
+                <a href="/antmap_m/{$vo['id']}">{$vo['name']}</a>
+            </li>
+            <!--{/foreach}-->
       </ul>
     </div>
     <!--{if condition="$class_id eq recom"}-->
@@ -220,7 +219,7 @@
             </ul>
         </div>
         <div class="nav_Content">
-            <p class="nav_Title">其他
+            <p class="nav_Title">社区
                 <span style="float: right;margin-right: .2rem;">
                     <a href="/antmap_m/8" style="color: #999999">更多</a>
                 </span>
