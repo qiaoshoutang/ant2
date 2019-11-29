@@ -60,13 +60,13 @@
     }
     .AcNameLocTim p{
         width: 92%;
-        margin: .2rem auto;
+        margin: .3rem auto;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
     }
     .leftAc{
-        width: 19%;
+        width: 14%;
         text-align: left;
         display: inline-block;
     }
@@ -91,11 +91,11 @@
     .YjsBtn{
         background: #a3a3a3;
         color: white;
-        width: 1.45rem;
-        height: .5rem;
+        width: 1.35rem;
+        height: .4rem;
         text-align: center;
-        line-height: .5rem;
-        font-size: .3rem;
+        line-height: .41rem;
+        font-size: .25rem;
         display: inline-block;
         float: right;
         border-radius: 4px;
@@ -124,6 +124,7 @@
     .contentA{
         margin-top: .3rem;
         padding-bottom: .5rem;
+        line-height: 180%;
     }
     .Ld{
       margin-top: .3rem;
@@ -145,9 +146,9 @@
            {$activityInfo.name}
        </div>
        <div class="AcNameLocTim">
-           <p><span class="leftAc">主办方</span>&nbsp&nbsp:{$activityInfo.master_name_1}  {$activityInfo.master_name_2}</p>
-           <p><span class="leftAc">地点</span>&nbsp&nbsp :{$activityInfo.position}</p>
-           <p><span class="leftAc">时间</span>&nbsp&nbsp :{$activityInfo.duration}</p>
+           <p><span class="leftAc">主办方</span>: {$activityInfo.master_name_1}  {$activityInfo.master_name_2}</p>
+           <p><span class="leftAc">地<span style="margin-left: .2rem">点</span></span>: {$activityInfo.position}</p>
+           <p><span class="leftAc">时<span style="margin-left: .2rem">间</span></span>: {$activityInfo.duration}</p>
            <p>
                <span class="LookPeople"><span>{$activityInfo.views}</span>人浏览</span>
 

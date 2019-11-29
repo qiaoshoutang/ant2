@@ -39,6 +39,8 @@
         height: .5rem;
         line-height: .5rem;
         margin:  -.1rem auto 0 auto;
+        position: relative;
+        bottom: .1rem;
     }
     .Title_Guan span:nth-child(1){
         width: 65%;
@@ -58,10 +60,9 @@
     }
     .locationStyle{
         width: 95%;
-
-        display: inline-block;
         position: relative;
-        left: 2.5%;
+        margin: 0 auto;
+        height: 1rem;
     }
     .locationAct{
         width: 60%;
@@ -72,7 +73,7 @@
         white-space: nowrap;
     }
     .EnrolmentAc{
-        width: 1.5rem;
+        width: 1.45rem;
         height: .4rem;
         background: #2e84fb;
         color: white;
@@ -87,14 +88,14 @@
 
     }
     .FinishAc{
-        width: 1.5rem;
+        width: 1.45rem;
         height: .4rem;
         background: #aaaaaa;
         color: white;
         line-height: .4rem;
         text-align: center;
         float: right;
-        font-size: .28rem;
+        font-size: .24rem;
         font-weight: 200;
         border-radius: 2px;
         margin-top: .2rem;
@@ -128,7 +129,7 @@
                <img src="{$vo.cover_url}" alt="" width="100%">
                <div class="Title_Guan">
                    <span>{$vo.name}</span>
-                   <span>{$vo.views}人浏览</span>
+                   <span><img src="images/guankan.png" alt="" width="13%" style="margin-right: .12rem">{$vo.views}</span>
                </div>
                <div class="locationStyle">
                    <div class="locationAct">

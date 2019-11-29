@@ -54,7 +54,7 @@ a{
     overflow-y: hidden;
 }
 .nav_ss ul{
-    width: 140%;
+    width: 130%;
     background: #f0f0f0;
     height: .8rem;
 }
@@ -104,7 +104,7 @@ a{
     height: 1.5rem;
 }
 .nav_Title{
-    font-size: .3rem;
+    font-size: .26rem;
     text-indent: 1em;
 }
 .Content_ulBall{
