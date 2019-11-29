@@ -21,23 +21,39 @@ class AjaxController extends SiteController {
             $where['class_id'] = $class_id;
         }
         //热门新闻
-        $newsList = M('content')->where($where)->field('content_id,title,description,image,time,views')->page($page_num,10)
+        $newsList = M('content')->where($where)->field('content_id,title,description,image,time,views,author')->page($page_num,10)
                     ->order('content_id desc')->select();
         if(empty($newsList)){
             $rdata['code'] = 0;
             $rdata['info'] = '已经没有更多了';
             $this->ajaxReturn($rdata);
         }
-        $this->assign('newsList',$newsList);
         
         $detect = new \Common\Util\Mobile_Detect();
-
+        
         if($detect->isMobile()){
+            foreach($newsList as $key=>$val){
+                $newsList[$key]['description'] = html_out($val['description']);
+                if($val['time']>(time()-3600)){ //一小时内
+                    $newsList[$key]['time'] = ceil((time()-$val['time'])/60).'分钟前';
+                }else{
+                    $newsList[$key]['time'] = date('m-d H:i');
+                }
+            }
+            $this->assign('newsList',$newsList);
             $data = $this->fetch('news_list_m');
         }else{
+            foreach($newsList as $key=>$val){
+                $newsList[$key]['description'] = html_out($val['description']);
+            }
+            $this->assign('newsList',$newsList);
+            
             $data = $this->fetch('news_list');
         }
         
+        
+
+
         
         $rdata['code'] = 1;
         $rdata['info'] = '获取信息成功';
