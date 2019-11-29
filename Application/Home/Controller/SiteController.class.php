@@ -8,6 +8,9 @@ class SiteController extends BaseController {
 
     public function __construct()
     {
+//         if($_SERVER['HTTP_HOST'] != 'mayi.org'){
+//             redirect($_SERVER['REQUEST_SCHEME'].'://mayi.org');
+//         }
         parent::__construct();
         $this->initialize();
     }
