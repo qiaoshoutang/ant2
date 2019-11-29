@@ -44,6 +44,9 @@
         font-size: .3rem!important;
         color: #333!important;
     }
+    .nav_Content{
+        margin-top: .2rem;
+    }
 </style>
 <body>
 <div class="box">
@@ -91,9 +94,33 @@
     <!--{if condition="$class_id eq recom"}-->
     <div class='antmap-content'>
         <!--交易所-->
+
+
+        <div class="nav_Content">
+            <p class="nav_Title">
+                行情
+                <span style="float: right;margin-right: .2rem;color: #999999">
+                    <a href="/antmap_m/1" style="color: #999999">更多</a>
+                </span>
+            </p>
+            <ul class="nav_Content_ul">
+                <!--{foreach name='naviList1' item='vo' }-->
+                <li onclick='window.location.href="{$vo.target}"' target="_blank">
+                    <div class="Content_ulBall">
+                        <img src="{$vo.icon}" alt="">
+                    </div>
+                    <div class="BzName">{$vo.name}</div>
+                </li>
+                <!--{/foreach}-->
+            </ul>
+        </div>
         <div class="nav_Content nav_Top">
-            
-            <p class="nav_Title">资产管理</p>
+
+            <p class="nav_Title">资产管理
+                <span style="float: right;margin-right: .2rem;">
+                    <a href="/antmap_m/2" style="color: #999999">更多</a>
+                </span>
+            </p>
             <ul class="nav_Content_ul">
                 <!--{foreach name='naviList2' item='vo' }-->
                 <li onclick='window.location.href="{$vo.target}"'>
@@ -107,10 +134,14 @@
         </div>
 
         <div class="nav_Content">
-            <p class="nav_Title">行情</p>
+            <p class="nav_Title">应用
+                <span style="float: right;margin-right: .2rem;">
+                    <a href="/antmap_m/3" style="color: #999999">更多</a>
+                </span>
+            </p>
             <ul class="nav_Content_ul">
-                <!--{foreach name='naviList1' item='vo' }-->
-                <li onclick='window.location.href="{$vo.target}"' target="_blank">
+                <!--{foreach name='naviList4' item='vo' }-->
+                <li onclick='window.location.href="{$vo.target}"'>
                     <div class="Content_ulBall">
                         <img src="{$vo.icon}" alt="">
                     </div>
@@ -121,7 +152,81 @@
         </div>
 
         <div class="nav_Content">
-            <p class="nav_Title">钱包</p>
+            <p class="nav_Title">钱包
+                <span style="float: right;margin-right: .2rem;">
+                    <a href="/antmap_m/4" style="color: #999999">更多</a>
+                </span>
+            </p>
+            <ul class="nav_Content_ul">
+                <!--{foreach name='naviList4' item='vo' }-->
+                <li onclick='window.location.href="{$vo.target}"'>
+                    <div class="Content_ulBall">
+                        <img src="{$vo.icon}" alt="">
+                    </div>
+                    <div class="BzName">{$vo.name}</div>
+                </li>
+                <!--{/foreach}-->
+            </ul>
+        </div>
+
+        <div class="nav_Content">
+            <p class="nav_Title">矿池
+                <span style="float: right;margin-right: .2rem;">
+                    <a href="/antmap_m/5" style="color: #999999">更多</a>
+                </span>
+            </p>
+            <ul class="nav_Content_ul">
+                <!--{foreach name='naviList4' item='vo' }-->
+                <li onclick='window.location.href="{$vo.target}"'>
+                    <div class="Content_ulBall">
+                        <img src="{$vo.icon}" alt="">
+                    </div>
+                    <div class="BzName">{$vo.name}</div>
+                </li>
+                <!--{/foreach}-->
+            </ul>
+        </div>
+
+        <div class="nav_Content">
+            <p class="nav_Title">媒体
+                <span style="float: right;margin-right: .2rem;">
+                    <a href="/antmap_m/6" style="color: #999999">更多</a>
+                </span>
+            </p>
+            <ul class="nav_Content_ul">
+                <!--{foreach name='naviList4' item='vo' }-->
+                <li onclick='window.location.href="{$vo.target}"'>
+                    <div class="Content_ulBall">
+                        <img src="{$vo.icon}" alt="">
+                    </div>
+                    <div class="BzName">{$vo.name}</div>
+                </li>
+                <!--{/foreach}-->
+            </ul>
+        </div>
+        <div class="nav_Content">
+            <p class="nav_Title">技术服务
+                <span style="float: right;margin-right: .2rem;">
+                    <a href="/antmap_m/7" style="color: #999999">更多</a>
+                </span>
+            </p>
+            <ul class="nav_Content_ul">
+                <!--{foreach name='naviList4' item='vo' }-->
+                <li onclick='window.location.href="{$vo.target}"'>
+                    <div class="Content_ulBall">
+                        <img src="{$vo.icon}" alt="">
+                    </div>
+                    <div class="BzName">{$vo.name}</div>
+                </li>
+                <!--{/foreach}-->
+            </ul>
+        </div>
+        <div class="nav_Content">
+            <p class="nav_Title">其他
+                <span style="float: right;margin-right: .2rem;">
+                    <a href="/antmap_m/8" style="color: #999999">更多</a>
+                </span>
+            </p>
             <ul class="nav_Content_ul">
                 <!--{foreach name='naviList4' item='vo' }-->
                 <li onclick='window.location.href="{$vo.target}"'>
