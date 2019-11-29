@@ -351,13 +351,24 @@
         $('.tab-content').eq(index).show();
 
 
-    })
+    });
 
 
     $('.SearchK_Point').click(function(){
         var keyword = $('.SearchKk').val();
         window.location.href="/search/"+keyword;
-    })
+    });
+
+    $( '.SearchKk').focus( function(){
+        document.onkeydown = function(e){
+            var ev = document.all ? window.event : e;
+            if(ev.keyCode==13) {
+                var keyword = $('.SearchKk').val();
+                // console.log(keyword)
+                window.location.href="/search/"+keyword;
+            }
+        }
+    } );
 
 
    $(".NewType-nav ul li").click(function () {
