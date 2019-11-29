@@ -116,11 +116,8 @@
         <div class="nav_Info">
             <ul>
                 <li class='<!--{if condition="$class_id eq all"}--> active <!--{/if}-->'>
-                    <a href="/news_m/0">
-                        全部
-                    </a>
+                    全部
                 </li>
-   
                 <!--{foreach name='newsCate' item='vo' }-->
                 <li class='<!--{if condition="$class_id eq $vo['class_id']"}--> active <!--{/if}-->'>
                     <a href = '/news_m/{$vo.class_id}'>
