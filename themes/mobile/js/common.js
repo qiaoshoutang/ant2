@@ -1,5 +1,5 @@
 s=0;
-$(".Dropdown").click(function () {
+$(".Dropdown").on("touchstart",function () {
     if(s==0){
         $(this).find($("#Dhl")).slideDown(500);
         s=1

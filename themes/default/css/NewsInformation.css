@@ -283,6 +283,7 @@ body{
     -webkit-line-clamp:4;
     line-clamp: 4;
     -webkit-box-orient: vertical;
+    height: 88px;
 }
 .Favorable-BadProfit{
     margin-top: 10px;
