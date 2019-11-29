@@ -50,6 +50,11 @@ class MobileController extends SiteController {
             }
         }
         
+        if($newsList){
+            $newsFirst = array_shift($newsList);
+            $this->assign('newsFirst',$newsFirst);
+        }
+        
         $this->assign('newsList',$newsList);
         $this -> siteDisplay('news');
     }

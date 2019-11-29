@@ -74,28 +74,11 @@
 <div class="box">
     <!--顶部导航栏-->
     <!--#include file="header.html"-->
-    <!--&lt;!&ndash;轮播&ndash;&gt;-->
-    <!--<div id="slideBox" class="slideBox">-->
-        <!--<div class="bd">-->
-            <!--<ul>-->
-                <!--<li>-->
-                    <!--<a class="pic" href="#"><img src="images/banner.png" /></a>-->
-                    <!--<a class="tit" href="#"></a>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a class="pic" href="#"><img src="images/bannerTow.png"/></a>-->
-                    <!--<a class="tit" href="#"></a>-->
-                <!--</li>-->
-            <!--</ul>-->
-        <!--</div>-->
-        <!--<div class="hd">-->
-            <!--<ul></ul>-->
-        <!--</div>-->
-    <!--</div>-->
-    <div class="bannerAc">
-        <img src="images/ActImg01.jpg" alt="">
+
+    <div class="bannerAc" onclick='window.location.href="/newsContent_m/{$newsFirst.content_id}"'>
+        <img src="{$newsFirst.image}" alt="">
         <div class="bannerAc_B">
-            【动态 | Facebook、Uber、推特以及阿里巴巴成立Presto基金会 将大规模处理分布式数据】
+            {$newsFirst.title}
         </div>
     </div>
     <!--资讯内容-->
