@@ -37,11 +37,12 @@
 
 
 .InfoContent{
-    width: 90%;
-    margin: .5rem auto 0 auto;
+    width: 100%;
+    margin: 0.2rem auto 0 auto;
 }
 .InfoContent ul {
-    width: 100%;
+    width: 90%;
+    margin: 0.2rem auto;
 }
 .InfoContent ul li{
     width: 100%;
