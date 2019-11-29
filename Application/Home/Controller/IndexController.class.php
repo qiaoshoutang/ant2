@@ -110,7 +110,13 @@ class IndexController extends SiteController {
         //推荐导航
         $naviList = D('Admin/Navi')->loadList(['recom'=>1],'0,5');
         
+        //新闻分类
+        $newsCate = M('category')->where(['show'=>1])->order('sequence asc')->select();
+        
+//         dd($newsCate);
+        
         $this->assign('class_id',$class_id);
+        $this->assign('newsCate',$newsCate);
         $this->assign('newsList',$newsList);
         $this->assign('messageList',$messageList);
         $this->assign('naviList',$naviList);

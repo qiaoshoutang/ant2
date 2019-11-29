@@ -93,7 +93,7 @@ class AdminContentController extends AdminController {
             $this->assign('time',$time);
             $this->assign('breadCrumb',$breadCrumb);
             $this->assign('name','添加');
-            $this->assign('categoryList',D('CategoryArticle')->loadList());
+            $this->assign('categoryList',M('category')->where(['show'=>1])->order('sequence asc')->select());
             $this->adminDisplay('info');
         }else{
 
@@ -139,7 +139,7 @@ class AdminContentController extends AdminController {
             $this->assign('breadCrumb',$breadCrumb);
             $this->assign('name','修改');
             $this->assign('info',$info);
-            $this->assign('categoryList',D('CategoryArticle')->loadList());
+            $this->assign('categoryList',M('category')->where(['show'=>1])->order('sequence asc')->select());
             $this->adminDisplay('info');
         }else{
             

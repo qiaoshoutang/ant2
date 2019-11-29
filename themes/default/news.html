@@ -66,26 +66,14 @@
                         全部
                     </a>
                 </li>
-                <li class='<!--{if condition="$class_id eq 1"}--> active <!--{/if}-->'>
-                    <a href = '/news/1'>
-                        行情
+                <!--{foreach name='newsCate' item='vo' }-->
+                <li class='<!--{if condition="$class_id eq $vo['class_id']"}--> active <!--{/if}-->'>
+                    <a href = '/news/{$vo.class_id}'>
+                        {$vo.name}
                     </a>
                 </li>
-                <li class='<!--{if condition="$class_id eq 2"}--> active <!--{/if}-->'>
-                    <a href = '/news/2'>
-                        政策
-                    </a>
-                </li>
-                <li class='<!--{if condition="$class_id eq 3"}--> active <!--{/if}-->'>
-                    <a href = '/news/3'>
-                        产业
-                    </a>
-                </li>
-                <li class='<!--{if condition="$class_id eq 4"}--> active <!--{/if}-->'>
-                    <a href = '/news/4'>
-                        声音
-                    </a>
-                </li>
+                <!--{/foreach}-->
+
             </ul>
         </div>
         <!--全部-->
