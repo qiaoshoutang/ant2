@@ -25,6 +25,7 @@
     left: 0;
     top: 0;
     bottom: 0;
+    cursor: pointer;
 }
 .Partner-T{
     width: 46px;
@@ -150,6 +151,7 @@
     height: 140px;
     margin-top: 20px;
     position: relative;
+    cursor: pointer;
 }
 .Organizer-T{
     width: 75px;

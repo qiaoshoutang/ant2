@@ -139,9 +139,14 @@ a{
     top: 0;
     height: 100%;
 }
+.text-bottom ul li{
+    cursor: pointer;
+}
 .text-bottom ul li p:hover{
     color: white;
-    cursor: pointer;
+}
+.text-bottom ul li:last-child{
+    cursor: auto;
 }
 .Right-belonging{
     width: 100%;
