@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/themes/default/searchPage.html" line="28" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d651e91c-2a79-4b79-88fe-9046f73e9574" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/activity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/activityContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/activityContent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/css/allianceActivities.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/allianceActivities.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/news.html" afterDir="false" />
-    </list>
+    <list default="true" id="d651e91c-2a79-4b79-88fe-9046f73e9574" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,8 +109,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/default/activity.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+            <state relative-caret-position="349">
+              <caret line="41" column="17" lean-forward="true" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -326,7 +320,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575020021650" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575254349727" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -367,18 +361,18 @@
       <workItem from="1574902744685" duration="28833000" />
       <workItem from="1574936538065" duration="258000" />
       <workItem from="1574988374994" duration="22351000" />
-      <workItem from="1575248134848" duration="2543000" />
+      <workItem from="1575248134848" duration="2978000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227057000" />
+    <option name="totallyTimeSpent" value="227492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29264393" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29264393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -395,7 +389,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5010661" side_tool="true" weight="0.45482865" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4989339" weight="0.45482865" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" sideWeight="0.4989339" visible="true" weight="0.45482865" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -758,8 +752,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/default/activity.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+        <state relative-caret-position="349">
+          <caret line="41" column="17" lean-forward="true" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
         </state>
       </provider>
     </entry>
