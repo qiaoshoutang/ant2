@@ -99,8 +99,8 @@
 }
 .Title_Ac_P span:nth-child(2){
     float: right;
-    font-weight: 200;
-    color: #a5a6a8;
+    font-weight: 400;
+    color: #585858;
     font-size: 14px;
 }
 .LocationTime{
@@ -179,7 +179,6 @@
     font-size: 15px;
     margin-right: 5px;
     border-radius: 2px;
-    display: none;
 }
 .font-cx{
     font-weight: bold;
