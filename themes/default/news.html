@@ -79,6 +79,7 @@
             </ul>
         </div>
         <!--全部-->
+        <!--{if condition="$class_id lt 6"}-->
         <div class="NewType-Content">
             <ul>
             <!--{foreach name='newsList' item='vo' }-->
@@ -107,12 +108,15 @@
                 </li>
                 <!--{/foreach}-->
             </ul>
-
             <div class="LookMore">
                 <span id='news_more'>查看更多</span>
             </div>
-
         </div>
+        <!--{else /}-->
+        <div class="NewType-Content">
+            <span>没有找到相关内容</span>
+        </div>
+        <!--{/if}-->
         <!--热门快讯-->
         <div class="Hot-News">
 
