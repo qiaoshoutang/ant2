@@ -6,23 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d651e91c-2a79-4b79-88fe-9046f73e9574" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/aboutus.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/aboutus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/activity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/activityContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/activityContent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/antmap.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/antmap.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/apply.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/apply.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/contactus.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/contactus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/css/aboutus.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/aboutus.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/css/activitiesDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/activitiesDetail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/css/allianceActivities.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/allianceActivities.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/css/includeApply.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/includeApply.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/description.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/description.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/news.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/default/newsContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/newsContent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/searchPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/searchPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/shortmessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/shortmessage.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,7 +69,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="119" />
-          <entry key="html" value="186" />
+          <entry key="html" value="187" />
           <entry key="js" value="6" />
           <entry key="php" value="3" />
         </counts>
@@ -93,7 +77,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="119" />
-          <entry key="HTML" value="186" />
+          <entry key="HTML" value="187" />
           <entry key="JavaScript" value="6" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
@@ -101,14 +85,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1563" />
-          <entry key="html" value="5661" />
+          <entry key="html" value="5667" />
           <entry key="js" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="1563" />
-          <entry key="HTML" value="5661" />
+          <entry key="HTML" value="5667" />
           <entry key="JavaScript" value="14" />
         </counts>
       </usages-collector>
@@ -116,97 +100,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/aboutus.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/activity.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="152" selection-start-line="6" selection-start-column="152" selection-end-line="6" selection-end-column="152" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/apply.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/contactus.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="152" selection-start-line="6" selection-start-column="152" selection-end-line="6" selection-end-column="152" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/description.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="152" selection-start-line="6" selection-start-column="152" selection-end-line="6" selection-end-column="152" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/news.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="47" column="36" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/default/newsContent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="152" selection-start-line="6" selection-start-column="152" selection-end-line="6" selection-end-column="152" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/searchPage.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding>
-                <element signature="n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#1;n#li#0;n#ul#0;n#div#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#1;n#li#0;n#ul#0;n#div#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/default/antmap.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="90" column="63" selection-start-line="90" selection-start-column="52" selection-end-line="90" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/themes/default/shortmessage.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-90">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="420">
+              <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -308,10 +206,10 @@
         <option value="$PROJECT_DIR$/themes/default/apply.html" />
         <option value="$PROJECT_DIR$/themes/default/contactus.html" />
         <option value="$PROJECT_DIR$/themes/default/description.html" />
-        <option value="$PROJECT_DIR$/themes/default/newsContent.html" />
         <option value="$PROJECT_DIR$/themes/default/searchPage.html" />
         <option value="$PROJECT_DIR$/themes/default/news.html" />
         <option value="$PROJECT_DIR$/themes/default/shortmessage.html" />
+        <option value="$PROJECT_DIR$/themes/default/newsContent.html" />
       </list>
     </option>
   </component>
@@ -401,7 +299,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575270911867" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575274366868" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bz/themes/default/Bz.html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -442,12 +340,12 @@
       <workItem from="1574902744685" duration="28833000" />
       <workItem from="1574936538065" duration="258000" />
       <workItem from="1574988374994" duration="22351000" />
-      <workItem from="1575248134848" duration="11783000" />
+      <workItem from="1575248134848" duration="12497000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="236297000" />
+    <option name="totallyTimeSpent" value="237011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
@@ -771,38 +669,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/aboutus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/activity.html">
+    <entry file="file://$PROJECT_DIR$/themes/default/shortmessage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="6" column="152" selection-start-line="6" selection-start-column="152" selection-end-line="6" selection-end-column="152" />
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/apply.html">
+    <entry file="file://$PROJECT_DIR$/themes/default/antmap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/contactus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="152" selection-start-line="6" selection-start-column="152" selection-end-line="6" selection-end-column="152" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/newsContent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="152" selection-start-line="6" selection-start-column="152" selection-end-line="6" selection-end-column="152" />
+        <state relative-caret-position="540">
+          <caret line="90" column="63" selection-start-line="90" selection-start-column="52" selection-end-line="90" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -818,20 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/description.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="152" selection-start-line="6" selection-start-column="152" selection-end-line="6" selection-end-column="152" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/antmap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="90" column="63" selection-start-line="90" selection-start-column="52" selection-end-line="90" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/default/news.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -839,10 +702,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/shortmessage.html">
+    <entry file="file://$PROJECT_DIR$/themes/default/description.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="150">
+          <caret line="6" column="152" selection-start-line="6" selection-start-column="152" selection-end-line="6" selection-end-column="152" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/contactus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="152" selection-start-line="6" selection-start-column="152" selection-end-line="6" selection-end-column="152" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/apply.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/activity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="152" selection-start-line="6" selection-start-column="152" selection-end-line="6" selection-end-column="152" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/aboutus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/newsContent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
         </state>
       </provider>
     </entry>
