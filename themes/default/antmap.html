@@ -301,8 +301,7 @@
                 </ul>
             </li>
         </ul>
-        <!--{/if}-->
-        <!--{if condition="$class_id neq recom"}-->
+        <!--{elseif condition="$class_id lt 9" /}-->
         <ul class="Market_view_ul" >
             <li class="Market_view_ul_list">
                 <ul class="type_NavList">
@@ -324,7 +323,16 @@
             </li>
             <div class="btnMORE" id='navi_more'>查看更多</div>
         </ul>
+        <!--{else /}-->
+        <ul class="Market_view_ul" >
+            <li class="Market_view_ul_list">
+                <ul class="type_NavList">
+                    <span>没有找到相关内容</span>
+                </ul>
+            </li>
+        </ul>
         <!--{/if}-->
+
     </div>
     <!--底部-->
     <!--#include file="footer.html"-->

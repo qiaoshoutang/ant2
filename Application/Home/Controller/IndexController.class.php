@@ -134,7 +134,7 @@ class IndexController extends SiteController {
         $contentInfo['content'] = html_out($contentInfo['content']);
 
         //热门新闻
-        $newsList = M('content')->where(['status'=>2])->field('content_id,title,description,image,time,views')->limit(5)
+        $newsList = M('content')->where(['status'=>2])->field('content_id,title,description,image,time,views')->limit(6)
                     ->order('sequence desc,content_id desc')->select();
         if($newsList){
             $newsFirst = array_shift($newsList);
