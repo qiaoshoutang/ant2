@@ -58,7 +58,7 @@ a{
     line-height: 55px;
 }
 .sub-page{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     min-height:55px ;
     background: black;
@@ -66,7 +66,7 @@ a{
     border-radius: 8px;
 }
 .sub-page-nav{
-    height: 30px;
+    min-height: 30px;
     width: 70%;
     margin: 0 auto;
     font-size: 15px;
@@ -74,6 +74,7 @@ a{
     color: white;
     line-height: 30px;
     border-bottom: 1px silver dashed;
+    text-align: center;
 }
 .nav_last{
     border-bottom: none!important;
@@ -83,7 +84,7 @@ a{
 }
 .sub-page-navH{
     display: none;
-    overflow: hidden;
+    /*overflow: hidden;*/
     position: relative;
     bottom: 10px;
     z-index: 999;

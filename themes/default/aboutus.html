@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>关于我们</title>
+    <meta name="baidu-site-verification" content="9h2o7ScMIE" />
     <meta name="keywords" content="蚂蚁节点联盟，社群组织，区块链，区块链社区，区块链社区联盟，区块链服务平台"/>
     <meta name="description" content="蚂蚁节点联盟-蚂蚁节点联盟是国内知名的区块链线下社群组织，联盟以引领行业新生态、 促进区块链行业稳健发展为宗旨，致力于聚合全球区块链行业专家及区块链爱好者， 整合区块链产业上下游资源，为区块链行业参与者提供第三方综合服务。"/>
     <link rel="stylesheet" href="css/common.css">
@@ -11,7 +12,12 @@
     <script src="js/jquery.fancybox.pack.js"></script>
 </head>
 <style>
-
+    .NameFound{
+        width: 100%;
+    }
+    .appellation{
+        width: 100%;
+    }
 </style>
 <body>
 <div class="box">
@@ -32,13 +38,13 @@
                     <div class="pictureTx">
                         <img src="images/zenghao.png" alt="">
                     </div>
-                    <div class="NameFound">
-                        曾豪
+                    <div class="NameFound" dom-i18n='ZengHao'>
+
                     </div>
                     <div class="appellation">
-                        <p>中高会区块链产业联盟副理事长</p>
-                        <p>蚂蚁节点联盟创始人</p>
-                        <p>蚂蚁联盟国际资本创始人</p>
+                        <p dom-i18n='appellationZH01'>中高会区块链产业联盟副理事长</p>
+                        <p dom-i18n='appellationZH02'>蚂蚁节点联盟创始人</p>
+                        <p dom-i18n='appellationZH03'>蚂蚁联盟国际资本创始人</p>
                     </div>
                 </div>
                 <!--三人-->
@@ -51,7 +57,7 @@
                             <div class="List_TeamTx">
                                 <img src="images/zh.png" alt="">
                             </div>
-                            <div class="NameList">
+                            <div class="NameList" dom-i18n='ZengHao'>
                                 曾豪
                             </div>
                         </li>
@@ -62,7 +68,7 @@
                             <div class="List_TeamTx">
                                 <img src="images/zjw.png" alt="">
                             </div>
-                            <div class="NameList">
+                            <div class="NameList" dom-i18n='ZhangJingWei'>
                                 张竟唯
                             </div>
                         </li>
@@ -73,7 +79,7 @@
                             <div class="List_TeamTx">
                                 <img src="images/yzw.png" alt="">
                             </div>
-                            <div class="NameList">
+                            <div class="NameList" dom-i18n='YangZhiWen'>
                                 杨志文
                             </div>
                         </li>
@@ -161,28 +167,25 @@
     });
 
     $(".List_Team ul li").click(function () {
-        if($(this).index()==0){
-            $(".pictureTx img").attr("src","/themes/default/images/zenghao.png");
-            $(".NameFound").html("曾豪")
-            $(".appellation p").eq(0).html("中高会区块链产业联盟副理事长");
-            $(".appellation p").eq(1).html("蚂蚁节点联盟创始人");
-            $(".appellation p").eq(2).html("蚂蚁联盟国际资本创始人");
+        if ($(this).index() == 0) {
+            $(".NameFound").attr("dom-i18n","ZengHao");
+            $(".appellation p").eq(0).attr("dom-i18n","appellationZH01");
+            $(".appellation p").eq(1).attr("dom-i18n","appellationZH02");
+            $(".appellation p").eq(2).attr("dom-i18n","appellationZH03");
         }
-        if($(this).index()==1){
-            $(".pictureTx img").attr("src","/themes/default/images/zhangjingwei.png")
-            $(".NameFound").html("张竟唯");
-            $(".appellation p").eq(0).html("蚂蚁节点联盟联合创始人");
-            $(".appellation p").eq(1).html("蚂蚁联盟国际资本联合创始人");
-            $(".appellation p").eq(2).html("");
+        if ($(this).index() == 1) {
+            $(".NameFound").attr("dom-i18n","ZhangJingWei");
+            $(".appellation p").eq(0).attr("dom-i18n","appellationZJW01");
+            $(".appellation p").eq(1).attr("dom-i18n","appellationZJW02");
+            $(".appellation p").eq(2).attr("dom-i18n","appellationZJW03");
         }
-        if($(this).index()==2){
-            $(".pictureTx img").attr("src","/themes/default/images/yangzhiwen.png")
-            $(".NameFound").html("杨志文")
-            $(".appellation p").eq(0).html("蚂蚁节点联盟联合创始人");
-            $(".appellation p").eq(1).html("蚂蚁联盟国际资本联合创始人");
-            $(".appellation p").eq(2).html("");
+        if ($(this).index() == 2) {
+            $(".NameFound").attr("dom-i18n","YangZhiWen");
+            $(".appellation p").eq(0).attr("dom-i18n","appellationYZW01");
+            $(".appellation p").eq(1).attr("dom-i18n","appellationYZW02");
+            $(".appellation p").eq(2).attr("dom-i18n","appellationYZW03");
         }
-
     })
+
 </script>
 
