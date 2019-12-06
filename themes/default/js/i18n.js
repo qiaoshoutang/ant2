@@ -17,8 +17,6 @@
     i18n: {
       //key编码规则：取前2个中文字符拼音+最后2个中文字符拼音
       //不满4个中文字符用e代表
-
-
         en: {
             header01:'Home',
             header02:"News",
@@ -97,6 +95,9 @@
             appellationYZW01:"Co-founder of Ant Node Alliance",
             appellationYZW02:"Co-founder of Ant Alliance International Capital",
             appellationYZW03:"",
+            ManagementConsult:"Project Consulting &Management",
+
+
 
         },
         zh: {
@@ -177,6 +178,7 @@
             appellationYZW01:"蚂蚁节点联盟联合创始人",
             appellationYZW02:"蚂蚁节点联盟联合创始人",
             appellationYZW03:"",
+            ManagementConsult:"项目咨询管理",
         },
     },
     dom: {
