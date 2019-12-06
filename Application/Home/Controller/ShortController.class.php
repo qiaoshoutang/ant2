@@ -34,15 +34,16 @@ class ShortController extends SiteController {
 	        }
 	    }
 
-
         //快讯列表
-        $where_a['A.status']=1;
-        $where_a['A.class_id']=5;
-	    $contentMod=D('Article/ContentArticle');
-	    $count = $contentMod->countList($where_a);
+        $where_a['state']=2;
+
+	    $messageMod=D('Article/Message');
+
+	    $count = $messageMod->countList($where_a);
+// 	    dd($count);
 	    $limit = $this->getPageLimit($count,20);
 
-	    $article_list = $contentMod->loadList($where_a,$limit);
+	    $article_list = $messageMod->loadList($where_a,$limit);
 	    $weekname=array('星期天','星期一','星期二','星期三','星期四','星期五','星期六');
 	    
 	    foreach($article_list as $key=>$val){  
@@ -53,28 +54,7 @@ class ShortController extends SiteController {
 	        $article_list[$key]['time_top']=date('m月d日',$val['time']).' '.$weekname[date('w',$val['time'])];
 	    }
 	    
-	    //动态列表
-	    $where_t['status']=1;
-	    $twitterMod=D('Admin/Twitter');
-	    $count = $twitterMod->countList($where_t);
-	    $limit = $this->getPageLimit($count,20);
-	    
-	    $twitter_list = $twitterMod->loadList($where_t,$limit);
-	    
-	    foreach($twitter_list as $key=>$val){
-	        $twitter_list[$key]['content']=html_out($val['content']);  
-	    }
-	    
-	    //微博列表
-	    $where_w['status']=1;
-	    $weiboMod=D('Admin/Weibo');
-	    $count = $weiboMod->countList($where_w);
-	    $limit = $this->getPageLimit($count,20);
-	    
-	    $weibo_list = $weiboMod->loadList($where_w,$limit);
-	    foreach($weibo_list as $key=>$val){
-	        $weibo_list[$key]['content']=html_out($val['content']);
-	    }
+
 	    
 	    
 	    $this->assign('page_num','1');
