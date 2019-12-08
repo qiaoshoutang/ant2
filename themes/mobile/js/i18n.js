@@ -337,6 +337,7 @@ function zh() {
     $(".serviceTitle img").css({
         "width":"16%",
         "left":"42%",
+        "top":".3rem"
     })
     $(".Partner_Title img").css({
         "width":"25%",
@@ -365,14 +366,14 @@ function zh() {
 
 }
 function En() {
-    $(".Ant_Video").css("height","7.8rem");
-    $(".DeveHistory").css("width","95%");
+    $(".Ant_Video").css("height","8rem");
+    $(".DeveHistory").css("width","98%");
     $(".EnHy").css("top","1.7rem");
     $(".EnHy1").css({
-        "top":"-.2rem",
+        "top":"-.25rem",
         "position":"relative"
     });
-    $(".Honor_union").css("height","8.4rem");
+    $(".Honor_union").css("height","8.8rem");
     $(".Ant_Content").css("text-align","left");
     $("#Dhl li").css({
         "width":"100%",
@@ -388,15 +389,16 @@ function En() {
     $(".zhshow").hide();
     $(".enshow").show();
     $(".serviceTitle img").css({
-        "width":"25%",
-        "left":"37.5%",
+        "width":"30%",
+        "left":"35%",
+        "top":".5rem"
     })
     $(".Partner_Title img").css({
-        "width":"40%",
-        "left":"30%",
+        "width":"50%",
+        "left":"25%",
     })
     $(" .ourBrandsTitle img").css({
-        "width":"22%",
+        "width":"25%",
     });
     $(" .DeveHistory_Title img").css({
         "width":"55%",
