@@ -28,11 +28,11 @@
     .Learn-More{
         font-size: 13px;
     }
-    .page_4 .scale_box img{
-
-    }
-    @keyframes scaleImg {
-
+  .enshow{
+      margin-top: 40px;
+  }
+    .topServe{
+        margin-top: 25px;
     }
 </style>
 
@@ -120,7 +120,8 @@
         <div style="width: 1200px;margin: 0 auto;height: 100%;position: relative">
             <!--标题-->
             <div class="Tiele-service">
-                <img src="images/serviceTypes.png" alt="" class="Tiele-service-img">
+                <img src="images/serviceTypes.png" alt="" class="Tiele-service-img zhshow">
+                <img src="images/serviceTypesEn.png" alt="" class="Tiele-service-img enshow">
             </div>
             <!--波动波-->
             <div class="Expand-dottedLine">
@@ -128,9 +129,9 @@
                 <div class="Consultation-management serviceType">
                     <div class="management-text">
                         <div class="management-Title" dom-i18n='ManagementConsult'>项目咨询管理</div>
-                        <div class="font-Mana font-margin">制定中短期及长期运营解决</div>
-                        <div class="font-Mana">方案，服务期间对项目进行</div>
-                        <div class="font-Mana">
+                        <div class="font-Mana font-margin" dom-i18n='ManagementTextA'>制定中短期及长期运营解决</div>
+                        <div class="font-Mana" dom-i18n='ManagementTextB'>方案，服务期间对项目进行</div>
+                        <div class="font-Mana" dom-i18n='ManagementTextC'>
                             市场监控与管理
                         </div>
                     </div>
@@ -143,10 +144,10 @@
                 <!--行业会议-->
                 <div class="Industry-meeting serviceType">
                     <div class="management-text">
-                        <div class="management-Title">行业会议</div>
-                        <div class="font-Mana font-margin">专业承办行业千人峰会</div>
-                        <div class="font-Mana">提供策划-推广-会务</div>
-                        <div class="font-Mana">
+                        <div class="management-Title" dom-i18n='ManagementConsult01'>行业会议</div>
+                        <div class="font-Mana font-margin" dom-i18n='ManagementTextA01'>专业承办行业千人峰会</div>
+                        <div class="font-Mana" dom-i18n='ManagementTextB01'>提供策划-推广-会务</div>
+                        <div class="font-Mana" dom-i18n='ManagementTextC01'>
                             等一条龙服务
                         </div>
                     </div>
@@ -159,9 +160,9 @@
                 <!--教育培训-->
                 <div class="Education-training serviceType">
                     <div class="management-text">
-                        <div class="management-Title" style="margin-top: 23px">教育培训</div>
-                        <div class="font-Mana font-margin">依托国家级教育培训资源</div>
-                        <div class="font-Mana">提供专业教育咨询服务</div>
+                        <div class="management-Title" style="margin-top: 23px" dom-i18n='ManagementConsult02'>教育培训</div>
+                        <div class="font-Mana font-margin" dom-i18n='ManagementTextA02'>依托国家级教育培训资源</div>
+                        <div class="font-Mana" dom-i18n='ManagementTextB02'>提供专业教育咨询服务</div>
                     </div>
                     <div class="management-img">
                         <img src="images/55.png" alt="" width="73%" style="margin-top: 40px">
@@ -176,9 +177,9 @@
 
                     </div>
                     <div class="Community-text">
-                        <div class="management-Title" style="margin-top: 23px">社群运营</div>
-                        <div class="font-Mana font-margin">线上专业的微信社群</div>
-                        <div class="font-Mana">管理团队</div>
+                        <div class="management-Title" style="margin-top: 23px" dom-i18n='ManagementConsult03'>社群运营</div>
+                        <div class="font-Mana font-margin" dom-i18n='ManagementTextA03'>线上专业的微信社群</div>
+                        <div class="font-Mana" dom-i18n='ManagementTextB03'>管理团队</div>
                     </div>
                 </div>
                 <!--媒体公关-->
@@ -188,9 +189,9 @@
 
                     </div>
                     <div class="Community-text">
-                        <div class="management-Title" style="margin-top: 23px">媒体公关</div>
-                        <div class="font-Mana font-margin">覆盖40+行业主流媒体</div>
-                        <div class="font-Mana">提供全方位媒体宣传服务</div>
+                        <div class="management-Title" style="margin-top: 23px" dom-i18n='ManagementConsult04'>媒体公关</div>
+                        <div class="font-Mana font-margin" dom-i18n='ManagementTextA04'>覆盖40+行业主流媒体</div>
+                        <div class="font-Mana" dom-i18n='ManagementTextB04'>提供全方位媒体宣传服务</div>
                     </div>
                 </div>
                 <!--投行上所-->
@@ -200,9 +201,9 @@
 
                     </div>
                     <div class="Community-text">
-                        <div class="management-Title" style="margin-top: 23px">投行上所</div>
-                        <div class="font-Mana font-margin">全球Top30</div>
-                        <div class="font-Mana">主流交易所资源对接</div>
+                        <div class="management-Title" style="margin-top: 23px" dom-i18n='ManagementConsult05'>投行上所</div>
+                        <div class="font-Mana font-margin" dom-i18n='ManagementTextA05'>全球Top30</div>
+                        <div class="font-Mana" dom-i18n='ManagementTextB05'>主流交易所资源对接</div>
                     </div>
                 </div>
 
@@ -230,7 +231,8 @@
         <div class="Cooperative-partner-box">
             <!--标题-->
             <div class="Tiele-service">
-                <img src="images/partnerC.png" alt="" class="Tiele-service-img">
+                <img src="images/partnerC.png" alt="" class="Tiele-service-img zhshow">
+                <img src="images/partnerCEn.png" alt="" class="Tiele-service-img enshow">
             </div>
             <div class="partner-img">
                 <a href="https://mvs.org/" target="_blank" rel="nofollow">
@@ -283,7 +285,8 @@
     <!--旗下产品-->
     <div class="Its-products">
         <div class="Tiele-service jz-tit-img">
-            <img src="images/ourBrands.png" alt="" class="Tiele-service-img">
+            <img src="images/ourBrands.png" alt="" class="Tiele-service-img zhshow">
+            <img src="images/ourBrandsEn.png" alt="" class="Tiele-service-img enshow">
         </div>
         <ul class="ourBrands-ul">
             <li>
@@ -291,18 +294,18 @@
                     <div class="ourBrandsList-img">
                         <img src="images/Qklt.png" alt=""  width="85%" class="ourBrands-products">
                     </div>
-                    <div class="ourBrands-text">
+                    <div class="ourBrands-text" dom-i18n='ourBrands'>
                         蚂蚁节点联盟旗下优质区块链自媒体平 台，致力打造最具行业影响力的财经媒
                         体品牌，粉丝数5w+
                     </div>
                     <!--了解更多-->
-                    <div class="Learn-More">
+                    <div class="Learn-More" dom-i18n='LearnMore'>
                         了解更多
                     </div>
                 </div>
                 <div class="QR-Code">
                     <img src="images/QRCode_Tt.png" alt="">
-                    <p>扫码查看</p>
+                    <p dom-i18n='FollowUs'>扫码查看</p>
                     <div class="crossCode">
                         ×
                     </div>
@@ -314,17 +317,17 @@
                     <div class="ourBrandsList-img">
                         <img src="images/bizhong.png" width="50%" alt=""  class="ourBrands-products">
                     </div>
-                    <div class="ourBrands-text">
+                    <div class="ourBrands-text" dom-i18n='ourBrandsBz'>
                         币众是基于LPChain理念开发的应用，利用LPChain的通证机制解决网络用户之间的信任和激励问题，实现用户各类行为价值化。旨在构建价值化自治社区，成为区块链领域流量入口，打造区块链领域项目孵化平台，为各类细分领域区块链项目提供流量资源与各种服务。
                     </div>
                     <!--了解更多-->
-                    <div class="Learn-More">
+                    <div class="Learn-More" dom-i18n='LearnMore'>
                         了解更多
                     </div>
                 </div>
                 <div class="QR-Code">
                     <img src="images/QRCoBz.png" alt="">
-                    <p>扫码查看</p>
+                    <p dom-i18n='FollowUs'>扫码查看</p>
                     <div class="crossCode">
                         ×
                     </div>
@@ -336,17 +339,17 @@
                     <div class="ourBrandsList-img">
                         <img src="images/finwise.png" width="85%" alt=""  class="ourBrands-products" >
                     </div>
-                    <div class="ourBrands-text">
+                    <div class="ourBrands-text" dom-i18n='ourBrandsFz'>
                         FINWISE纷智峰会是全球最貝影响力的金融科技峰会之一，团队由经验丰富的金融市场专家和区块链行业精英组成，旨在加强行业从业者们的交流，推动全球金融科技的发展。
                     </div>
                     <!--了解更多-->
-                    <div class="Learn-More">
+                    <div class="Learn-More" dom-i18n='LearnMore'>
                         了解更多
                     </div>
                 </div>
                 <div class="QR-Code">
                     <img src="images/QRCode.png" alt="">
-                    <p>扫码查看</p>
+                    <p dom-i18n='FollowUs'>扫码查看</p>
                     <div class="crossCode">
                         ×
                     </div>

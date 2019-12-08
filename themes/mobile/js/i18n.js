@@ -98,6 +98,8 @@
             appellationYZW01:"Co-founder of Ant Node Alliance",
             appellationYZW02:"Co-founder of Ant Alliance International Capital",
             appellationYZW03:"",
+            Didian:"Huli District Xiamen City",
+            cricleTaday:"Today"
 
         },
         zh: {
@@ -179,6 +181,8 @@
             appellationYZW01:"蚂蚁节点联盟联合创始人",
             appellationYZW02:"蚂蚁节点联盟联合创始人",
             appellationYZW03:"",
+            Didian:"厦门市湖里区",
+            cricleTaday:"今天"
         },
     },
     dom: {
@@ -311,13 +315,13 @@ $(".en-lang").click(function () {
 
 });
 function zh() {
-    $(".Ant_Video").css("height","6.3rem")
+    $(".Ant_Video").css("height","6.3rem");
     $(".DeveHistory").css("width","90%");
     $(".EnHy1").css({
         "top":"0rem",
         "position":"relative"
-    })
-    $(".Honor_union").css("height","6.2rem")
+    });
+    $(".Honor_union").css("height","6.2rem");
     $(".Ant_Content").css("text-align","justify");
     $("#Dhl li").css({
         "width":"100%",
@@ -326,17 +330,48 @@ function zh() {
         "height":".5rem",
         "line-height":".5rem",
         "padding": "0"
+    });
+    $(".header_list a").css("font-size",".22rem!important");
+    $(".zhshow").show();
+    $(".enshow").hide();
+    $(".serviceTitle img").css({
+        "width":"16%",
+        "left":"42%",
     })
-    $(".header_list a").css("font-size",".22rem!important")
+    $(".Partner_Title img").css({
+        "width":"25%",
+        "left":"37.5%",
+    })
+    $(" .ourBrandsTitle img").css({
+        "width":"17%",
+    });
+    $(" .DeveHistory_Title img").css({
+        "width":"32%",
+    });
+    $(" .HonorTitle img").css({
+        "width":"35%",
+    });
+    $(" .TeamStyleTitle img").css({
+        "width":"17%",
+    });
+    $(" .Ant_Video_Title img").css({
+        "width":"25%",
+    });
+
+
+    $("#banner").css("background-image","url(/themes/mobile/images/briefbanner.png)");
+
+
+
 }
 function En() {
     $(".Ant_Video").css("height","7.8rem");
     $(".DeveHistory").css("width","95%");
-    $(".EnHy").css("top","1.7rem")
+    $(".EnHy").css("top","1.7rem");
     $(".EnHy1").css({
         "top":"-.2rem",
         "position":"relative"
-    })
+    });
     $(".Honor_union").css("height","8.4rem");
     $(".Ant_Content").css("text-align","left");
     $("#Dhl li").css({
@@ -346,10 +381,36 @@ function En() {
         "height":"auto",
         "line-height":"normal",
         "padding": "0rem 0 .15rem 0"
-    })
+    });
     $(".header_list a").css({
         "font-size":".2rem!important",
+    });
+    $(".zhshow").hide();
+    $(".enshow").show();
+    $(".serviceTitle img").css({
+        "width":"25%",
+        "left":"37.5%",
     })
+    $(".Partner_Title img").css({
+        "width":"40%",
+        "left":"30%",
+    })
+    $(" .ourBrandsTitle img").css({
+        "width":"22%",
+    });
+    $(" .DeveHistory_Title img").css({
+        "width":"55%",
+    });
+    $(" .HonorTitle img").css({
+        "width":"55%",
+    });
+    $(" .TeamStyleTitle img").css({
+        "width":"23%",
+    });
+    $(" .Ant_Video_Title img").css({
+        "width":"35%",
+    });
+    $("#banner").css("background-image","url(/themes/mobile/images/briefbannerEn.png)");
 }
 
 
