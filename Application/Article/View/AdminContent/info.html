@@ -27,7 +27,10 @@
           <admin:textarea name="content" rows="10" width="full" class="u-editor">{$info.content}</admin:textarea>
         </admin:formrow>
         <admin:formrow title="简介" tip=""  >
-          <admin:textarea name="description" rows="10" width="full" >{$info.description}</admin:textarea>
+          <admin:textarea name="description" rows="5" width="full" >{$info.description}</admin:textarea>
+        </admin:formrow>
+        <admin:formrow title="关键字" tip="用小写逗号隔开">
+          <admin:text name="keyword" value="{$info.keyword}" len="50"  width="full" />
         </admin:formrow>
         <admin:formrow title="权重" tip="越大越靠前">
           <admin:text name="sequence" value="{$info.sequence}" len="50"  width="full" />

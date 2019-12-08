@@ -34,6 +34,8 @@ return array(
 	    
 	    'aboutus_m'         =>  'Home/Mobile/aboutus',
 	    'team_m'          =>  'Home/Mobile/team',
+	    
+	    'gocontent/:gzh_num'=>'Home/Short/message',
 
 	),
     'URL_HTML_SUFFIX'=>'html', // 伪静态后缀

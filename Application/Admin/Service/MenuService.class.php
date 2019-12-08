@@ -37,12 +37,12 @@ class MenuService{
 	                ),
 	                array(
 	                    'name' => '快讯列表',
-	                    'url' =>  U('Article/Message/index'),
+	                    'url' =>  U('Article/Messag/index'),
 	                    'order' => 5
 	                ),
 	                array(
 	                    'name' => '添加快讯',
-	                    'url' =>  U('Article/Message/add'),
+	                    'url' =>  U('Article/Messag/add'),
 	                    'order' => 7
 	                )
 	            )

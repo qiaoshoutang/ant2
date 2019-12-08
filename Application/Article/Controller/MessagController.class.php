@@ -5,7 +5,7 @@ use Admin\Controller\AdminController;
  * 快讯后台控制器
  */
 
-class MessageController extends AdminController {
+class MessagController extends AdminController {
     /**
      * 当前模块参数
      */
@@ -43,6 +43,7 @@ class MessageController extends AdminController {
      * 列表
      */
     public function index(){
+
         //筛选条件
         $where = array();
         $keyword = I('request.keyword','');
