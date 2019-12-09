@@ -31,7 +31,8 @@
             <div class="FoundTeam_Cont">
                 <a href="#" name="FoundingTeam"></a>
                 <div class="FoundTitle">
-                    <img src="images/foundteam.png" alt="" >
+                    <img src="images/foundteam.png" alt=""  class="zhshow">
+                    <img src="images/foundteamEn.png" alt="" class="enshow">
                 </div>
                 <div class="FoundContent">
                     <img src="images/teamK.png" alt="" width="70%">
@@ -94,7 +95,8 @@
                 <div class="FoundTeam_Cont">
                     <div class="FoundTitle">
 
-                        <img src="images/teamType.png" alt="" >
+                        <img src="images/teamType.png" alt=""  class="zhshow">
+                        <img src="images/teamTypeEn.png" alt="" class="enshow">
                     </div>
                     <!--轮播-->
                     <div class="banner-nav">
@@ -166,24 +168,48 @@
         });
     });
 
+    // $(".List_Team ul li").click(function () {
+    //     if ($(this).index() == 0) {
+    //         $(".NameFound").attr("dom-i18n","ZengHao");
+    //         $(".appellation p").eq(0).attr("dom-i18n","appellationZH01");
+    //         $(".appellation p").eq(1).attr("dom-i18n","appellationZH02");
+    //         $(".appellation p").eq(2).attr("dom-i18n","appellationZH03");
+    //     }
+    //     if ($(this).index() == 1) {
+    //         $(".NameFound").attr("dom-i18n","ZhangJingWei");
+    //         $(".appellation p").eq(0).attr("dom-i18n","appellationZJW01");
+    //         $(".appellation p").eq(1).attr("dom-i18n","appellationZJW02");
+    //         $(".appellation p").eq(2).attr("dom-i18n","appellationZJW03");
+    //     }
+    //     if ($(this).index() == 2) {
+    //         $(".NameFound").attr("dom-i18n","YangZhiWen");
+    //         $(".appellation p").eq(0).attr("dom-i18n","appellationYZW01");
+    //         $(".appellation p").eq(1).attr("dom-i18n","appellationYZW02");
+    //         $(".appellation p").eq(2).attr("dom-i18n","appellationYZW03");
+    //     }
+    // })
+
     $(".List_Team ul li").click(function () {
         if ($(this).index() == 0) {
-            $(".NameFound").attr("dom-i18n","ZengHao");
-            $(".appellation p").eq(0).attr("dom-i18n","appellationZH01");
-            $(".appellation p").eq(1).attr("dom-i18n","appellationZH02");
-            $(".appellation p").eq(2).attr("dom-i18n","appellationZH03");
+            $(".pictureTx img").attr("src", "/themes/default/images/zenghao.png");
+            $(".NameFound").html("曾豪");
+            $(".appellation p").eq(0).html("中高会区块链产业联盟副理事长");
+            $(".appellation p").eq(1).html("蚂蚁节点联盟创始人");
+            $(".appellation p").eq(2).html("蚂蚁联盟国际资本创始人");
         }
         if ($(this).index() == 1) {
-            $(".NameFound").attr("dom-i18n","ZhangJingWei");
-            $(".appellation p").eq(0).attr("dom-i18n","appellationZJW01");
-            $(".appellation p").eq(1).attr("dom-i18n","appellationZJW02");
-            $(".appellation p").eq(2).attr("dom-i18n","appellationZJW03");
+            $(".pictureTx img").attr("src", "/themes/default/images/zhangjingwei.png");
+            $(".NameFound").html("张竟唯");
+            $(".appellation p").eq(0).html("蚂蚁节点联盟联合创始人");
+            $(".appellation p").eq(1).html("蚂蚁联盟国际资本联合创始人");
+            $(".appellation p").eq(2).html("");
         }
         if ($(this).index() == 2) {
-            $(".NameFound").attr("dom-i18n","YangZhiWen");
-            $(".appellation p").eq(0).attr("dom-i18n","appellationYZW01");
-            $(".appellation p").eq(1).attr("dom-i18n","appellationYZW02");
-            $(".appellation p").eq(2).attr("dom-i18n","appellationYZW03");
+            $(".pictureTx img").attr("src", "/themes/default/images/yangzhiwen.png");
+            $(".NameFound").html("杨志文");
+            $(".appellation p").eq(0).html("蚂蚁节点联盟联合创始人");
+            $(".appellation p").eq(1).html("蚂蚁联盟国际资本联合创始人");
+            $(".appellation p").eq(2).html("");
         }
     })
 

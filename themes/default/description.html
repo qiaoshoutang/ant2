@@ -13,6 +13,9 @@
     .AntZhiContent{
         text-align: left!important;
     }
+    #Medal{
+        width: 80%;
+    }
 </style>
 <body>
 <div class="box">
@@ -24,7 +27,8 @@
     <!--视频-->
     <div class="AntVideo">
         <div class="AntVideo_Title">
-            <img src="images/introdutionTitle.png" alt="" >
+            <img src="images/introdutionTitle.png" alt=""  class="zhshow">
+            <img src="images/introdutionTitleEn.png" alt=""  class="enshow">
         </div>
         <div class="AntZhi">
             <p dom-i18n='AntZhiContent'>蚂蚁节点联盟是国内知名的区块链线下社群组织，联盟以引领行业新生态、
@@ -40,7 +44,8 @@
     <!--发展历程-->
     <div class="developmentHistory">
         <div class="HistoryTitle">
-            <img src="images/hisTory.png" alt="" >
+            <img src="images/hisTory.png" alt="" class="zhshow">
+            <img src="images/hisToryEn.png" alt="" class="enshow">
         </div>
         <div class="HistoryContent">
             <div class="History_Left">
@@ -106,7 +111,7 @@
             <!--中间格子线-->
             <div class="History_Centet">
                 <!--今天-->
-                <div class="taday">今天</div>
+                <div class="taday" dom-i18n='cricleTaday'>今天</div>
                 <div class="lineL">
                     <ul>
                         <li><span class="ballHistoryB"></span></li>
@@ -199,10 +204,11 @@
     <div class="Company-Honor">
         <div class="Company-Honor-box">
             <div class="Medal">
-                <img src="images/Medal.png" alt="">
+                <img src="images/Medal.png" alt="" id="Medal">
             </div>
             <div class="Company-Honor-Title">
-                <img src="images/CompanyHonor.png" alt="">
+                <img src="images/CompanyHonor.png" alt="" class="zhshow">
+                <img src="images/CompanyHonorEn.png" alt="" class="enshow">
             </div>
             <ul class="Company-Honor-Text">
                 <li class="Company-Honor-Textlist">

@@ -17,8 +17,6 @@
     i18n: {
       //key编码规则：取前2个中文字符拼音+最后2个中文字符拼音
       //不满4个中文字符用e代表
-
-
         en: {
             header01:'Home',
             header02:"News",
@@ -97,7 +95,37 @@
             appellationYZW01:"Co-founder of Ant Node Alliance",
             appellationYZW02:"Co-founder of Ant Alliance International Capital",
             appellationYZW03:"",
-
+            LearnMore:'Learn more',
+            ourBrands:"As a high quality blockchain we-media platform with 50,000+ followers under the Ant Node Alliance, Block-Hunt is committed to building the most influential financial and economic media.",
+            ourBrandsBz:"Based on the application and token mechanism of LPChain, Link People solves the problem of the trust and incentives among internet users. ",
+            ourBrandsFz:"With a team of experienced financial market experts and blockchain elites, FINWISE is one of the most influential fintech summits.",
+            FollowUs:"Follow us",
+            Didian:"Huli District,Xiamen City",
+            ManagementConsult:"Project",
+            ManagementTextA:"Consulting",
+            ManagementTextB:" ",
+            ManagementTextC:" ",
+            ManagementConsult01:"Industry",
+            ManagementTextA01:"Conferences",
+            ManagementTextB01:" ",
+            ManagementTextC01:" ",
+            ManagementConsult02:"Blockchain",
+            ManagementTextA02:"Education",
+            ManagementTextB02:" ",
+            ManagementTextC02:" ",
+            ManagementConsult03:"Community",
+            ManagementTextA03:"Operations",
+            ManagementTextB03:" ",
+            ManagementTextC03:" ",
+            ManagementConsult04:"Public",
+            ManagementTextA04:"Relations",
+            ManagementTextB04:" ",
+            ManagementTextC04:" ",
+            ManagementConsult05:"TOP",
+            ManagementTextA05:"Exchanges",
+            ManagementTextB05:" ",
+            ManagementTextC05:" ",
+            cricleTaday:"Today",
         },
         zh: {
             header01:'首页',
@@ -177,6 +205,38 @@
             appellationYZW01:"蚂蚁节点联盟联合创始人",
             appellationYZW02:"蚂蚁节点联盟联合创始人",
             appellationYZW03:"",
+            LearnMore:'了解更多',
+            ourBrands:"蚂蚁节点联盟旗下优质区块链自媒体平台，致力打造最具行业影响力的财经媒体品牌，粉丝数5w+",
+            ourBrandsBz:"币众是基于LPChain理念开发的应用，利用LPChain的通证机制解决网络用户之间的信任和激励问题，实现用户各类",
+            ourBrandsFz:"FINWISE纷智峰会是全球最具影响力的金融科技峰会之一，团队由经验丰富的金融市场专家和区块链行业精英组成",
+            FollowUs:"关注我们",
+            Didian:"厦门市湖里区",
+            ManagementConsult:"项目咨询管理",
+            ManagementTextA:"制定中短期及长期运营解决",
+            ManagementTextB:"方案，服务期间对项目进行",
+            ManagementTextC:"市场监控与管理",
+            ManagementConsult01:"行业会议",
+            ManagementTextA01:"专业承办行业千人峰会",
+            ManagementTextB01:"提供策划-推广-会务",
+            ManagementTextC01:"等一条龙服务",
+            ManagementConsult02:"教育培训",
+            ManagementTextA02:"依托国家级教育培训资源",
+            ManagementTextB02:"提供专业教育咨询服务",
+            ManagementTextC02:" ",
+            ManagementConsult03:"社群运营",
+            ManagementTextA03:"线上专业的微信社群",
+            ManagementTextB03:"管理团队",
+            ManagementTextC03:" ",
+            ManagementConsult04:"投行上所",
+            ManagementTextA04:"全球Top30",
+            ManagementTextB04:"主流交易所资源对接",
+            ManagementTextC04:" ",
+            ManagementConsult05:"媒体公关",
+            ManagementTextA05:"覆盖40+行业主流媒体",
+            ManagementTextB05:"提供全方位媒体宣传服务",
+            ManagementTextC05:" ",
+            cricleTaday:"今天",
+
         },
     },
     dom: {
@@ -294,47 +354,21 @@ var tyLang = localStorage.tyLang;
 if(tyLang == 'zh'){
     $('body').addClass('zhlang');
     $('body').removeClass('otherlang');
-    $(".header-list").css("width","600px");
-    $(".sub-page-nav").css("width","70%");
-    $(".header-list li").css("width","20%");
-    $(".AntVideo").css("height","900px");
-    $(".AntZhi").removeClass("AntZhiContent");
-    $(".HisDetail").css("font-size","27.15px");
-    $(".search-i").attr("placeholder","搜索");
     FoundingTeam()
+    Zh()
 }else {
     $('body').addClass('otherlang');
     $('body').removeClass('zhlang');
-    $(".header-list").css("width","800px");
-    $(".sub-page-nav").css("width","85%");
-    $(".header-list li").css("width","18%");
-    $(".header-list li").eq(2).css("width","28%");
-    $(".AntVideo").css("height","1150px");
-    $(".AntZhi").addClass("AntZhiContent");
-    $(".HisDetail").css("font-size","20px");
-    $(".search-i").attr("placeholder","search");
+    En()
     FoundingTeamEn()
 }
 
 $(".zh-lang").click(function () {
-    $(".header-list").css("width","600px");
-    $(".sub-page-nav").css("width","70%");
-    $(".header-list li").css("width","20%");
-    $(".AntVideo").css("height","900px");
-    $(".AntZhi").removeClass("AntZhiContent");
-    $(".HisDetail").css("font-size","27.15px");
-    $(".search-i").attr("placeholder","搜索");
+    Zh()
     FoundingTeam()
 });
 $(".en-lang").click(function () {
-    $(".header-list").css("width","800px");
-    $(".sub-page-nav").css("width","85%");
-    $(".header-list li").css("width","18%");
-    $(".header-list li").eq(2).css("width","28%");
-    $(".AntVideo").css("height","1150px");
-    $(".AntZhi").addClass("AntZhiContent");
-    $(".HisDetail").css("font-size","20px");
-    $(".search-i").attr("placeholder","search");
+    En()
     FoundingTeamEn()
 });
 function FoundingTeam(){
@@ -386,6 +420,44 @@ function FoundingTeamEn(){
             $(".appellation p").eq(2).html("");
         }
     })
+}
+
+function Zh(){
+    $(".header-list").css("width","600px");
+    $(".sub-page-nav").css("width","70%");
+    $(".header-list li").css("width","20%");
+    $(".AntVideo").css("height","900px");
+    $(".AntZhi").removeClass("AntZhiContent");
+    $(".HisDetail").css("font-size","27.15px");
+    $(".search-i").attr("placeholder","搜索");
+    $(".ourBrands-ul li:nth-child(1)").css("background-image","url(/themes/default/images/outBrandsList.png)")
+    $(".zhshow").show();
+    $(".enshow").hide()
+    $(".font-Mana").css("font-size","15px")
+    $(".management-Title").removeClass("topServe")
+    $('.briefbanner').css("background-image","url(/themes/default/images/briefbanner.png)");
+    $(".taday").css("font-size","30px");
+
+}
+
+function En() {
+    $(".header-list").css("width","800px");
+    $(".sub-page-nav").css("width","85%");
+    $(".header-list li").css("width","18%");
+    $(".header-list li").eq(2).css("width","28%");
+    $(".AntVideo").css("height","1150px");
+    $(".AntZhi").addClass("AntZhiContent");
+    $(".HisDetail").css("font-size","20px");
+    $(".search-i").attr("placeholder","search");
+    $(".ourBrands-ul li:nth-child(1)").css("background-image","url(/themes/default/images/BLOCK-HUNT.png)");
+    $(".ourBrands-ul li:nth-child(2)").css("background-image","url(/themes/default/images/LINKPEOPLE.png)");
+    $(".ourBrands-ul li:nth-child(3)").css("background-image","url(/themes/default/images/FINWISESUMMIT.png)");
+    $(".zhshow").hide();
+    $(".enshow").show();
+    $(".font-Mana").css("font-size","23px");
+    $(".management-Title").addClass("topServe")
+    $('.briefbanner').css("background-image","url(/themes/default/images/briefbannerEn.png)")
+    $(".taday").css("font-size","23px");
 }
 
 
