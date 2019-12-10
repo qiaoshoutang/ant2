@@ -40,7 +40,7 @@
             header051:"Introduction",
             header052:"Team",
             header053:"Contact Us",
-            header054:"Focus Us",
+            header054:"Follow Us",
             AntZhiContent:"As a well-known offline blockchain community organization in China, Ant Node Alliance aims to build a new industry ecosystem and promote the steady development of the blockchain industry, and connect the blockchain experts and enthusiasts on a global scale. By integrating the upstream and downstream resources of the blockchain industry, we provide comprehensive third-party services for industry participants. Our corporate vision is “To be the best blockchain community alliance in the world. Our corporate values are “openness, equality, innovation and win-win cooperation”.",
             TimeFzMaCao:"Sept.21st-22nd,2019",
             FzMaCao01:"The 6th session of FINWISE summit",
@@ -413,6 +413,9 @@ function En() {
         "width":"35%",
     });
     $("#banner").css("background-image","url(/themes/mobile/images/briefbannerEn.png)");
+    $(".search-i").css({
+        "font-size":"12px"
+    })
 }
 
 

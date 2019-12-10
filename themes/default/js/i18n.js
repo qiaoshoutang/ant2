@@ -126,6 +126,15 @@
             ManagementTextB05:" ",
             ManagementTextC05:" ",
             cricleTaday:"Today",
+            All:"All",
+            SigningUp:"Signing up",
+            Completed:"Completed ",
+            LastWeek:"Last week",
+            LastMonth:"Last month",
+            Last6months:"Last 6 months",
+            Earlier:'Earlier',
+            more:"more",
+            NoMore:"No more"
         },
         zh: {
             header01:'首页',
@@ -203,7 +212,7 @@
             appellationZJW02:"蚂蚁联盟国际资本联合创始人",
             appellationZJW03:"",
             appellationYZW01:"蚂蚁节点联盟联合创始人",
-            appellationYZW02:"蚂蚁节点联盟联合创始人",
+            appellationYZW02:"蚂蚁联盟国际资本联合创始人",
             appellationYZW03:"",
             LearnMore:'了解更多',
             ourBrands:"蚂蚁节点联盟旗下优质区块链自媒体平台，致力打造最具行业影响力的财经媒体品牌，粉丝数5w+",
@@ -236,8 +245,18 @@
             ManagementTextB05:"提供全方位媒体宣传服务",
             ManagementTextC05:" ",
             cricleTaday:"今天",
+            All:"全部",
+            SigningUp:"报名中",
+            Completed:"已结束",
+            LastWeek:"近一周",
+            LastMonth:"近一月",
+           Last6months:"近半年",
+            Earlier:'更早',
+            more:'查看更多',
+            NoMore:"已经没有更多了"
 
-        },
+
+},
     },
     dom: {
       domI18n: "dom-i18n"
@@ -437,6 +456,16 @@ function Zh(){
     $(".management-Title").removeClass("topServe")
     $('.briefbanner').css("background-image","url(/themes/default/images/briefbanner.png)");
     $(".taday").css("font-size","30px");
+    $(".search-i").css({
+        "font-size":"15px"
+    })
+    $(".Recent-time ul li").css({
+        "width": "85px",
+        "font-size":"20px"
+    })
+    $(".RecentnavList_ul li").css({
+        "width": "8%"
+    })
 
 }
 
@@ -458,6 +487,23 @@ function En() {
     $(".management-Title").addClass("topServe")
     $('.briefbanner').css("background-image","url(/themes/default/images/briefbannerEn.png)")
     $(".taday").css("font-size","23px");
+    $(".search-i").css({
+        "font-size":"12px"
+    })
+    $(".Recent-time ul li").css({
+        "width": "120px",
+        "font-size":"16px"
+    })
+    $(".Recent-time ul li:nth-child(1)").css({
+        "width": "85px",
+        "font-size":"16px"
+    })
+    $(".RecentnavList_ul li").css({
+        "width": "12%"
+    })
+    $(".RecentnavList_ul li:nth-child(1)").css({
+        "width": "8%"
+    })
 }
 
 

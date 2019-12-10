@@ -44,32 +44,32 @@
     <div class="RecentnavList">
         <ul class="RecentnavList_ul">
             <li class='<!--{if condition="$state eq all"}--> active <!--{/if}-->'>
-                <a href='/activit/all/all'>全部</a>
+                <a href='/activit/all/all' dom-i18n='All'>全部</a>
             </li>
             <li class='<!--{if condition="$state eq 1"}--> active <!--{/if}-->'>
-                <a href='/activit/1/all'>报名中</a>
+                <a href='/activit/1/all' dom-i18n='SigningUp'>报名中</a>
             </li>
             <li class='<!--{if condition="$state eq 2"}--> active <!--{/if}-->'>
-                <a href='/activit/2/all'>已结束</a>
+                <a href='/activit/2/all' dom-i18n='Completed'>已结束</a>
             </li>
         </ul>
         <!--近期-->
         <div class="Recent-time">
             <ul>
                 <li class='<!--{if condition="$time eq all"}--> active <!--{/if}-->'>
-                    <a href='/activit/all/all'>全部</a>
+                    <a href='/activit/all/all' dom-i18n='All'>全部</a>
                 </li>
                 <li class='<!--{if condition="$time eq 1"}--> active <!--{/if}-->'>
-                    <a href='/activit/all/1'>近一周</a>
+                    <a href='/activit/all/1' dom-i18n='LastWeek'>近一周</a>
                 </li>
                 <li class='<!--{if condition="$time eq 2"}--> active <!--{/if}-->'>
-                    <a href='/activit/all/2'>近一月</a>
+                    <a href='/activit/all/2' dom-i18n='LastMonth'>近一月</a>
                 </li>
                 <li class='<!--{if condition="$time eq 3"}--> active <!--{/if}-->'>
-                    <a href='/activit/all/3'>近半年</a>
+                    <a href='/activit/all/3' dom-i18n='Last6months'>近半年</a>
                 </li>
                 <li class='<!--{if condition="$time eq 4"}--> active <!--{/if}-->'>
-                    <a href='/activit/all/4'>更早</a>
+                    <a href='/activit/all/4' dom-i18n='Earlier'>更早</a>
                 </li>
             </ul>
         </div>
@@ -110,7 +110,7 @@
                 </li>
                 <!--{/foreach}-->
             </ul>
-            <div class="LOOKMMM" id='acti_more'>
+            <div class="LOOKMMM" id='acti_more' dom-i18n='more'>
                 查看更多
             </div>
         </div>
@@ -159,6 +159,22 @@
                 page_num++;
             }else{
                 $('#acti_more').html(rdata.info);
+                // if(tyLang == 'zh'){
+                //     $('#acti_more').attr("dom-i18n","more")
+                //     $('#acti_more').html("已经没有更多了");
+                // }else {
+                //     $('#acti_more').attr("dom-i18n","NoMore")
+                //     $('#acti_more').html("No more");
+                // }
+                // $(".zh-lang").click(function () {
+                //     $('#acti_more').attr("dom-i18n","more")
+                //     $('#acti_more').html("已经没有更多了");
+                //     // rdata.info
+                // });
+                // $(".en-lang").click(function () {
+                //     $('#acti_more').attr("dom-i18n","NoMore")
+                //     $('#acti_more').html("No more");
+                // });
             }
           }
         });
