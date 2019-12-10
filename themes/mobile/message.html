@@ -134,25 +134,24 @@
             font-size: .3rem;
         }
         .wrapper_p{
-            line-height: 180%;
+            line-height: 150%;
             width: 95%;
             margin: 0 auto;
-            font-size: .4rem;
+            font-size: .41rem;
             letter-spacing: 1.5px;
             text-align: justify;
         }
         .wrapper_h1{
-            font-size: .5rem;
+            font-size: .52rem;
             width: 95%;
             margin: 0 auto;
             letter-spacing: 1.5px;
             font-weight: bold;
-
         }
         .nr{
             width:100%;
             height:100%;
-            margin: 2% auto 0 auto;
+            margin: 0 auto 0 auto;
             text-align: left;
         }
         .neirong{
@@ -184,10 +183,11 @@
             margin-top: .18rem;
         }
         .data_weekContent{
+            padding-top: .4rem;
             width: 95%;
             margin-left: 2.5%;
             overflow: hidden;
-            padding-bottom: .3rem;
+            padding-bottom: .85rem;
         }
         .LGoodAK{
             width: 95%;
@@ -242,7 +242,6 @@
     <!--弹窗-->
     <div id="alert">
         <button class="dj" style="cursor: pointer">×</button>
-
         <div class="nr">
             <div class="center_b" id="view"  style="width:650px; overflow: hidden">
                 <div class="neirong">
@@ -274,11 +273,8 @@
                                 </span>
                             </div>
                         </div>
-
-
                     </div>
                     <img src="/themes/mobile/images/Kxbottom.jpg"  style="width: 100%" >
-
                 </div>
 
             </div>
@@ -376,7 +372,7 @@
         var shareContent = $("#view");// 需要绘制的部分的 (原生）dom 对象 ，注意容器的宽度不要使用百分比，使用固定宽度，避免缩放问题
         var width = shareContent.width();  // 获取(原生）dom 宽度
         var height = shareContent.height(); // 获取(原生）dom 高
-        console.log(width)
+        console.log(width);
         console.log(height);
 
         var canvas = document.createElement('canvas');  //创建canvas 对象
@@ -407,12 +403,16 @@
             $(img).addClass('img-wjh');
             if(IsPC() == false){
                 $(img).css({
+                    "display":"block",
+                    "border":"0",
                     'max-width': '90%',
                     "max-height":"90%",
                     "margin-top":"8%"
                 });
             }else{
                 $(img).css({
+                    "display":"block",
+                    "border":"0",
                     'max-width': '90%',
                     "max-height":"90%",
                     "margin-top":"8%"
