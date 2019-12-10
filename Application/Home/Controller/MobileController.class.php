@@ -29,6 +29,11 @@ class MobileController extends SiteController {
         $limit = $this->getPageLimit($messageCount,10);
         $messageList = $messageMod->loadList($where,$limit);
         
+        $weekname=array('星期天','星期一','星期二','星期三','星期四','星期五','星期六');
+        
+        foreach($messageList as $key=>$val){
+            $messageList[$key]['timeH'] = $weekname[date('w',$val['time'])].' '.date('Y-m-d H:i');
+        }
         $this->assign('messageList',$messageList);
         $this -> siteDisplay('message');
     }

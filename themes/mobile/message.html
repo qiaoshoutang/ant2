@@ -301,6 +301,9 @@
                     <div class="timeF">
                         {$vo.time|format_time='H:i'}
                     </div>
+                    <div class="timeH" style="display:none">
+                        {$vo.timeH}
+                    </div>
                     <div class="maintitle">
                         {$vo.title}
                     </div>
@@ -438,7 +441,7 @@
     function share(obj) {
 
         var content = $(obj).parents('.mainContent').find(".mainText").html();
-        var time_date = $(obj).parents(".mainContent").find(".timeF").html();
+        var time_date = $(obj).parents(".mainContent").find(".timeH").html();
         var h_title=$(obj).parents(".mainContent").find(".maintitle").html();
         var content_img=$(obj).parents('.mainContent').prevAll('img').clone();
         var LGood = $(obj).parents('.mainContent').find("#UPC").html();
