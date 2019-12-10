@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d651e91c-2a79-4b79-88fe-9046f73e9574" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/mobile/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/message.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -82,14 +83,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1591" />
-          <entry key="html" value="8356" />
+          <entry key="html" value="8390" />
           <entry key="js" value="2212" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="1591" />
-          <entry key="HTML" value="8356" />
+          <entry key="HTML" value="8390" />
           <entry key="JavaScript" value="2212" />
         </counts>
       </usages-collector>
@@ -100,8 +101,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/mobile/message.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3047">
-              <caret line="327" column="131" selection-start-line="327" selection-start-column="131" selection-end-line="327" selection-end-column="131" />
+            <state relative-caret-position="287">
+              <caret line="148" column="30" selection-start-line="148" selection-start-column="30" selection-end-line="148" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -111,18 +112,6 @@
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#2;n#div#3;n#div#1;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#span#2;n#div#3;n#div#1;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/Ajax/message_list_m.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-              <folding>
-                <element signature="n#style#0;n#span#2;n#div#3;n#div#1;n#li#0;n#foreach#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -327,7 +316,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575963532046" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575966328535" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -378,12 +367,12 @@
       <workItem from="1575787844618" duration="12236000" />
       <workItem from="1575852357769" duration="636000" />
       <workItem from="1575871452979" duration="7958000" />
-      <workItem from="1575943572148" duration="14984000" />
+      <workItem from="1575943572148" duration="18005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323900000" />
+    <option name="totallyTimeSpent" value="326921000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
@@ -429,7 +418,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/themes/mobile/message.html</url>
-          <line>492</line>
+          <line>491</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -784,8 +773,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/mobile/message.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3047">
-          <caret line="327" column="131" selection-start-line="327" selection-start-column="131" selection-end-line="327" selection-end-column="131" />
+        <state relative-caret-position="287">
+          <caret line="148" column="30" selection-start-line="148" selection-start-column="30" selection-end-line="148" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
