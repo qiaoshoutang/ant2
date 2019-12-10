@@ -78,6 +78,12 @@ class AjaxController extends SiteController {
             $rdata['info'] = '已经没有更多了';
             $this->ajaxReturn($rdata);
         }
+        $weekname=array('星期天','星期一','星期二','星期三','星期四','星期五','星期六');
+        
+        foreach($messageList as $key=>$val){
+            $messageList[$key]['timeH'] = $weekname[date('w',$val['time'])].' '.date('Y-m-d H:i');
+        }
+        
         $this->assign('messageList',$messageList);
         
         $detect = new \Common\Util\Mobile_Detect();
