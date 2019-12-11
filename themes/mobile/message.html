@@ -74,6 +74,9 @@
             top: -.1rem;
         }
         .maintitle{
+
+        }
+        .maintitle h1{
             margin-top: .3rem;
             text-align: left;
             font-size: .28rem;
@@ -142,11 +145,11 @@
             text-align: justify;
         }
         .wrapper_h1{
-            font-size: .52rem;
+            font-size: .5rem;
             width: 95%;
-            margin: 0 auto;
-            letter-spacing: 1.5px;
+            margin: 2% auto;
             font-weight: bold;
+            text-align: justify;
         }
         .nr{
             width:100%;
@@ -173,14 +176,17 @@
         }
         .data_week_p{
             width: 95%;
-            margin: 0.2rem auto 0 auto;
+            margin: 0 auto;
+            position: relative;
         }
         .data_week_p img{
-            position: relative;
-            top: .1rem;
+            position: absolute;
+            bottom: 0.05rem;
         }
         .data_week_span{
             margin-top: .18rem;
+            margin-left: .5rem;
+
         }
         .data_weekContent{
             padding-top: .4rem;
@@ -255,9 +261,7 @@
                                 <span class="data_week_span">星期二 2018-05-31 14:20</span>
                             </p>
                             <div id="wrapper">
-                                <p class="wrapper_h1" style="margin-top: 2%">
-                                    昨日，新京报记者从浙江大学获悉报记者从浙江大学获悉
-                                </p>
+                                <p class="wrapper_h1"></p>
                                 <p class="wrapper_p" style="margin-top: 5%">
                                     昨日，新京报记者从浙江大学获悉，浙大计算机学院和软件学院，将于今年学获悉，浙大计算机学院和软件学院，将于今年学获悉，浙大计算机学院和软件学院，将于今年学获悉，浙大计算机学院和软件学院，将于今年学获悉，浙大计算机学院和软件学院，将于今年秋季面向部分高年级本科生和研究生，设置一门名为《区块链与数字货币》的课程。据悉，这是国内首家开设此类课程的高校。 浙江大学相关课程教师称，在对区块链技术进行讲授时，将无法避免地涉及对于虚拟数字货币的介绍，但课程本身依然以教授区块链通用技术为主，不会鼓励...
                                 </p>
@@ -306,7 +310,7 @@
                         {$vo.timeH}
                     </div>
                     <div class="maintitle">
-                        {$vo.title}
+                        <h1>{$vo.title}</h1>
                     </div>
                     <div class="mainText">
                         {$vo.content}
@@ -443,7 +447,7 @@
 
         var content = $(obj).parents('.mainContent').find(".mainText").html();
         var time_date = $(obj).parents(".mainContent").find(".timeH").html();
-        var h_title=$(obj).parents(".mainContent").find(".maintitle").html();
+        var h_title=$(obj).parents(".mainContent").find("h1").html();
         var content_img=$(obj).parents('.mainContent').prevAll('img').clone();
         var LGood = $(obj).parents('.mainContent').find("#UPC").html();
         var LKong = $(obj).parents('.mainContent').find("#UPDown").html();
