@@ -31,10 +31,48 @@
         width: 2%;
         position: relative;
         top: 2px;
+
+    }
+    .Favorable-BadProfit{
+        position: relative;
+        width: 100%;
+    }
+    #GOUPID{
+       margin-left: 500px;
     }
     .shareKx{
         margin-left: 20px;
+        cursor: pointer;
     }
+    .shareKx:hover .QRKX_Code{
+      display: block;
+    }
+    .QRKX_Code{
+        width: 150px;
+        height: 180px;
+        position: absolute;
+        background: white;
+        bottom: -190px;
+        right: -35px;
+        z-index: 99999999;
+        display: none;
+        border: 1px #eeeeee solid;
+    }
+    #CodeShare{
+        width: 120px;
+        height: 120px;
+        margin-left: 10%;
+        margin-top: 8px;
+    }
+    #WxTxH{
+       width: 20%;
+    }
+    .WxSyX{
+        width: 80%;
+        margin: 10px auto;
+        text-align: center;
+    }
+
 </style>
 <div class="box">
     <!--导航栏-->
@@ -85,13 +123,25 @@
                                         {$vo.content}
                                     </div>
                                     <div class="Favorable-BadProfit">
-                                        <span class="badDownGood" data-id='{$vo.id}' data-type='up'>
+                                        <span class="badDownGood" data-id='{$vo.id}' data-type='up' id="GOUPID">
                                             <img src="images/up.png" alt=""> 利好<span class="count-f">{$vo.up}</span>
                                         </span>
                                         <span class="badDownGood" data-id='{$vo.id}' data-type='down'>
                                             <img src="images/down.png" alt=""> 利空<span class="count-f">{$vo.down}</span>
                                         </span>
-                                        <span class="shareKx"><img src="images/fenxiang.png" alt=""> 分享</span>
+                                        <span class="shareKx">
+                                            <img src="images/fenxiang.png" alt="">
+                                            分享
+                                            <span class="QRKX_Code">
+                                                <img src="images/QRKX_Code.jpg" alt="" id="CodeShare">
+                                                <div class="WxSyX">
+                                                    <img src="images/WxTxH.png" alt="" id="WxTxH">
+                                                    <span>微信扫一扫</span>
+                                                </div>
+
+
+                                            </span>
+                                        </span>
                                     </div>
                                 </div>
                             </li>
@@ -171,7 +221,6 @@
         exdate.setDate(exdate.getDate()+expiredays);
         document.cookie=c_name+ "=" +escape(value)+ ((expiredays==null) ? "" : ";expires="+exdate.toGMTString());
     }
-
     //取回cookie
     function getCookie(c_name)
     {
@@ -188,9 +237,7 @@
         }
         return "";
     }
-
     var page_num = 2;
-  
     $('#message_more').click(function(){
         
         $.ajax({
@@ -209,8 +256,6 @@
           }
         });
     });
-
-
     $("body").on("click",".badDownGood",function () {
         var obj =$(this);
         var id = obj.attr('data-id');
