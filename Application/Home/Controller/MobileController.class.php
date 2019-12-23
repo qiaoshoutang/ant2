@@ -33,6 +33,7 @@ class MobileController extends SiteController {
         
         foreach($messageList as $key=>$val){
             $messageList[$key]['timeH'] = $weekname[date('w',$val['time'])].' '.date('Y-m-d H:i');
+            $messageList[$key]['content'] =html_out($val['content']);
         }
         $this->assign('messageList',$messageList);
         $this -> siteDisplay('message');

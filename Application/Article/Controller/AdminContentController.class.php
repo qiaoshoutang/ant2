@@ -28,12 +28,12 @@ class AdminContentController extends AdminController {
                     ),
                     array(
                         'name' => '快讯列表',
-                        'url' => U('Message/index'),
+                        'url' => U('Messag/index'),
                         'icon' => 'list',
                     ),
                     array(
                         'name' => '添加快讯',
-                        'url' => U('Message/add'),
+                        'url' => U('Messag/add'),
                         'icon' => 'plus',
                     ),
                 )
