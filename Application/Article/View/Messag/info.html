@@ -12,6 +12,20 @@
         <admin:textarea name="content" rows="10" width="full" class="u-editor">{$info.content}</admin:textarea>
       </admin:formrow>
 
+      <admin:formrow title="内容图片" tip=""  >
+        <admin:text name="image" type="text" value="{$info.image}" len="250" width="medium" />
+        <a class="u-btn u-btn-primary u-img-upload" data="image" preview="image-preview" href="javascript:;" >上传</a> 
+        <a class="u-btn u-btn-primary" href="javascript:;" id="image-preview">预览</a> 
+      </admin:formrow>
+
+      <div class='short_msg'>
+      <admin:formrow title="二维码" tip="海报下方的二维码，不填默认使用公众号二维码"  >
+        <admin:text name="qr_code" type="text" value="{$info.qr_code}" len="250" width="medium" />
+        <a class="u-btn u-btn-primary u-img-upload" data="qr_code" preview="qr-preview" href="javascript:;" >上传</a> 
+        <a class="u-btn u-btn-primary" href="javascript:;" id="qr-preview">预览</a> 
+      </admin:formrow>
+      </div>
+
       <admin:formrow title="添加时间" tip="请按照格式填写发布时间">
         <if condition="empty($info['time'])">
             <admin:text name="time" value="{$time|date='Y/m/d H:i',###}" len="250" class="u-time" />
