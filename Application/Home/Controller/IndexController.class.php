@@ -94,7 +94,7 @@ class IndexController extends SiteController {
         }
         //热门新闻
         $newsList = M('content')->where($where)->field('content_id,title,description,image,time,views,author')->limit(10)
-                                ->order('sequence desc,content_id desc')->select();
+                                ->order('time desc,sequence desc')->select();
 
         foreach($newsList as $key=>$val){
             $newsList[$key]['description'] = html_out($val['description']);
