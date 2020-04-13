@@ -54,7 +54,28 @@ class ShortController extends SiteController {
 	        $article_list[$key]['time_top']=date('m月d日',$val['time']).' '.$weekname[date('w',$val['time'])];
 	    }
 	    
-
+// 	    //动态列表
+// 	    $where_t['status']=1;
+// 	    $twitterMod=D('Admin/Twitter');
+// 	    $count = $twitterMod->countList($where_t);
+// 	    $limit = $this->getPageLimit($count,20);
+	    
+// 	    $twitter_list = $twitterMod->loadList($where_t,$limit);
+	    
+// 	    foreach($twitter_list as $key=>$val){
+// 	        $twitter_list[$key]['content']=html_out($val['content']);  
+// 	    }
+	    
+// 	    //微博列表
+// 	    $where_w['status']=1;
+// 	    $weiboMod=D('Admin/Weibo');
+// 	    $count = $weiboMod->countList($where_w);
+// 	    $limit = $this->getPageLimit($count,20);
+	    
+// 	    $weibo_list = $weiboMod->loadList($where_w,$limit);
+// 	    foreach($weibo_list as $key=>$val){
+// 	        $weibo_list[$key]['content']=html_out($val['content']);
+// 	    }
 	    
 	    
 	    $this->assign('page_num','1');
@@ -218,7 +239,7 @@ class ShortController extends SiteController {
 	            $title_temp =explode('|',$this->getNeedBetween($valb['content'],'【','】'));
 	            $_POST['unique_num']=$valb['id'];
 	            $_POST['class_id']=5;
-	            $_POST['title']=$title_temp[1];
+	            $_POST['title']=$title_temp[0];
 	            $_POST['time']=date('Y/m/d H:i:s',$valb['created_at']);
 	            $_POST['up']=rand(30,50);
 	            $_POST['down']=rand(1,10);
