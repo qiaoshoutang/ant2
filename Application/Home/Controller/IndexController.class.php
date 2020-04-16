@@ -70,12 +70,17 @@ class IndexController extends SiteController {
         $newsList = M('content')->where(['status'=>2])->field('content_id,title,image,time')->limit('0,5')->order('sequence desc,content_id desc')->select();
         
         if($newsList){
+            $newsList = $this->newsAllRoute($newsList);
             $newsFirst = array_shift($newsList);
             $this->assign('newsFirst',$newsFirst);
         }
 
         //推荐导航
         $naviList = D('Admin/Navi')->loadList(['recom'=>1],'0,5');
+        if($naviList){
+            $naviList = $this->naviAllRoute($naviList);
+        }
+
         
         
         $this->assign('newsList',$newsList);
@@ -96,22 +101,26 @@ class IndexController extends SiteController {
         $newsList = M('content')->where($where)->field('content_id,title,description,image,time,views,author')->limit(10)
                                 ->order('time desc,sequence desc')->select();
 
-        foreach($newsList as $key=>$val){
-            $newsList[$key]['description'] = html_out($val['description']);
+
+        if($newsList){
+            foreach($newsList as $key=>$val){
+                $newsList[$key]['description'] = html_out($val['description']);
+                
+            }
+            $newsList = $this->newsAllRoute($newsList);
         }
-//         dd($newsList);
+        
         //快讯
         $map['state'] = 2;
         $messageMod = D('Article/Message');
         
         $messageList = $messageMod->loadList($map,'0,3');
         
-
         //推荐导航
         $naviList = D('Admin/Navi')->loadList(['recom'=>1],'0,5');
-        
-        
-//         dd($newsCate);
+        if($naviList){
+            $naviList = $this->naviAllRoute($naviList);
+        }
         
         $this->assign('class_id',$class_id);
         $this->assign('newsCate',M('category')->where(['show'=>1])->order('sequence asc')->select());
@@ -131,12 +140,17 @@ class IndexController extends SiteController {
         M('content')->where(['content_id'=>$content_id])->setInc('views'); //浏览自增1
         
         $contentInfo = $contentMod->getInfo($content_id);
+
+        if($_SERVER['HTTP_HOST'] != 'mayi.org'){ //大陆服务器连接香港服务器数据库  需要补全资源路径
+            $contentInfo['content'] = str_replace('/Uploads/','http://mayi.org/Uploads/',$contentInfo['content']);
+        }
         $contentInfo['content'] = html_out($contentInfo['content']);
 
         //热门新闻
         $newsList = M('content')->where(['status'=>2])->field('content_id,title,description,image,time,views')->limit(6)
                     ->order('sequence desc,content_id desc')->select();
         if($newsList){
+            $newsList = $this->newsAllRoute($newsList);
             $newsFirst = array_shift($newsList);
             $this->assign('newsFirst',$newsFirst);
         }
@@ -151,7 +165,9 @@ class IndexController extends SiteController {
         
         //推荐导航
         $naviList = D('Admin/Navi')->loadList(['recom'=>1],'0,5');
-        
+        if($naviList){
+            $naviList = $this->naviAllRoute($naviList);
+        }
 
         $this->assign('newsList',$newsList);
         $this->assign('messageList',$messageList);
@@ -175,27 +191,51 @@ class IndexController extends SiteController {
             
             $where['class_id'] = 1;
             $naviList1 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            if($naviList1){
+                $naviList2 = $this->naviAllRoute($naviList2);
+            }
             
             $where['class_id'] = 2;
             $naviList2 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            if($naviList2){
+                $naviList2 = $this->naviAllRoute($naviList2);
+            }
             
             $where['class_id'] = 3;
             $naviList3 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            if($naviList3){
+                $naviList3 = $this->naviAllRoute($naviList3);
+            }
             
             $where['class_id'] = 4;
             $naviList4 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            if($naviList4){
+                $naviList4 = $this->naviAllRoute($naviList4);
+            }
             
             $where['class_id'] = 5;
             $naviList5 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            if($naviList5){
+                $naviList5 = $this->naviAllRoute($naviList5);
+            }
             
             $where['class_id'] = 6;
             $naviList6 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            if($naviList6){
+                $naviList6 = $this->naviAllRoute($naviList6);
+            }
             
             $where['class_id'] = 7;
             $naviList7 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            if($naviList7){
+                $naviList7 = $this->naviAllRoute($naviList7);
+            }
             
             $where['class_id'] = 8;
             $naviList8 = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            if($naviList8){
+                $naviList8 = $this->naviAllRoute($naviList8);
+            }
             
             $this->assign('naviList1',$naviList1);
             $this->assign('naviList2',$naviList2);
@@ -209,11 +249,39 @@ class IndexController extends SiteController {
             $where['class_id'] = $class_id;
             
             $naviList = $naviMod->where($where)->limit(0,20)->order('order_id desc,id desc')->select();
+            if($naviList){
+                $naviList = $this->naviAllRoute($naviList);
+            }
             $this->assign('naviList',$naviList);
         }
         
         $this->assign('class_id',$class_id);
         $this -> siteDisplay('antmap');
+    }
+    
+    //导航列表 图片路径替换
+    private function naviAllRoute($naviList){  //大陆服务器连接香港服务器数据库  需要补全导航中的资源路径
+        if($_SERVER['HTTP_HOST'] != 'mayi.org'){ //大陆服务器连接香港服务器数据库  需要补全资源路径
+            foreach($naviList as $key=>$info){
+                if($info['icon']){
+                    $naviList[$key]['icon'] = 'http://mayi.org'.$info['icon'];
+                }
+            }
+        }
+        return $naviList;
+    }
+    
+    //新闻列表 图片路径替换
+    private function newsAllRoute($newsList){  //大陆服务器连接香港服务器数据库  需要补全导航中的资源路径
+        
+        if($_SERVER['HTTP_HOST'] != 'mayi.org'){ //大陆服务器连接香港服务器数据库  需要补全资源路径
+            foreach($newsList as $key=>$newsInfo){
+                if($newsInfo['image']){
+                    $newsList[$key]['image'] = 'http://mayi.org'.$newsInfo['image'];
+                }
+            }
+        }
+        return $newsList;
     }
     
     //活动
@@ -248,10 +316,26 @@ class IndexController extends SiteController {
         $activityMod = D('Admin/Activity');
         
         $acitvityList = $activityMod->loadList($where,9,'order_id desc,id desc');
+        if($acitvityList){
+            $acitvityList = $this->actiAllRoute($acitvityList);
+        }
+
         $this->assign('state',$state);
         $this->assign('time',$time);
         $this->assign('acitvityList',$acitvityList);
         $this -> siteDisplay('activity');
+    }
+    //活动列表 图片路径替换
+    private function actiAllRoute($actiList){  //大陆服务器连接香港服务器数据库  需要补全导航中的资源路径
+        
+        if($_SERVER['HTTP_HOST'] != 'mayi.org'){ //大陆服务器连接香港服务器数据库  需要补全资源路径
+            foreach($actiList as $key=>$info){
+                if($info['cover_url']){
+                    $actiList[$key]['cover_url'] = 'http://mayi.org'.$info['cover_url'];
+                }
+            }
+        }
+        return $actiList;
     }
     
     //活动详情
@@ -263,11 +347,35 @@ class IndexController extends SiteController {
         $activityMod->where(['id'=>$content_id])->setInc('views'); //浏览自增1
         
         $activityInfo = $activityMod->where(['id'=>$content_id])->find();
+        if($activityInfo){
+            if($_SERVER['HTTP_HOST'] != 'mayi.org'){ //大陆服务器连接香港服务器数据库  需要补全资源路径
+   
+                if($activityInfo['cover_url']){
+                    $activityInfo['cover_url'] = 'http://mayi.org'.$activityInfo['cover_url'];
+                }
+                if($activityInfo['master_icon_1']){
+                    $activityInfo['master_icon_1'] = 'http://mayi.org'.$activityInfo['master_icon_1'];
+                }
+                if($activityInfo['master_icon_2']){
+                    $activityInfo['master_icon_2'] = 'http://mayi.org'.$activityInfo['master_icon_2'];
+                }
+                if($activityInfo['qrcode']){
+                    $activityInfo['qrcode'] = 'http://mayi.org'.$activityInfo['qrcode'];
+                }
+                if($activityInfo['content']){
+                     $activityInfo['content'] = str_replace('/Uploads/','http://mayi.org/Uploads/',$activityInfo['content']);
+                }
+
+            }
+        }
         $activityInfo['content'] = html_out($activityInfo['content']);
         
         
         //推荐导航
         $naviList = D('Admin/Navi')->loadList(['recom'=>1],'0,5');
+        if($naviList){
+            $naviList = $this->naviAllRoute($naviList);
+        }
         
         $this->assign('contentInfo',$activityInfo);
         $this->assign('naviList',$naviList);
