@@ -369,6 +369,11 @@
 
 // 通过语言区分页面 begin
 // $('body').addClass('zhlang');
+window.onload=function(){
+    $(function() {
+        $(".zh-lang").trigger("click");//触发button的click事件
+    })
+};
 var tyLang = localStorage.tyLang;
 if(tyLang == 'zh'){
     $('body').addClass('zhlang');
@@ -378,12 +383,12 @@ if(tyLang == 'zh'){
 }else {
     $('body').addClass('otherlang');
     $('body').removeClass('zhlang');
-    En()
+    En();
     FoundingTeamEn()
 }
 
 $(".zh-lang").click(function () {
-    Zh()
+    Zh();
     FoundingTeam()
 });
 $(".en-lang").click(function () {
@@ -466,7 +471,6 @@ function Zh(){
     $(".RecentnavList_ul li").css({
         "width": "8%"
     })
-
 }
 
 function En() {
