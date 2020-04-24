@@ -239,7 +239,7 @@ class ShortController extends SiteController {
 	            $title_temp =explode('|',$this->getNeedBetween($valb['content'],'【','】'));
 	            $_POST['unique_num']=$valb['id'];
 	            $_POST['class_id']=5;
-	            $_POST['title']=$title_temp[0];
+	            $_POST['title']=$title_temp[1]?$title_temp[1]:$title_temp[0];
 	            $_POST['time']=date('Y/m/d H:i:s',$valb['created_at']);
 	            $_POST['up']=rand(30,50);
 	            $_POST['down']=rand(1,10);
